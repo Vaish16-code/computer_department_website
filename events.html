@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Computer Engineering Department</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="images/college-logo.png" alt="College Logo" class="logo">
+                    <div class="dept-info">
+                        <h1>Computer Engineering Department</h1>
+                        <p class="college-name">[Your College Name]</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📞 +91-XXXXXXXXXX</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️ cse@college.edu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="academics.html">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="academics.html#se">Second Year (SE)</a></li>
+                        <li><a href="academics.html#te">Third Year (TE)</a></li>
+                        <li><a href="academics.html#be">Final Year (BE)</a></li>
+                    </ul>
+                </li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Events</h1>
+                <p>Stay updated with our seminars, workshops, conferences, and activities</p>
+            </div>
+        </section>
+
+        <!-- Event Categories -->
+        <section class="event-categories">
+            <div class="container">
+                <div class="categories-tabs">
+                    <button class="tab-btn active" onclick="showEvents('upcoming')">Upcoming Events</button>
+                    <button class="tab-btn" onclick="showEvents('seminars')">Seminars</button>
+                    <button class="tab-btn" onclick="showEvents('workshops')">Workshops</button>
+                    <button class="tab-btn" onclick="showEvents('conferences')">Conferences</button>
+                    <button class="tab-btn" onclick="showEvents('past-events')">Past Events</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events -->
+        <section id="upcoming" class="event-section active">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                <div class="events-grid">
+                    <div class="event-card featured">
+                        <div class="event-date">
+                            <span class="day">[DD]</span>
+                            <span class="month">[MMM]</span>
+                            <span class="year">[YYYY]</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-category">Workshop</div>
+                            <h3>[Workshop Title]</h3>
+                            <p class="event-description">
+                                [Brief description of the workshop, including topics covered and learning outcomes]
+                            </p>
+                            <div class="event-details">
+                                <p><strong>Time:</strong> [Start Time] - [End Time]</p>
+                                <p><strong>Venue:</strong> [Venue Name/Location]</p>
+                                <p><strong>Speaker:</strong> [Speaker Name and Designation]</p>
+                                <p><strong>Registration Fee:</strong> [Amount/Free]</p>
+                            </div>
+                            <div class="event-actions">
+                                <a href="#" class="btn">Register Now</a>
+                                <a href="#" class="btn btn-secondary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">[DD]</span>
+                            <span class="month">[MMM]</span>
+                            <span class="year">[YYYY]</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-category">Seminar</div>
+                            <h3>[Seminar Title]</h3>
+                            <p class="event-description">
+                                [Brief description of the seminar topic and its relevance]
+                            </p>
+                            <div class="event-details">
+                                <p><strong>Time:</strong> [Start Time] - [End Time]</p>
+                                <p><strong>Venue:</strong> [Venue Name/Location]</p>
+                                <p><strong>Speaker:</strong> [Speaker Name and Affiliation]</p>
+                            </div>
+                            <div class="event-actions">
+                                <a href="#" class="btn">Register</a>
+                                <a href="#" class="btn btn-secondary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">[DD]</span>
+                            <span class="month">[MMM]</span>
+                            <span class="year">[YYYY]</span>
+                        </div>
+                        <div class="event-content">
+                            <div class="event-category">Conference</div>
+                            <h3>[Conference Title]</h3>
+                            <p class="event-description">
+                                [Brief description of the conference theme and call for papers]
+                            </p>
+                            <div class="event-details">
+                                <p><strong>Duration:</strong> [Number] Days</p>
+                                <p><strong>Venue:</strong> [Venue Name/Location]</p>
+                                <p><strong>Keynote Speaker:</strong> [Speaker Name]</p>
+                                <p><strong>Registration Deadline:</strong> [Date]</p>
+                            </div>
+                            <div class="event-actions">
+                                <a href="#" class="btn">Submit Paper</a>
+                                <a href="#" class="btn btn-secondary">View CFP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seminars -->
+        <section id="seminars" class="event-section">
+            <div class="container">
+                <h2>Technical Seminars</h2>
+                <div class="events-list">
+                    <div class="event-item">
+                        <div class="event-date-small">
+                            <span>[DD/MM/YYYY]</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>[Seminar Title 1]</h3>
+                            <p><strong>Speaker:</strong> [Speaker Name], [Designation], [Organization]</p>
+                            <p><strong>Topic:</strong> [Brief description of the seminar topic]</p>
+                            <p><strong>Time:</strong> [Time] | <strong>Venue:</strong> [Location]</p>
+                        </div>
+                        <div class="event-status">
+                            <span class="status-badge upcoming">Upcoming</span>
+                        </div>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date-small">
+                            <span>[DD/MM/YYYY]</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>[Seminar Title 2]</h3>
+                            <p><strong>Speaker:</strong> [Speaker Name], [Designation], [Organization]</p>
+                            <p><strong>Topic:</strong> [Brief description of the seminar topic]</p>
+                            <p><strong>Time:</strong> [Time] | <strong>Venue:</strong> [Location]</p>
+                        </div>
+                        <div class="event-status">
+                            <span class="status-badge upcoming">Upcoming</span>
+                        </div>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date-small">
+                            <span>[DD/MM/YYYY]</span>
+                        </div>
+                        <div class="event-info">
+                            <h3>[Seminar Title 3]</h3>
+                            <p><strong>Speaker:</strong> [Speaker Name], [Designation], [Organization]</p>
+                            <p><strong>Topic:</strong> [Brief description of the seminar topic]</p>
+                            <p><strong>Time:</strong> [Time] | <strong>Venue:</strong> [Location]</p>
+                        </div>
+                        <div class="event-status">
+                            <span class="status-badge completed">Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workshops -->
+        <section id="workshops" class="event-section">
+            <div class="container">
+                <h2>Workshops & Training Programs</h2>
+                <div class="workshops-grid">
+                    <div class="workshop-card">
+                        <div class="workshop-header">
+                            <h3>[Workshop Title 1]</h3>
+                            <span class="duration">[Duration] Days</span>
+                        </div>
+                        <div class="workshop-content">
+                            <p><strong>Dates:</strong> [Start Date] to [End Date]</p>
+                            <p><strong>Instructor:</strong> [Instructor Name and Credentials]</p>
+                            <p><strong>Description:</strong> [Workshop description and learning objectives]</p>
+                            
+                            <h4>Topics Covered:</h4>
+                            <ul class="workshop-topics">
+                                <li>[Topic 1]</li>
+                                <li>[Topic 2]</li>
+                                <li>[Topic 3]</li>
+                                <li>[Topic 4]</li>
+                            </ul>
+                            
+                            <div class="workshop-details">
+                                <p><strong>Prerequisites:</strong> [Prerequisites if any]</p>
+                                <p><strong>Certification:</strong> Certificate of completion</p>
+                                <p><strong>Registration Fee:</strong> ₹[Amount] for students, ₹[Amount] for professionals</p>
+                            </div>
+                            
+                            <div class="workshop-actions">
+                                <a href="#" class="btn">Register Now</a>
+                                <a href="#" class="btn btn-secondary">Download Brochure</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="workshop-card">
+                        <div class="workshop-header">
+                            <h3>[Workshop Title 2]</h3>
+                            <span class="duration">[Duration] Days</span>
+                        </div>
+                        <div class="workshop-content">
+                            <p><strong>Dates:</strong> [Start Date] to [End Date]</p>
+                            <p><strong>Instructor:</strong> [Instructor Name and Credentials]</p>
+                            <p><strong>Description:</strong> [Workshop description and learning objectives]</p>
+                            
+                            <h4>Topics Covered:</h4>
+                            <ul class="workshop-topics">
+                                <li>[Topic 1]</li>
+                                <li>[Topic 2]</li>
+                                <li>[Topic 3]</li>
+                                <li>[Topic 4]</li>
+                            </ul>
+                            
+                            <div class="workshop-details">
+                                <p><strong>Prerequisites:</strong> [Prerequisites if any]</p>
+                                <p><strong>Certification:</strong> Certificate of completion</p>
+                                <p><strong>Registration Fee:</strong> ₹[Amount] for students, ₹[Amount] for professionals</p>
+                            </div>
+                            
+                            <div class="workshop-actions">
+                                <a href="#" class="btn">Register Now</a>
+                                <a href="#" class="btn btn-secondary">Download Brochure</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conferences -->
+        <section id="conferences" class="event-section">
+            <div class="container">
+                <h2>Conferences & Symposiums</h2>
+                <div class="conferences-grid">
+                    <div class="conference-card">
+                        <div class="conference-header">
+                            <h3>[Conference Title/Acronym]</h3>
+                            <p class="conference-full-title">[Full Conference Title]</p>
+                        </div>
+                        <div class="conference-content">
+                            <p><strong>Dates:</strong> [Conference Dates]</p>
+                            <p><strong>Venue:</strong> [Venue Details]</p>
+                            <p><strong>Theme:</strong> [Conference Theme]</p>
+                            
+                            <h4>Key Features:</h4>
+                            <ul class="conference-features">
+                                <li>Keynote speeches by industry leaders</li>
+                                <li>Technical paper presentations</li>
+                                <li>Panel discussions and workshops</li>
+                                <li>Networking opportunities</li>
+                                <li>Exhibition of latest technologies</li>
+                            </ul>
+                            
+                            <div class="conference-deadlines">
+                                <h4>Important Dates:</h4>
+                                <p>Paper Submission Deadline: [Date]</p>
+                                <p>Notification of Acceptance: [Date]</p>
+                                <p>Camera-ready Submission: [Date]</p>
+                                <p>Early Registration Deadline: [Date]</p>
+                            </div>
+                            
+                            <div class="conference-actions">
+                                <a href="#" class="btn">Submit Paper</a>
+                                <a href="#" class="btn btn-secondary">Registration</a>
+                                <a href="#" class="btn btn-secondary">Call for Papers</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conference-card">
+                        <div class="conference-header">
+                            <h3>[International Symposium Title]</h3>
+                            <p class="conference-full-title">[Full Symposium Title]</p>
+                        </div>
+                        <div class="conference-content">
+                            <p><strong>Dates:</strong> [Symposium Dates]</p>
+                            <p><strong>Venue:</strong> [Venue Details]</p>
+                            <p><strong>Focus Area:</strong> [Research Focus]</p>
+                            
+                            <h4>Tracks:</h4>
+                            <ul class="conference-tracks">
+                                <li>[Track 1 Name]</li>
+                                <li>[Track 2 Name]</li>
+                                <li>[Track 3 Name]</li>
+                                <li>[Track 4 Name]</li>
+                            </ul>
+                            
+                            <div class="conference-committee">
+                                <h4>Organizing Committee:</h4>
+                                <p><strong>General Chair:</strong> [Name and Affiliation]</p>
+                                <p><strong>Program Chair:</strong> [Name and Affiliation]</p>
+                                <p><strong>Local Chair:</strong> [Name and Affiliation]</p>
+                            </div>
+                            
+                            <div class="conference-actions">
+                                <a href="#" class="btn">Abstract Submission</a>
+                                <a href="#" class="btn btn-secondary">Program Schedule</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Past Events -->
+        <section id="past-events" class="event-section">
+            <div class="container">
+                <h2>Past Events</h2>
+                <div class="past-events-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">[Month Year]</div>
+                        <div class="timeline-content">
+                            <h3>[Event Title]</h3>
+                            <p class="event-type">[Event Type - Workshop/Seminar/Conference]</p>
+                            <p>[Brief description of the event and its outcomes]</p>
+                            <div class="event-highlights">
+                                <p><strong>Participants:</strong> [Number] participants</p>
+                                <p><strong>Speaker(s):</strong> [Speaker Names]</p>
+                            </div>
+                            <a href="#" class="btn btn-small">View Gallery</a>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">[Month Year]</div>
+                        <div class="timeline-content">
+                            <h3>[Event Title]</h3>
+                            <p class="event-type">[Event Type - Workshop/Seminar/Conference]</p>
+                            <p>[Brief description of the event and its outcomes]</p>
+                            <div class="event-highlights">
+                                <p><strong>Participants:</strong> [Number] participants</p>
+                                <p><strong>Speaker(s):</strong> [Speaker Names]</p>
+                            </div>
+                            <a href="#" class="btn btn-small">View Gallery</a>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-date">[Month Year]</div>
+                        <div class="timeline-content">
+                            <h3>[Event Title]</h3>
+                            <p class="event-type">[Event Type - Workshop/Seminar/Conference]</p>
+                            <p>[Brief description of the event and its outcomes]</p>
+                            <div class="event-highlights">
+                                <p><strong>Participants:</strong> [Number] participants</p>
+                                <p><strong>Speaker(s):</strong> [Speaker Names]</p>
+                            </div>
+                            <a href="#" class="btn btn-small">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Registration -->
+        <section class="event-registration">
+            <div class="container">
+                <h2>Event Registration</h2>
+                <div class="registration-info">
+                    <p>
+                        To register for any of our upcoming events, please fill out the registration form 
+                        or contact our department office. Early registration is recommended as seats are limited.
+                    </p>
+                    
+                    <div class="registration-contact">
+                        <div class="contact-info">
+                            <h3>Event Coordinator</h3>
+                            <p>Prof. [Coordinator Name]</p>
+                            <p>Email: events.cse@college.edu</p>
+                            <p>Phone: +91-XXXXXXXXXX</p>
+                        </div>
+                        
+                        <div class="registration-form-link">
+                            <h3>Online Registration</h3>
+                            <p>Register for events online through our registration portal</p>
+                            <a href="#" class="btn">Go to Registration Portal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Calendar -->
+        <section class="event-calendar">
+            <div class="container">
+                <h2>Event Calendar</h2>
+                <div class="calendar-container">
+                    <p>View our complete event calendar with all upcoming seminars, workshops, and conferences.</p>
+                    <div class="calendar-actions">
+                        <a href="#" class="btn">View Full Calendar</a>
+                        <a href="#" class="btn btn-secondary">Subscribe to Calendar</a>
+                        <a href="#" class="btn btn-secondary">Download PDF Schedule</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Computer Engineering Department</h3>
+                    <p class="address">
+                        [College Name]<br>
+                        [Address Line 1]<br>
+                        [Address Line 2]<br>
+                        [City, State - PIN Code]
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Phone: +91-XXXXXXXXXX</p>
+                    <p>Email: cse@college.edu</p>
+                    <p>Fax: +91-XXXXXXXXXX</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Computer Engineering Department, [College Name]. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

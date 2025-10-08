@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students - Computer Engineering Department</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="images/college-logo.png" alt="College Logo" class="logo">
+                    <div class="dept-info">
+                        <h1>Computer Engineering Department</h1>
+                        <p class="college-name">[Your College Name]</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📞 +91-XXXXXXXXXX</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️ cse@college.edu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="academics.html">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="academics.html#se">Second Year (SE)</a></li>
+                        <li><a href="academics.html#te">Third Year (TE)</a></li>
+                        <li><a href="academics.html#be">Final Year (BE)</a></li>
+                    </ul>
+                </li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="students.html" class="active">Students</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Students</h1>
+                <p>Resources, achievements, and opportunities for our students</p>
+            </div>
+        </section>
+
+        <!-- Student Resources -->
+        <section class="student-resources">
+            <div class="container">
+                <h2>Student Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-icon">📚</div>
+                        <h3>Academic Resources</h3>
+                        <p>Access study materials, lecture notes, and online learning platforms</p>
+                        <ul class="resource-links">
+                            <li><a href="#">Lecture Notes</a></li>
+                            <li><a href="#">E-books & References</a></li>
+                            <li><a href="#">Online Courses</a></li>
+                            <li><a href="#">Previous Year Papers</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">💻</div>
+                        <h3>Technical Resources</h3>
+                        <p>Programming tools, software, and development environments</p>
+                        <ul class="resource-links">
+                            <li><a href="#">Programming IDEs</a></li>
+                            <li><a href="#">Software Downloads</a></li>
+                            <li><a href="#">Online Compilers</a></li>
+                            <li><a href="#">Development Tools</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🏆</div>
+                        <h3>Competition Resources</h3>
+                        <p>Prepare for coding competitions and technical challenges</p>
+                        <ul class="resource-links">
+                            <li><a href="#">Coding Platforms</a></li>
+                            <li><a href="#">Competition Calendar</a></li>
+                            <li><a href="#">Practice Problems</a></li>
+                            <li><a href="#">Team Formation</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">💼</div>
+                        <h3>Career Resources</h3>
+                        <p>Placement preparation and career guidance materials</p>
+                        <ul class="resource-links">
+                            <li><a href="#">Resume Templates</a></li>
+                            <li><a href="#">Interview Preparation</a></li>
+                            <li><a href="#">Placement Portal</a></li>
+                            <li><a href="#">Career Guidance</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🔬</div>
+                        <h3>Research Opportunities</h3>
+                        <p>Undergraduate research programs and project guidelines</p>
+                        <ul class="resource-links">
+                            <li><a href="#">Research Projects</a></li>
+                            <li><a href="#">Faculty Mentorship</a></li>
+                            <li><a href="#">Conference Submissions</a></li>
+                            <li><a href="#">Research Funding</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="resource-card">
+                        <div class="resource-icon">🤝</div>
+                        <h3>Student Support</h3>
+                        <p>Academic and personal support services for students</p>
+                        <ul class="resource-links">
+                            <li><a href="#">Counseling Services</a></li>
+                            <li><a href="#">Academic Support</a></li>
+                            <li><a href="#">Mentorship Program</a></li>
+                            <li><a href="#">Student Handbook</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Projects -->
+        <section class="student-projects">
+            <div class="container">
+                <h2>Student Projects</h2>
+                
+                <!-- Project Categories -->
+                <div class="project-categories">
+                    <div class="category-tabs">
+                        <button class="tab-btn active" onclick="showProjects('final-year')">Final Year Projects</button>
+                        <button class="tab-btn" onclick="showProjects('mini-projects')">Mini Projects</button>
+                        <button class="tab-btn" onclick="showProjects('research-projects')">Research Projects</button>
+                    </div>
+                </div>
+
+                <!-- Final Year Projects -->
+                <div id="final-year" class="project-section active">
+                    <h3>Final Year Projects (2024-25)</h3>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h4>[Project Title 1]</h4>
+                            <p class="project-team">Team: [Student Names]</p>
+                            <p class="project-guide">Guide: [Faculty Name]</p>
+                            <p class="project-description">[Brief description of the project and its objectives]</p>
+                            <div class="project-tech">
+                                <strong>Technologies:</strong> [Tech Stack]
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>[Project Title 2]</h4>
+                            <p class="project-team">Team: [Student Names]</p>
+                            <p class="project-guide">Guide: [Faculty Name]</p>
+                            <p class="project-description">[Brief description of the project and its objectives]</p>
+                            <div class="project-tech">
+                                <strong>Technologies:</strong> [Tech Stack]
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>[Project Title 3]</h4>
+                            <p class="project-team">Team: [Student Names]</p>
+                            <p class="project-guide">Guide: [Faculty Name]</p>
+                            <p class="project-description">[Brief description of the project and its objectives]</p>
+                            <div class="project-tech">
+                                <strong>Technologies:</strong> [Tech Stack]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini Projects -->
+                <div id="mini-projects" class="project-section">
+                    <h3>Mini Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h4>[Mini Project Title 1]</h4>
+                            <p class="project-team">Team: [Student Names]</p>
+                            <p class="project-guide">Guide: [Faculty Name]</p>
+                            <p class="project-description">[Brief description of the mini project]</p>
+                            <div class="project-tech">
+                                <strong>Technologies:</strong> [Tech Stack]
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <h4>[Mini Project Title 2]</h4>
+                            <p class="project-team">Team: [Student Names]</p>
+                            <p class="project-guide">Guide: [Faculty Name]</p>
+                            <p class="project-description">[Brief description of the mini project]</p>
+                            <div class="project-tech">
+                                <strong>Technologies:</strong> [Tech Stack]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Projects -->
+                <div id="research-projects" class="project-section">
+                    <h3>Research Projects</h3>
+                    <div class="projects-grid">
+                        <div class="project-card">
+                            <h4>[Research Project Title 1]</h4>
+                            <p class="project-team">Team: [Student Names]</p>
+                            <p class="project-guide">Guide: [Faculty Name]</p>
+                            <p class="project-description">[Brief description of the research project]</p>
+                            <div class="project-tech">
+                                <strong>Research Area:</strong> [Area]
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Achievements -->
+        <section id="achievements" class="student-achievements">
+            <div class="container">
+                <h2>Student Achievements</h2>
+                
+                <!-- Achievement Categories -->
+                <div class="achievements-categories">
+                    <div class="achievement-category">
+                        <h3>Academic Achievements</h3>
+                        <div class="achievement-list">
+                            <div class="achievement-item">
+                                <h4>University Toppers</h4>
+                                <ul>
+                                    <li>[Student Name] - University Rank 1, BE Computer 2024</li>
+                                    <li>[Student Name] - University Rank 3, TE Computer 2024</li>
+                                    <li>[Student Name] - University Rank 5, SE Computer 2024</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="achievement-item">
+                                <h4>Scholarships & Awards</h4>
+                                <ul>
+                                    <li>[Student Name] - Merit Scholarship 2024</li>
+                                    <li>[Student Name] - Best Academic Performance Award</li>
+                                    <li>[Student Name] - Research Excellence Award</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-category">
+                        <h3>Technical Competitions</h3>
+                        <div class="achievement-list">
+                            <div class="achievement-item">
+                                <h4>Coding Competitions</h4>
+                                <ul>
+                                    <li>[Student Name] - Winner, National Coding Championship 2024</li>
+                                    <li>[Team Names] - 2nd Place, Inter-College Programming Contest</li>
+                                    <li>[Student Name] - Top 10, Google Code Jam 2024</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="achievement-item">
+                                <h4>Hackathons</h4>
+                                <ul>
+                                    <li>[Team Names] - Winner, State Level Hackathon 2024</li>
+                                    <li>[Team Names] - 1st Runner-up, Tech Innovation Challenge</li>
+                                    <li>[Team Names] - Best Innovation Award, Smart City Hackathon</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-category">
+                        <h3>Research & Publications</h3>
+                        <div class="achievement-list">
+                            <div class="achievement-item">
+                                <h4>Conference Publications</h4>
+                                <ul>
+                                    <li>[Student Name] - Paper published in IEEE Conference 2024</li>
+                                    <li>[Student Name] - Best Paper Award, National Conference</li>
+                                    <li>[Student Name] - Research presentation at International Symposium</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="achievement-item">
+                                <h4>Research Projects</h4>
+                                <ul>
+                                    <li>[Student Name] - Outstanding Research Project Award</li>
+                                    <li>[Student Name] - Patent filed for innovative solution</li>
+                                    <li>[Student Name] - Research internship at [Institution/Company]</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-category">
+                        <h3>Placements & Internships</h3>
+                        <div class="achievement-list">
+                            <div class="achievement-item">
+                                <h4>Campus Placements</h4>
+                                <ul>
+                                    <li>[Student Name] - Placed at [Company] with [Package] LPA</li>
+                                    <li>[Student Name] - Selected for [Company] International Role</li>
+                                    <li>[Student Name] - Entrepreneur - Founded [Startup Name]</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="achievement-item">
+                                <h4>Internships</h4>
+                                <ul>
+                                    <li>[Student Name] - Summer Internship at [Company]</li>
+                                    <li>[Student Name] - Research Internship at [Institute]</li>
+                                    <li>[Student Name] - International Internship Program</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-category">
+                        <h3>Extracurricular Activities</h3>
+                        <div class="achievement-list">
+                            <div class="achievement-item">
+                                <h4>Leadership & Social Service</h4>
+                                <ul>
+                                    <li>[Student Name] - Student Council President 2024</li>
+                                    <li>[Student Name] - Best Volunteer Award, Community Service</li>
+                                    <li>[Student Name] - Cultural Event Coordinator</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="achievement-item">
+                                <h4>Sports & Cultural</h4>
+                                <ul>
+                                    <li>[Student Name] - Inter-College Sports Champion</li>
+                                    <li>[Student Name] - Cultural Fest Winner</li>
+                                    <li>[Student Name] - Art & Photography Competition Winner</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Organizations -->
+        <section class="student-organizations">
+            <div class="container">
+                <h2>Student Organizations & Clubs</h2>
+                <div class="organizations-grid">
+                    <div class="org-card">
+                        <h3>Computer Society</h3>
+                        <p>The official technical society of the Computer Engineering Department</p>
+                        <ul>
+                            <li>Technical workshops and seminars</li>
+                            <li>Coding competitions and hackathons</li>
+                            <li>Industry interaction sessions</li>
+                        </ul>
+                    </div>
+
+                    <div class="org-card">
+                        <h3>Programming Club</h3>
+                        <p>For students passionate about competitive programming and algorithms</p>
+                        <ul>
+                            <li>Weekly coding practice sessions</li>
+                            <li>Contest participation and training</li>
+                            <li>Peer learning and mentorship</li>
+                        </ul>
+                    </div>
+
+                    <div class="org-card">
+                        <h3>Innovation & Entrepreneurship Cell</h3>
+                        <p>Fostering innovation and startup culture among students</p>
+                        <ul>
+                            <li>Startup idea competitions</li>
+                            <li>Entrepreneur mentorship programs</li>
+                            <li>Innovation challenges and projects</li>
+                        </ul>
+                    </div>
+
+                    <div class="org-card">
+                        <h3>Research Forum</h3>
+                        <p>Platform for students interested in research and higher studies</p>
+                        <ul>
+                            <li>Research methodology workshops</li>
+                            <li>Paper writing and presentation skills</li>
+                            <li>Conference participation support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placement Statistics -->
+        <section class="placement-stats">
+            <div class="container">
+                <h2>Placement Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>[Percentage]%</h3>
+                        <p>Overall Placement Rate</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>₹[Amount] LPA</h3>
+                        <p>Average Package</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>₹[Amount] LPA</h3>
+                        <p>Highest Package</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>[Number]+</h3>
+                        <p>Recruiting Companies</p>
+                    </div>
+                </div>
+                
+                <div class="top-recruiters">
+                    <h3>Top Recruiters</h3>
+                    <div class="recruiters-list">
+                        <span class="recruiter">[Company 1]</span>
+                        <span class="recruiter">[Company 2]</span>
+                        <span class="recruiter">[Company 3]</span>
+                        <span class="recruiter">[Company 4]</span>
+                        <span class="recruiter">[Company 5]</span>
+                        <span class="recruiter">[Company 6]</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Computer Engineering Department</h3>
+                    <p class="address">
+                        [College Name]<br>
+                        [Address Line 1]<br>
+                        [Address Line 2]<br>
+                        [City, State - PIN Code]
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Phone: +91-XXXXXXXXXX</p>
+                    <p>Email: cse@college.edu</p>
+                    <p>Fax: +91-XXXXXXXXXX</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Computer Engineering Department, [College Name]. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

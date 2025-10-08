@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Computer Engineering Department</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="images/college-logo.png" alt="College Logo" class="logo">
+                    <div class="dept-info">
+                        <h1>Computer Engineering Department</h1>
+                        <p class="college-name">[Your College Name]</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📞 +91-XXXXXXXXXX</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️ cse@college.edu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="academics.html">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="academics.html#se">Second Year (SE)</a></li>
+                        <li><a href="academics.html#te">Third Year (TE)</a></li>
+                        <li><a href="academics.html#be">Final Year (BE)</a></li>
+                    </ul>
+                </li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Get in touch with us for any inquiries or information</p>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="contact-info-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Department Contact -->
+                    <div class="contact-card">
+                        <div class="contact-icon">🏢</div>
+                        <h3>Department Office</h3>
+                        <div class="contact-details">
+                            <p><strong>Computer Engineering Department</strong></p>
+                            <p>[College Name]</p>
+                            <p>[Address Line 1]</p>
+                            <p>[Address Line 2]</p>
+                            <p>[City, State - PIN Code]</p>
+                            <p>[Country]</p>
+                        </div>
+                    </div>
+
+                    <!-- Phone Contact -->
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h3>Phone</h3>
+                        <div class="contact-details">
+                            <p><strong>Main Office:</strong> +91-XXXXXXXXXX</p>
+                            <p><strong>HOD Office:</strong> +91-XXXXXXXXXX</p>
+                            <p><strong>Faculty Room:</strong> +91-XXXXXXXXXX</p>
+                            <p><strong>Lab Coordinator:</strong> +91-XXXXXXXXXX</p>
+                            <p><strong>Fax:</strong> +91-XXXXXXXXXX</p>
+                        </div>
+                    </div>
+
+                    <!-- Email Contact -->
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h3>Email</h3>
+                        <div class="contact-details">
+                            <p><strong>General Inquiry:</strong> cse@college.edu</p>
+                            <p><strong>Head of Department:</strong> hod.cse@college.edu</p>
+                            <p><strong>Admissions:</strong> admissions.cse@college.edu</p>
+                            <p><strong>Placements:</strong> placements.cse@college.edu</p>
+                            <p><strong>Research:</strong> research.cse@college.edu</p>
+                        </div>
+                    </div>
+
+                    <!-- Office Hours -->
+                    <div class="contact-card">
+                        <div class="contact-icon">🕒</div>
+                        <h3>Office Hours</h3>
+                        <div class="contact-details">
+                            <p><strong>Monday - Friday:</strong></p>
+                            <p>9:00 AM - 5:00 PM</p>
+                            <p><strong>Saturday:</strong></p>
+                            <p>9:00 AM - 1:00 PM</p>
+                            <p><strong>Sunday:</strong> Closed</p>
+                            <p><em>*During college holidays, office hours may vary</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Send Us a Message</h2>
+                        <p>Have a question or need more information? Fill out the form below and we'll get back to you as soon as possible.</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="category">Inquiry Category *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="admissions">Admissions</option>
+                                <option value="academics">Academics</option>
+                                <option value="research">Research</option>
+                                <option value="placements">Placements</option>
+                                <option value="events">Events</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your inquiry..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for updates on events and news
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                            <button type="reset" class="btn btn-secondary">Clear Form</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Personnel -->
+        <section class="key-personnel">
+            <div class="container">
+                <h2>Key Personnel</h2>
+                <div class="personnel-grid">
+                    <div class="personnel-card">
+                        <div class="personnel-photo">
+                            <img src="images/hod-photo.jpg" alt="HOD" class="personnel-image">
+                        </div>
+                        <div class="personnel-info">
+                            <h3>Dr. [HOD Name]</h3>
+                            <p class="personnel-designation">Head of Department</p>
+                            <div class="personnel-contact">
+                                <p>📞 +91-XXXXXXXXXX</p>
+                                <p>✉️ hod.cse@college.edu</p>
+                                <p>🏢 Room No. [Number]</p>
+                            </div>
+                            <div class="personnel-hours">
+                                <p><strong>Office Hours:</strong></p>
+                                <p>Monday - Friday: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="personnel-card">
+                        <div class="personnel-photo">
+                            <img src="images/faculty/coordinator.jpg" alt="Academic Coordinator" class="personnel-image">
+                        </div>
+                        <div class="personnel-info">
+                            <h3>Prof. [Coordinator Name]</h3>
+                            <p class="personnel-designation">Academic Coordinator</p>
+                            <div class="personnel-contact">
+                                <p>📞 +91-XXXXXXXXXX</p>
+                                <p>✉️ academics.cse@college.edu</p>
+                                <p>🏢 Room No. [Number]</p>
+                            </div>
+                            <div class="personnel-hours">
+                                <p><strong>Office Hours:</strong></p>
+                                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="personnel-card">
+                        <div class="personnel-photo">
+                            <img src="images/faculty/placement-coordinator.jpg" alt="Placement Coordinator" class="personnel-image">
+                        </div>
+                        <div class="personnel-info">
+                            <h3>Prof. [Placement Coordinator Name]</h3>
+                            <p class="personnel-designation">Placement Coordinator</p>
+                            <div class="personnel-contact">
+                                <p>📞 +91-XXXXXXXXXX</p>
+                                <p>✉️ placements.cse@college.edu</p>
+                                <p>🏢 Room No. [Number]</p>
+                            </div>
+                            <div class="personnel-hours">
+                                <p><strong>Office Hours:</strong></p>
+                                <p>Monday - Friday: 9:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="personnel-card">
+                        <div class="personnel-photo">
+                            <img src="images/staff/office-staff.jpg" alt="Office Staff" class="personnel-image">
+                        </div>
+                        <div class="personnel-info">
+                            <h3>[Staff Name]</h3>
+                            <p class="personnel-designation">Department Office Staff</p>
+                            <div class="personnel-contact">
+                                <p>📞 +91-XXXXXXXXXX</p>
+                                <p>✉️ office.cse@college.edu</p>
+                                <p>🏢 Department Office</p>
+                            </div>
+                            <div class="personnel-hours">
+                                <p><strong>Office Hours:</strong></p>
+                                <p>Monday - Saturday: 9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location Map -->
+        <section class="location-map">
+            <div class="container">
+                <h2>Find Us</h2>
+                <div class="map-container">
+                    <div class="map-info">
+                        <h3>Campus Location</h3>
+                        <p>
+                            Our Computer Engineering Department is located in the main academic building 
+                            of [College Name]. The department office is on the [Floor] floor of [Building Name].
+                        </p>
+                        
+                        <div class="directions">
+                            <h4>Directions:</h4>
+                            <ul>
+                                <li>From Railway Station: [Distance] km - [Direction/Route]</li>
+                                <li>From Airport: [Distance] km - [Direction/Route]</li>
+                                <li>From City Center: [Distance] km - [Direction/Route]</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="parking-info">
+                            <h4>Parking:</h4>
+                            <p>Visitor parking is available in the main campus parking area. Please obtain a visitor's pass from the security gate.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map-embed">
+                        <!-- Google Maps Embed -->
+                        <div class="map-placeholder">
+                            <p>📍 Interactive Map</p>
+                            <p>Google Maps integration will be added here</p>
+                            <p>Coordinates: [Latitude], [Longitude]</p>
+                            <a href="#" class="btn btn-small">Open in Google Maps</a>
+                        </div>
+                        <!-- Replace the placeholder above with actual Google Maps embed code:
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=..." 
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media -->
+        <section class="social-media-section">
+            <div class="container">
+                <h2>Connect With Us</h2>
+                <div class="social-grid">
+                    <div class="social-card">
+                        <div class="social-icon linkedin">🔗</div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with our department, faculty, and alumni network</p>
+                        <a href="#" class="btn btn-small">Follow Us</a>
+                    </div>
+                    
+                    <div class="social-card">
+                        <div class="social-icon instagram">📷</div>
+                        <h3>Instagram</h3>
+                        <p>See our latest activities, events, and campus life</p>
+                        <a href="#" class="btn btn-small">Follow Us</a>
+                    </div>
+                    
+                    <div class="social-card">
+                        <div class="social-icon youtube">📹</div>
+                        <h3>YouTube</h3>
+                        <p>Watch our seminars, lectures, and department videos</p>
+                        <a href="#" class="btn btn-small">Subscribe</a>
+                    </div>
+                    
+                    <div class="social-card">
+                        <div class="social-icon website">🌐</div>
+                        <h3>Department Website</h3>
+                        <p>Visit our official website for the latest updates</p>
+                        <a href="#" class="btn btn-small">Visit Website</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>How can I get admission to the Computer Engineering program?</h4>
+                        <p>Admission information is available through our admissions office. You can contact admissions.cse@college.edu or visit the main admissions office for detailed information about eligibility, application process, and important dates.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4>What are the visiting hours for faculty members?</h4>
+                        <p>Faculty members have designated office hours which are typically posted on their office doors. You can also contact the department office to schedule an appointment or check faculty availability.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4>How can I get information about placement opportunities?</h4>
+                        <p>For placement-related queries, please contact our Placement Coordinator at placements.cse@college.edu or visit the placement office during working hours.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4>Can I visit the department labs and facilities?</h4>
+                        <p>Lab visits can be arranged through the department office. Please contact us in advance to schedule a visit and ensure that labs are available for tours.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Computer Engineering Department</h3>
+                    <p class="address">
+                        [College Name]<br>
+                        [Address Line 1]<br>
+                        [Address Line 2]<br>
+                        [City, State - PIN Code]
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Phone: +91-XXXXXXXXXX</p>
+                    <p>Email: cse@college.edu</p>
+                    <p>Fax: +91-XXXXXXXXXX</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Computer Engineering Department, [College Name]. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
