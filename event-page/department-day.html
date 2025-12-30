@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Department Day Celebrations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 30px;
+        }
+
+        .year {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .year h2 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .report-link {
+            margin-bottom: 15px;
+        }
+
+        .report-link a {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #003366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .report-link a:hover {
+            background-color: #0055aa;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+            background-color: #ddd;
+        }
+
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="../images/college-logo.png" alt="CSE Logo" class="nav-logo">
+                <span class="nav-title">CSE Department</span>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li class="dropdown">
+                    <a href="../academics.html" class="nav-link">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../academics.html#se">Second Year (SE)</a></li>
+                        <li><a href="../academics.html#te">Third Year (TE)</a></li>
+                        <li><a href="../../academics.html#be">Final Year (BE)</a></li>
+                    </ul>
+                </li>
+                <li><a href="../faculty.html" class="nav-link">Faculty</a></li>
+                <li><a href="../students.html" class="nav-link">Students</a></li>
+                <li><a href="../research.html" class="nav-link">Research</a></li>
+                <li><a href="../events.html" class="nav-link active">Events</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<section>
+    <a href="../events.html" class="back-btn">← Back to Events</a>
+
+    <!-- Academic Year 2024–2025 -->
+    <div class="year">
+        <h2>Academic Year 2024 – 2025</h2>
+
+        <!-- PDF Report Link -->
+        <div class="report-link">
+            <a href="reports/DeptDay_2023_2024.pdf" target="_blank">
+                View Department Day Report (PDF)
+            </a>
+        </div>
+
+        <div class="gallery">
+            <img src="images/dept day1.JPG" alt="Department Day 2023 Image 1">
+            <img src="images/dept day2.JPG" alt="Department Day 2023 Image 2">
+            <img src="images/dept day3.JPG" alt="Department Day 2023 Image 3">
+        </div>
+    </div>
+
+    <div class="year">
+        <h2>Academic Year 2019-2020</h2>
+
+        <!-- PDF Report Link -->
+        <div class="report-link">
+            <a href="pdfs/1.pdf" target="_blank">
+                View Department Day Report (PDF)
+            </a>
+        </div>
+
+    </div>
+
+    <div class="year">
+        <h2>Academic Year 2018-2019</h2>
+
+        <!-- PDF Report Link -->
+        <div class="report-link">
+            <a href="pdfs/2.pdf" target="_blank">
+                View Department Day Report (PDF)
+            </a>
+        </div>
+    </div>
+
+    <div class="year">
+        <h2>Academic Year 2017-2018</h2>
+
+        <!-- PDF Report Link -->
+        <div class="report-link">
+            <a href="pdfs/3.pdf" target="_blank">
+                View Department Day Report (PDF)
+            </a>
+        </div>
+    </div>
+
+    <div class="year">
+        <h2>Academic Year 2016-2017</h2>
+
+        <!-- PDF Report Link -->
+        <div class="report-link">
+            <a href="pdfs/4.pdf" target="_blank">
+                View Department Day Report (PDF)
+            </a>
+        </div>
+    </div>
+
+</section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+    <div class="container">
+        <div class="footer-content">
+
+            <!-- Institute Info -->
+            <div class="footer-section">
+                <h3>Don Bosco Institute of Technology</h3>
+                <p class="footer-description">
+                    Don Bosco Institute of Technology offers high-quality education to students in the field of engineering. With our help, you can master any sphere you prefer, from computer engineering to mechanical engineering.
+                    <br><br>Premier Automobiles Road <br>
+                    Kurla (West), Mumbai – 400070
+                </p>
+                   
+            </div>
+
+            <!-- Contact Information -->
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <span>+91 22 2504 2000</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <span>info@dbit.in</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🌐</span>
+                    <span>www.dbit.in</span>
+                </div>
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html">About DBIT</a></li>
+                    <li><a href="academics.html">Academic Programs</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="students.html">Student Life</a></li>
+                </ul>
+            </div>
+
+            <!-- Other Resources -->
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="https://comps.dbit.in/" target="_blank">Old Website</a></li>
+                    <li><a href="https://maps.google.com/?q=Don+Bosco+Institute+of+Technology+Kurla" target="_blank">
+                        Campus Location
+                    </a></li>
+                    <li><a href="http://naac.gov.in/index.php/en/">NAAC</a></li>
+                    <li><a href="https://www.aicte.gov.in/">AICTE</a></li>
+                </ul>
+            </div>
+
+             <!-- Social Media -->
+              <div class="footer-section">
+    <h3>Follow Us</h3>
+    <div class="social-links">
+        <a href="https://www.instagram.com/dbitcompdept/" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i> 
+        </a>
+       
+        <a href="https://www.youtube.com/@DBITCOMP" class="social-link" aria-label="YouTube">
+            <i class="fab fa-youtube"></i> 
+        </a>
+    </div>
+</div>
+
+
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>
+                    &copy; 2025 Don Bosco Institute of Technology, Kurla, Mumbai. All Rights Reserved.
+                </p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,566 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 80px; /* Account for fixed navbar */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header/Hero Section */
+.hero {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+    color: white;
+    padding: 60px 20px 60px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.hero h1 {
+        font-size: 2.8em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Filter Buttons Styling */
+.filters {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.filters h2 {
+    color: #000000;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.filter-btn {
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #e0e0e0;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filter-btn:hover {
+    background-color: #f8f8f8;
+    border-color: #cccccc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn.active {
+    background-color: #000000;
+    color: white;
+    border-color: #000000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Event Grid and Card Styling */
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Event Link Wrapper */
+.event-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.event-link.hidden {
+    display: none;
+}
+
+/* Event Card Design */
+.event-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.event-link:hover .event-card {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Card Image */
+.card-image {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
+}
+
+/* Card Content */
+.card-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Card Title */
+.event-card h3 {
+    color: #1a1a1a;
+    font-size: 1.4em;
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+/* Card Description */
+.event-card p {
+    color: #666666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+/* Card Date (if added later) */
+.card-date {
+    color: #999999;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Card Action Button */
+.card-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.card-action:hover {
+    background-color: #333333;
+    transform: translateY(-1px);
+}
+
+/* Event Image Backgrounds */
+.card-image-innovex {
+    background-image: url('images/innovex.png');
+}
+
+.card-image-tecnack {
+    background-image: url('images/tecnack.png');
+}
+
+.card-image-alumni {
+    background-image: url('https://www.aluminati.net/wp-content/uploads/2019/07/10-creative-ideas-for-your-next-alumni-event.jpg');
+}
+
+.card-image-acm {
+    background-image: url('images/acm.png');
+}
+
+
+
+.card-image-dept {
+    background-image: url('images/dept\ day2.JPG');
+}
+
+.card-image-pta {
+    background-image: url('https://www.waldenu.edu/media/4295/seo-487-bsteacher-and-parent-meeting-in-117631442-1200x675');
+}
+
+.card-image-guest {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/003/088/157/original/guest-speaker-on-illustration-garphic-free-vector.jpg');
+}
+
+.card-image-newsletter {
+    background-image: url('https://www.comexplorer.com/hubfs/Creer-une-newsletter-editoriale.webp');
+}
+
+.card-image-tools {
+    background-image: url('https://clipart-library.com/2023/583-5837336_workshop-meeting-clip-art-black-and-white-hd.png');
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    color: #ffffff;
+    margin-top: 80px;
+    font-size: 0.9em;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.footer a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+
+/* Large screens (desktops) - 3 cards per row */
+@media (min-width: 1200px) {
+    .event-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 0 auto 60px;
+    }
+}
+
+/* Medium screens (tablets) - 2 cards per row */
+@media (max-width: 1199px) and (min-width: 769px) {
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card-image {
+        height: 200px;
+    }
+}
+
+/* Mobile screens - 1 card per row */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .hero {
+        padding: 60px 15px 40px;
+        margin-bottom: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.2em;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .filters {
+        margin-bottom: 40px;
+    }
+
+    .filters h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .filter-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .filter-btn {
+        width: 90%;
+        max-width: 300px;
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+
+    .event-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .card-image {
+        height: 180px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    .event-card h3 {
+        font-size: 1.3em;
+    }
+
+    .event-card p {
+        font-size: 0.95rem;
+        margin-bottom: 18px;
+    }
+
+    .footer {
+        padding: 30px 15px;
+        margin-top: 60px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.9em;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card-content {
+        padding: 18px;
+    }
+
+    .event-card h3 {
+        font-size: 1.2em;
+    }
+
+    .card-action {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Enhanced hover effects for non-touch devices */
+@media (hover: hover) {
+    .event-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent 0%, rgba(0,0,0,0.02) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .event-link:hover .event-card::before {
+        opacity: 1;
+    }
+}
+
+/* Accessibility improvements */
+.event-link:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+    border-radius: 16px;
+}
+
+.filter-btn:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+}
+
+/* Animation for cards appearing */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.event-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Footer Layout */
+.footer {
+    background: #111;
+    color: #fff;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+}
+
+/* Footer Sections */
+.footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-address p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Contact */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a,
+.social-link {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.social-link:hover {
+    color: #fff;
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.social-link i {
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+.footer-bottom-links a {
+    color: #aaa;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.footer-bottom-links a:hover {
+    color: #fff;
+}
+
+/* RESPONSIVE */
+
+/* Tablets */
+@media (max-width: 1100px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-bottom-links a {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+}
