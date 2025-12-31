@@ -1,0 +1,221 @@
+
+.hod-section {
+  padding: 4rem 0;
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.container h2{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* CARD */
+.faculty-card {
+  background: var(--light-grey);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+.faculty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+.faculty-img {
+  width: 100%;
+  height: 200px auto;
+  object-fit: cover;
+  padding: 30px;
+  border-radius: 0px;
+}
+
+.faculty-body {
+  padding: 1.2rem;
+}
+
+.faculty-body h3 {
+  margin-bottom: 4px;
+}
+
+.faculty-role {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.faculty-contact {
+  font-size: 0.85rem;
+  color: var(--grey);
+}
+
+.faculty-card {
+  display: grid;
+}
+
+.sub-container {
+  display: grid;
+  gap: 2rem;
+  align-items: stretch; /* 🔑 equal height */
+  grid-template-columns: 1fr;
+}
+
+
+.faculty-achievements,
+.research-areas {
+  padding: 4rem 0;
+  background: var(--light-grey);
+}
+
+.achievements-grid,
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Shared Card */
+.info-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  transition: var(--transition);
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.info-card p {
+  color: var(--grey);
+  margin-bottom: 0.75rem;
+}
+
+.info-card ul {
+  text-align: left;
+  padding-left: 1.2rem;
+}
+
+.info-card li {
+  margin-bottom: 0.4rem;
+  color: var(--dark-grey);
+}
+.portfolio-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: var(--black);
+    color: var(--white) !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.portfolio-link:hover {
+    background: var(--dark-grey);
+    transform: translateY(-2px);
+}
+
+.portfolio-link i {
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .faculty-card {
+    grid-template-columns: 300px 1fr;
+  }
+
+  .faculty-card .faculty-img {
+    height: 100%;
+  }
+  .sub-container {
+    /* grid-template-columns: 1fr; */
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .faculty-card {
+    grid-template-columns: 1fr;   /* stack image and text vertically */
+  }
+
+  .faculty-card .faculty-img {
+    height: auto;                 /* let image size naturally */
+  }
+}
+
+/* Assistant Professors horizontal scroll on desktop */
+.assistant-professors-wrapper {
+  position: relative;
+}
+
+/* desktop & large tablets */
+@media (min-width: 1024px) {
+  #assistant-professors {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;          /* Firefox */
+  }
+
+  #assistant-professors::-webkit-scrollbar {
+    height: 6px;                    /* small horizontal bar */
+  }
+
+  #assistant-professors::-webkit-scrollbar-track {
+    background: #e0e0e0;
+  }
+
+  #assistant-professors::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 999px;
+  }
+
+  #assistant-professors .faculty-card {
+    min-width: 280px;               /* ensure at least 3 cards visible */
+    max-width: 320px;
+    scroll-snap-align: start;
+    grid-template-columns: 1fr;     /* image on top, text below */
+  }
+
+  #assistant-professors .faculty-img {
+    height: auto;
+  }
+}
+
+/* mobile & small tablets: fall back to normal grid */
+@media (max-width: 1023px) {
+  #assistant-professors {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    overflow-x: visible;
+  }
+
+  #assistant-professors .faculty-card {
+    grid-template-columns: 1fr;   /* same stacked layout as mobile prof cards */
+  }
+
+  #assistant-professors .faculty-img {
+    height: auto;
+  }
+}

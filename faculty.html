@@ -3,498 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Faculty - Computer Engineering Department</title>
     <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="css/faculty.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
+            <span class="nav-title">CSE Department</span>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="academics.html" class="nav-link">Academics</a></li>
+            <li><a href="faculty.html" class="nav-link active">Faculty</a></li>
+            <li><a href="students.html" class="nav-link">Students</a></li>
+            <li><a href="research.html" class="nav-link ">Research</a></li>
+            <li><a href="events.html" class="nav-link">Events</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Page Hero -->
+    <section class="page-hero">
         <div class="container">
-            <div class="header-top">
-                <div class="logo-section">
-                    <img src="images/college-logo.png" alt="College Logo" class="logo">
-                    <div class="dept-info">
-                        <h1>Computer Engineering Department</h1>
-                        <p class="college-name">[Your College Name]</p>
+            <div class="page-hero-content">
+                <h1>Meet Our Faculty</h1>
+                <p>Dedicated educators and industry experts shaping future computer engineers through knowledge, guidance, and innovation.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">17</span>
+                        <span class="stat-label">Total Faculty Members</span>
                     </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📞 +91-XXXXXXXXXX</span>
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">PhD Holders</span>
                     </div>
-                    <div class="contact-item">
-                        <span>✉️ cse@college.edu</span>
+                    <div class="stat-item">
+                        <span class="stat-number">13</span>
+                        <span class="stat-label">Years Average Experience</span>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li class="dropdown">
-                    <a href="academics.html">Academics</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="academics.html#se">Second Year (SE)</a></li>
-                        <li><a href="academics.html#te">Third Year (TE)</a></li>
-                        <li><a href="academics.html#be">Final Year (BE)</a></li>
-                    </ul>
-                </li>
-                <li><a href="faculty.html" class="active">Faculty</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
+
+<!-- Head of Department -->
+    <section class="hod-section">
+    <div class="container">
+        <h2>Head of Department</h2>
+
+        <div id="hod-card"></div>
+    </div>
+    </section>
+
+<!-- Faculty List -->
+    <section class="faculty-list">
+    <div class="container">
+
+        <div class="sub-container">
+            <div class="faculty-category">
+                <h2>Professor</h2>
+                <div class="faculty-grid" id="professors"></div>
+                </div>
+
+                <div class="faculty-category">
+                <h2>Associate Professor</h2>
+                <div class="faculty-grid" id="associate-professors"></div>
+            </div>
         </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1>Our Faculty</h1>
-                <p>Meet our dedicated team of educators and researchers</p>
-            </div>
-        </section>
+        <div class="faculty-category assistant-professors-wrapper" style="margin: 30px 0;">
+            <h2>Assistant Professors</h2>
+            <div class="faculty-grid" id="assistant-professors"></div>
+        </div>
 
-        <!-- Faculty Statistics -->
-        <section class="faculty-stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <h3>[Number]</h3>
-                        <p>Total Faculty Members</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>[Number]</h3>
-                        <p>PhD Holders</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>[Number]</h3>
-                        <p>Years Average Experience</p>
-                    </div>
-                    <div class="stat-card">
-                        <h3>[Number]+</h3>
-                        <p>Research Publications</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Head of Department -->
-        <section class="hod-section">
-            <div class="container">
-                <h2>Head of Department</h2>
-                <div class="faculty-card featured">
-                    <div class="faculty-photo">
-                        <img src="images/hod-photo.jpg" alt="Dr. [HOD Name]" class="faculty-image">
-                    </div>
-                    <div class="faculty-details">
-                        <h3>Dr. [HOD Name]</h3>
-                        <p class="faculty-designation">Professor & Head of Department</p>
-                        <p class="faculty-qualification">[Qualifications - Ph.D., M.Tech, etc.]</p>
-                        <p class="faculty-specialization"><strong>Specialization:</strong> [Area of Expertise]</p>
-                        <p class="faculty-experience"><strong>Experience:</strong> [Years] years</p>
-                        <div class="faculty-contact">
-                            <p><strong>Email:</strong> hod.cse@college.edu</p>
-                            <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
-                            <p><strong>Office:</strong> [Room Number]</p>
-                        </div>
-                        <div class="faculty-links">
-                            <a href="#" class="btn btn-small">View Profile</a>
-                            <a href="#" class="btn btn-small btn-secondary">Research Publications</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    </div>
+    </section>
 
-        <!-- Faculty by Designation -->
-        <section class="faculty-list">
-            <div class="container">
-                <!-- Professors -->
-                <div class="faculty-category">
-                    <h2>Professors</h2>
-                    <div class="faculty-grid">
-                        <div class="faculty-card">
-                            <div class="faculty-photo">
-                                <img src="images/faculty/prof1.jpg" alt="Dr. [Name]" class="faculty-image">
-                            </div>
-                            <div class="faculty-info">
-                                <h3>Dr. [Professor Name 1]</h3>
-                                <p class="faculty-designation">Professor</p>
-                                <p class="faculty-qualification">[Qualifications]</p>
-                                <p class="faculty-specialization">Specialization: [Area]</p>
-                                <p class="faculty-experience">Experience: [Years] years</p>
-                                <div class="faculty-contact">
-                                    <p>Email: [email]@college.edu</p>
-                                    <p>Phone: +91-XXXXXXXXXX</p>
-                                </div>
-                                <div class="faculty-actions">
-                                    <a href="#" class="btn btn-small">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
+<!-- Faculty Achievements -->
+    <section class="faculty-achievements">
+    <div class="container">
+        <h2>Faculty Achievements</h2>
+        <div class="achievements-grid" id="achievements"></div>
+    </div>
+    </section>
 
-                        <div class="faculty-card">
-                            <div class="faculty-photo">
-                                <img src="images/faculty/prof2.jpg" alt="Dr. [Name]" class="faculty-image">
-                            </div>
-                            <div class="faculty-info">
-                                <h3>Dr. [Professor Name 2]</h3>
-                                <p class="faculty-designation">Professor</p>
-                                <p class="faculty-qualification">[Qualifications]</p>
-                                <p class="faculty-specialization">Specialization: [Area]</p>
-                                <p class="faculty-experience">Experience: [Years] years</p>
-                                <div class="faculty-contact">
-                                    <p>Email: [email]@college.edu</p>
-                                    <p>Phone: +91-XXXXXXXXXX</p>
-                                </div>
-                                <div class="faculty-actions">
-                                    <a href="#" class="btn btn-small">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Research Areas -->
+    <section class="research-areas">
+    <div class="container">
+        <h2>Faculty Research Areas</h2>
+        <div class="research-grid" id="research-areas"></div>
+    </div>
+    </section>
 
-                <!-- Associate Professors -->
-                <div class="faculty-category">
-                    <h2>Associate Professors</h2>
-                    <div class="faculty-grid">
-                        <div class="faculty-card">
-                            <div class="faculty-photo">
-                                <img src="images/faculty/assoc_prof1.jpg" alt="Dr. [Name]" class="faculty-image">
-                            </div>
-                            <div class="faculty-info">
-                                <h3>Dr. [Associate Professor Name 1]</h3>
-                                <p class="faculty-designation">Associate Professor</p>
-                                <p class="faculty-qualification">[Qualifications]</p>
-                                <p class="faculty-specialization">Specialization: [Area]</p>
-                                <p class="faculty-experience">Experience: [Years] years</p>
-                                <div class="faculty-contact">
-                                    <p>Email: [email]@college.edu</p>
-                                    <p>Phone: +91-XXXXXXXXXX</p>
-                                </div>
-                                <div class="faculty-actions">
-                                    <a href="#" class="btn btn-small">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="faculty-card">
-                            <div class="faculty-photo">
-                                <img src="images/faculty/assoc_prof2.jpg" alt="Dr. [Name]" class="faculty-image">
-                            </div>
-                            <div class="faculty-info">
-                                <h3>Dr. [Associate Professor Name 2]</h3>
-                                <p class="faculty-designation">Associate Professor</p>
-                                <p class="faculty-qualification">[Qualifications]</p>
-                                <p class="faculty-specialization">Specialization: [Area]</p>
-                                <p class="faculty-experience">Experience: [Years] years</p>
-                                <div class="faculty-contact">
-                                    <p>Email: [email]@college.edu</p>
-                                    <p>Phone: +91-XXXXXXXXXX</p>
-                                </div>
-                                <div class="faculty-actions">
-                                    <a href="#" class="btn btn-small">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="faculty-card">
-                            <div class="faculty-photo">
-                                <img src="images/faculty/assoc_prof3.jpg" alt="Dr. [Name]" class="faculty-image">
-                            </div>
-                            <div class="faculty-info">
-                                <h3>Prof. [Associate Professor Name 3]</h3>
-                                <p class="faculty-designation">Associate Professor</p>
-                                <p class="faculty-qualification">[Qualifications]</p>
-                                <p class="faculty-specialization">Specialization: [Area]</p>
-                                <p class="faculty-experience">Experience: [Years] years</p>
-                                <div class="faculty-contact">
-                                    <p>Email: [email]@college.edu</p>
-                                    <p>Phone: +91-XXXXXXXXXX</p>
-                                </div>
-                                <div class="faculty-actions">
-                                    <a href="#" class="btn btn-small">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Assistant Professors -->
-                <div class="faculty-category">
-                    <h2>Assistant Professors</h2>
-                    <div class="faculty-grid">
-                        <div class="faculty-card">
-                            <div class="faculty-photo">
-                                <img src="images/faculty/asst_prof1.jpg" alt="Prof. [Name]" class="faculty-image">
-                            </div>
-                            <div class="faculty-info">
-                                <h3>Prof. [Assistant Professor Name 1]</h3>
-                                <p class="faculty-designation">Assistant Professor</p>
-                                <p class="faculty-qualification">[Qualifications]</p>
-                                <p class="faculty-specialization">Specialization: [Area]</p>
-                                <p class="faculty-experience">Experience: [Years] years</p>
-                                <div class="faculty-contact">
-                                    <p>Email: [email]@college.edu</p>
-                                    <p>Phone: +91-XXXXXXXXXX</p>
-                                </div>
-                                <div class="faculty-actions">
-                                    <a href="#" class="btn btn-small">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="faculty-card">
-                            <div class="faculty-photo">
-                                <img src="images/faculty/asst_prof2.jpg" alt="Prof. [Name]" class="faculty-image">
-                            </div>
-                            <div class="faculty-info">
-                                <h3>Prof. [Assistant Professor Name 2]</h3>
-                                <p class="faculty-designation">Assistant Professor</p>
-                                <p class="faculty-qualification">[Qualifications]</p>
-                                <p class="faculty-specialization">Specialization: [Area]</p>
-                                <p class="faculty-experience">Experience: [Years] years</p>
-                                <div class="faculty-contact">
-                                    <p>Email: [email]@college.edu</p>
-                                    <p>Phone: +91-XXXXXXXXXX</p>
-                                </div>
-                                <div class="faculty-actions">
-                                    <a href="#" class="btn btn-small">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="faculty-card">
-                            <div class="faculty-photo">
-                                <img src="images/faculty/asst_prof3.jpg" alt="Prof. [Name]" class="faculty-image">
-                            </div>
-                            <div class="faculty-info">
-                                <h3>Prof. [Assistant Professor Name 3]</h3>
-                                <p class="faculty-designation">Assistant Professor</p>
-                                <p class="faculty-qualification">[Qualifications]</p>
-                                <p class="faculty-specialization">Specialization: [Area]</p>
-                                <p class="faculty-experience">Experience: [Years] years</p>
-                                <div class="faculty-contact">
-                                    <p>Email: [email]@college.edu</p>
-                                    <p>Phone: +91-XXXXXXXXXX</p>
-                                </div>
-                                <div class="faculty-actions">
-                                    <a href="#" class="btn btn-small">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="faculty-card">
-                            <div class="faculty-photo">
-                                <img src="images/faculty/asst_prof4.jpg" alt="Prof. [Name]" class="faculty-image">
-                            </div>
-                            <div class="faculty-info">
-                                <h3>Prof. [Assistant Professor Name 4]</h3>
-                                <p class="faculty-designation">Assistant Professor</p>
-                                <p class="faculty-qualification">[Qualifications]</p>
-                                <p class="faculty-specialization">Specialization: [Area]</p>
-                                <p class="faculty-experience">Experience: [Years] years</p>
-                                <div class="faculty-contact">
-                                    <p>Email: [email]@college.edu</p>
-                                    <p>Phone: +91-XXXXXXXXXX</p>
-                                </div>
-                                <div class="faculty-actions">
-                                    <a href="#" class="btn btn-small">View Profile</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Faculty Achievements -->
-        <section id="achievements" class="faculty-achievements">
-            <div class="container">
-                <h2>Faculty Achievements</h2>
-                <div class="achievements-grid">
-                    <div class="achievement-card">
-                        <h3>Research Publications</h3>
-                        <p>Our faculty members have published over [Number] research papers in prestigious international journals and conferences.</p>
-                        <ul class="achievement-list">
-                            <li>Dr. [Name] - [Achievement/Publication]</li>
-                            <li>Dr. [Name] - [Achievement/Publication]</li>
-                            <li>Prof. [Name] - [Achievement/Publication]</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="achievement-card">
-                        <h3>Awards & Recognitions</h3>
-                        <p>Recognition for excellence in teaching, research, and service to the academic community.</p>
-                        <ul class="achievement-list">
-                            <li>Dr. [Name] - Best Teacher Award 2024</li>
-                            <li>Prof. [Name] - Outstanding Research Award</li>
-                            <li>Dr. [Name] - Industry Excellence Recognition</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="achievement-card">
-                        <h3>Research Grants</h3>
-                        <p>Successful acquisition of research funding from various government and industry sources.</p>
-                        <ul class="achievement-list">
-                            <li>DST Research Grant - ₹[Amount] Lakhs</li>
-                            <li>Industry Collaboration - ₹[Amount] Lakhs</li>
-                            <li>University Research Fund - ₹[Amount] Lakhs</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="achievement-card">
-                        <h3>Professional Services</h3>
-                        <p>Active participation in editorial boards, review committees, and professional organizations.</p>
-                        <ul class="achievement-list">
-                            <li>Editorial Board Member - [Journal Name]</li>
-                            <li>Conference Chair - [Conference Name]</li>
-                            <li>Technical Committee Member - [Organization]</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Research Areas -->
-        <section class="research-areas">
-            <div class="container">
-                <h2>Faculty Research Areas</h2>
-                <div class="research-grid">
-                    <div class="research-area-card">
-                        <h3>Artificial Intelligence & Machine Learning</h3>
-                        <p>Faculty: Dr. [Name 1], Prof. [Name 2]</p>
-                    </div>
-                    <div class="research-area-card">
-                        <h3>Computer Networks & Security</h3>
-                        <p>Faculty: Dr. [Name 1], Prof. [Name 2]</p>
-                    </div>
-                    <div class="research-area-card">
-                        <h3>Software Engineering</h3>
-                        <p>Faculty: Prof. [Name 1], Dr. [Name 2]</p>
-                    </div>
-                    <div class="research-area-card">
-                        <h3>Data Science & Analytics</h3>
-                        <p>Faculty: Dr. [Name 1], Prof. [Name 2]</p>
-                    </div>
-                    <div class="research-area-card">
-                        <h3>Cloud Computing & IoT</h3>
-                        <p>Faculty: Prof. [Name 1], Dr. [Name 2]</p>
-                    </div>
-                    <div class="research-area-card">
-                        <h3>Computer Graphics & Vision</h3>
-                        <p>Faculty: Dr. [Name 1], Prof. [Name 2]</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
 
     <!-- Footer -->
-    <footer class="footer" id="contact">
-    <div class="container">
-        <div class="footer-content">
-
-            <!-- Institute Info -->
-            <div class="footer-section">
-                <h3>Don Bosco Institute of Technology</h3>
-                <p class="footer-description">
-                    Don Bosco Institute of Technology offers high-quality education to students in the field of engineering. With our help, you can master any sphere you prefer, from computer engineering to mechanical engineering.
-                    <br><br>Premier Automobiles Road <br>
-                    Kurla (West), Mumbai – 400070
-                </p>
-                   
-            </div>
-
-            <!-- Contact Information -->
-            <div class="footer-section">
-                <h3>Contact Information</h3>
-                <div class="contact-item">
-                    <span class="contact-icon">📞</span>
-                    <span>+91 22 2504 2000</span>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Computer Engineering Department</h3>
+                    <p class="address">
+                        [College Name]<br>
+                        [Address Line 1]<br>
+                        [Address Line 2]<br>
+                        [City, State - PIN Code]
+                    </p>
                 </div>
-                <div class="contact-item">
-                    <span class="contact-icon">✉️</span>
-                    <span>info@dbit.in</span>
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p>Phone: +91-XXXXXXXXXX</p>
+                    <p>Email: cse@college.edu</p>
+                    <p>Fax: +91-XXXXXXXXXX</p>
                 </div>
-                <div class="contact-item">
-                    <span class="contact-icon">🌐</span>
-                    <span>www.dbit.in</span>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="faculty.html">Faculty</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
             </div>
-
-
-            <!-- Quick Links -->
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="about.html">About DBIT</a></li>
-                    <li><a href="academics.html">Academic Programs</a></li>
-                    <li><a href="admissions.html">Admissions</a></li>
-                    <li><a href="faculty.html">Faculty</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="students.html">Student Life</a></li>
-                </ul>
-            </div>
-
-            <!-- Other Resources -->
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <ul class="footer-links">
-                    <li><a href="https://comps.dbit.in/" target="_blank">Old Website</a></li>
-                    <li><a href="https://maps.google.com/?q=Don+Bosco+Institute+of+Technology+Kurla" target="_blank">
-                        Campus Location
-                    </a></li>
-                    <li><a href="http://naac.gov.in/index.php/en/">NAAC</a></li>
-                    <li><a href="https://www.aicte.gov.in/">AICTE</a></li>
-                </ul>
-            </div>
-
-             <!-- Social Media -->
-<div class="footer-section">
-    <h3>Follow Us</h3>
-    <div class="social-links">
-        <a href="https://www.instagram.com/dbitcompdept/" class="social-link" aria-label="Instagram">
-            <i class="fab fa-instagram"></i> 
-        </a>
-       
-        <a href="https://www.youtube.com/@DBITCOMP" class="social-link" aria-label="YouTube">
-            <i class="fab fa-youtube"></i> 
-        </a>
-    </div>
-</div>
-
-
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <p>
-                    &copy; 2025 Don Bosco Institute of Technology, Kurla, Mumbai. All Rights Reserved.
-                </p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Accessibility</a>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Computer Engineering Department, [College Name]. All rights reserved.</p>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
+    <script src="js/faculty.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
