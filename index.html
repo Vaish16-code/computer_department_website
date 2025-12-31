@@ -6,6 +6,7 @@
     <title>Home - Computer Engineering Department</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/homepage.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -13,7 +14,7 @@
         <div class="nav-container">
             <div class="nav-brand">
                 <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
-                <span class="nav-title">CSE Department</span>
+                <span class="nav-title">Comps DBIT</span>
             </div>
             
             <!-- Mobile menu button -->
@@ -45,21 +46,15 @@
 
     <!-- Hero Section with Video Background -->
     <section class="hero-section">
-        <video class="hero-video" autoplay muted loop id="hero-video">
-            <source src="videos/department-showcase.mp4" type="video/mp4">
-            <source src="videos/department-showcase.webm" type="video/webm">
-            <!-- Fallback image if video doesn't load -->
-            Your browser does not support the video tag.
-        </video>
-        
-        <!-- Video overlay for better text readability -->
-        <div class="hero-overlay"></div>
-        
+       
         <!-- Hero content -->
         <div class="hero-content" id="hero-content">
             <div class="hero-text">
-                <h1 class="hero-title">Welcome to the Computer Department</h1>
-                <p class="hero-subtitle">Explore Our Achievements, Innovations, and Opportunities</p>
+                <h1 class="hero-title">
+                    Educating Engineers with <br>
+                    <span id="typewriter" style="color: var(--white); border-right: 3px solid var(--white); padding-right: 5px;"></span>
+                </h1>
+                <p class="hero-subtitle">Inspired by the Don Bosco Way of Learning</p>
                 
                 <div class="hero-buttons">
                     <a href="#about" class="hero-btn hero-btn-primary">Learn More</a>
@@ -82,29 +77,74 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Excellence in Computer Engineering</h2>
-                    <p class="section-subtitle">Empowering minds, transforming futures through cutting-edge technology education</p>
+                    <p class="section-subtitle">Bridging the Gap Between Academic Rigor and Industry Reality.</p>
                 </div>
                 
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <div class="stat-number">1995</div>
+                        <div class="stat-val">2001</div>
                         <div class="stat-label">Established</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">120</div>
-                        <div class="stat-label">Annual Intake</div>
+                        <div class="stat-val">AICTE</div>
+                        <div class="stat-label">Approved</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">A+</div>
+                        <div class="stat-val">A</div>
                         <div class="stat-label">NAAC Grade</div>
                     </div>
+
                     <div class="stat-item">
-                        <div class="stat-number">95%</div>
-                        <div class="stat-label">Placement Rate</div>
+                        <div class="stat-number" data-target="180">0</div>
+                        <div class="stat-label">Annual Intake</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="95">0%</div>
+                        <div class="stat-label">Students Placed</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">98%</div>
+                        <div class="stat-number" data-target="98">0%</div>
                         <div class="stat-label">Pass Rate</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="13682">0</div>
+                        <div class="stat-label">Alumni</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- hod message -->
+         <section class="hod-section" id="hod-message">
+            <div class="container">
+                <div class="hod-card">
+                    <div class="hod-image-container">
+                        <img src="images/hod-pic.png" alt="Ms. Dipti Jadhav" class="hod-photo">
+                        <div class="hod-info-overlay">
+                            <h3>Ms. Dipti Jadhav</h3>
+                            <p>Head of Department</p>
+                            <p class="hod-email">dipti@dbit.in | Ext: 550</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hod-text-content">
+                        <h2 class="section-title">HOD's Message</h2>
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        
+                        <p class="hod-intro">
+                            Welcome to the Department of Computer Engineering at Don Bosco Institute of Technology! 
+                            At the heart of our department lies a steadfast commitment to academic excellence, 
+                            innovative thinking, and holistic development.
+                        </p>
+                        
+                        <div class="hod-full-text" id="hod-text">
+                            <p>In alignment with our vision, we continuously strive to develop an academic ecosystem that prioritizes an effective and engaging teaching-learning process.</p>
+                            <p>We are proud to actively encourage undergraduate research in emerging domains of computer science, enabling our students to sharpen their problem-solving abilities while upholding professional ethics.</p>
+                        </div>
+                        
+                        <button class="read-more-btn" onclick="toggleHODText()" id="hodBtn">Read Full Message</button>
                     </div>
                 </div>
             </div>
