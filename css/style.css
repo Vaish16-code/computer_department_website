@@ -438,6 +438,87 @@ body {
     color: var(--grey);
 }
 
+/* ABOUT   Image Slider Section */  
+.image-slider-section {
+    padding: 4rem 0;
+    background: var(--white);
+}
+
+.slider-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: var(--black);
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s ease;
+}
+
+.slider-card {
+    min-width: 300px;
+    background: var(--light-grey);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.slider-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.slider-card p {
+    padding: 1rem;
+    font-weight: 500;
+    color: var(--dark-grey);
+}
+
+/* Arrow Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    padding: 0.7rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.slider-btn:hover {
+    opacity: 1;
+}
+
+.slider-btn.left {
+    left: 10px;
+}
+
+.slider-btn.right {
+    right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slider-card {
+        min-width: 250px;
+    }
+}
+
 /* Announcements Section */
 .announcements-section {
     padding: 6rem 0;
@@ -1005,6 +1086,7 @@ body {
     color: var(--white);
     border-radius: 12px;
     transition: transform 0.3s ease;
+    
 }
 
 .vision-card:hover, .mission-card:hover {
@@ -1016,11 +1098,18 @@ body {
     margin-bottom: 1rem;
 }
 
-.vision-card h3, .mission-card h3 {
-    font-size: 1.3rem;
+.vision-card h3,
+.mission-card h3 {
+    background: var(--white);
+    color: var(--black);
+    padding: 0.6rem 1rem;   /* reduced height */
+    border-radius: 8px;
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;     /* slightly bigger text */
     font-weight: 600;
-    margin-bottom: 1rem;
+    text-align: center;
 }
+
 
 .overview-stats h3 {
     font-size: 1.5rem;
