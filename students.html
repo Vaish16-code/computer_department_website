@@ -7,6 +7,81 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Marquee Slider Styles */
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            background: linear-gradient(to right, #f8f9fa, #ffffff, #f8f9fa);
+            padding: 40px 0;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: marquee 40s linear infinite;
+            width: fit-content;
+            gap: 20px;
+        }
+
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-content .recruiter {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 140px;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .marquee-content .recruiter:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .recruiter-logo {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .recruiter:hover .recruiter-logo {
+            transform: scale(1.1);
+        }
+        
+        .recruiter-name {
+            display: none;
+        }
+
+        .top-recruiters h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+    </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -515,45 +590,47 @@
         <!-- Student Organizations -->
         <section class="student-organizations">
             <div class="container">
-                <h2>Student Organizations & Clubs</h2>
+                <h2>Student Chapter</h2>
                 <div class="organizations-grid">
                     <div class="org-card">
-                        <h3>Computer Society</h3>
-                        <p>The official technical society of the Computer Engineering Department</p>
+                        <h3>GDGC</h3>
+                        <p>The official Google-backed technical community fostering coding culture and modern technology skills on campus</p>
                         <ul>
-                            <li>Technical workshops and seminars</li>
-                            <li>Coding competitions and hackathons</li>
-                            <li>Industry interaction sessions</li>
+                            <li>Google-backed university club at DBIT promoting Cloud Computing, Web & App Development, DSA, and Google technologies.</li>
+                            <li>Works on peer-to-peer learning with the motto “By the students, For the students.”</li>
+                            <li>Focuses on building coding culture and making students industry-ready with latest tech trends.</li>                           
+                            <li><a href="https://gdgc.dbit.in/" target="_blank">GDGC Website</a></li>                        </ul>
+                    </div>
+
+                    <div class="org-card">
+                        <h3>ACM</h3>
+                        <p>The official computing society empowering innovation and excellence in computer science.</p>
+                        <ul>
+                            <li>Reputed ACM student chapter under the Department of Computer Engineering.</li>
+                            <li>Promotes leadership, professional growth, and networking in computing.</li>
+                            <li>Hosts Teknack, a game development event where students build and publish games.</li>
+                            <li><a href="https://dbit.acm.org/" target="_blank">ACM Website</a></li> 
                         </ul>
                     </div>
 
                     <div class="org-card">
-                        <h3>Programming Club</h3>
-                        <p>For students passionate about competitive programming and algorithms</p>
+                        <h3>IEEE Club</h3>
+                        <p>Advancing technology for the benefit of humanity.</p>
                         <ul>
-                            <li>Weekly coding practice sessions</li>
-                            <li>Contest participation and training</li>
-                            <li>Peer learning and mentorship</li>
+                            <li>Professional technical society promoting innovation in electronics and computer science.</li>
+                            <li>Focuses on standards, research, and industry-oriented learning.</li>
+                            <li>Helps students become corporate-ready through technical activities.</li>
+                            <li><a href="https://ieee.dbit.in/" target="_blank">IEEE Website</a></li> 
                         </ul>
                     </div>
 
                     <div class="org-card">
-                        <h3>Innovation & Entrepreneurship Cell</h3>
-                        <p>Fostering innovation and startup culture among students</p>
+                        <h3>Mathematics Club</h3>
+                        <p>Where logic meets creativity and math becomes fun.</p>
                         <ul>
-                            <li>Startup idea competitions</li>
-                            <li>Entrepreneur mentorship programs</li>
-                            <li>Innovation challenges and projects</li>
-                        </ul>
-                    </div>
-
-                    <div class="org-card">
-                        <h3>Research Forum</h3>
-                        <p>Platform for students interested in research and higher studies</p>
-                        <ul>
-                            <li>Research methodology workshops</li>
-                            <li>Paper writing and presentation skills</li>
-                            <li>Conference participation support</li>
+                            <li>Platform to build logical thinking and intuitive problem-solving skills.</li>
+                            <li>Promotes fun, applied learning through workshops, seminars, and competitions</li>
+                            <li>Makes mathematics engaging, practical, and enjoyable for students.</li>
                         </ul>
                     </div>
                 </div>
@@ -566,32 +643,76 @@
                 <h2>Placement Statistics</h2>
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <h3>[Percentage]%</h3>
-                        <p>Overall Placement Rate</p>
+                        <h3>250+</h3>
+                        <p> Placements</p>
                     </div>
                     <div class="stat-card">
-                        <h3>₹[Amount] LPA</h3>
+                        <h3>₹5 LPA</h3>
                         <p>Average Package</p>
                     </div>
                     <div class="stat-card">
-                        <h3>₹[Amount] LPA</h3>
+                        <h3>₹25 LPA</h3>
                         <p>Highest Package</p>
                     </div>
                     <div class="stat-card">
-                        <h3>[Number]+</h3>
+                        <h3>200+</h3>
                         <p>Recruiting Companies</p>
                     </div>
                 </div>
                 
                 <div class="top-recruiters">
-                    <h3>Top Recruiters</h3>
-                    <div class="recruiters-list">
-                        <span class="recruiter">[Company 1]</span>
-                        <span class="recruiter">[Company 2]</span>
-                        <span class="recruiter">[Company 3]</span>
-                        <span class="recruiter">[Company 4]</span>
-                        <span class="recruiter">[Company 5]</span>
-                        <span class="recruiter">[Company 6]</span>
+                    <h3>Top Companies Hiring From DBIT</h3>
+                    <div class="marquee-container">
+                        <div class="marquee-content">
+                            <div class="recruiter">
+                                <img src="images/companies/icici.jpg" alt="ICICI" class="recruiter-logo">
+                                <span class="recruiter-name">ICICI</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/jio.png" alt="Jio" class="recruiter-logo">
+                                <span class="recruiter-name">Jio</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/seclore.png" alt="Seclore" class="recruiter-logo">
+                                <span class="recruiter-name">Seclore</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/tcs.jpg" alt="TCS" class="recruiter-logo">
+                                <span class="recruiter-name">TCS</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/infosys.png" alt="Infosys" class="recruiter-logo">
+                                <span class="recruiter-name">Infosys</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/sap.png" alt="SAP" class="recruiter-logo">
+                                <span class="recruiter-name">SAP</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/hsbc.png" alt="HSBC" class="recruiter-logo">
+                                <span class="recruiter-name">HSBC</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/jacobs.png" alt="Jacobs" class="recruiter-logo">
+                                <span class="recruiter-name">Jacobs</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/L&T.png" alt="L&T" class="recruiter-logo">
+                                <span class="recruiter-name">L&T</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/godrej.png" alt="Godrej" class="recruiter-logo">
+                                <span class="recruiter-name">Godrej</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/fedral.png" alt="Fedral" class="recruiter-logo">
+                                <span class="recruiter-name">Fedral</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/capgemini.png" alt="Capgemini" class="recruiter-logo">
+                                <span class="recruiter-name">Capgemini</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
