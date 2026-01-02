@@ -270,119 +270,33 @@
             </div>
         </section>
 
-        <!-- Announcements -->
-        <section class="announcements-section">
+        <!-- testimonials section -->
+         <section class="testimonials-section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Announcements</h2>
-                    <p class="section-subtitle">Stay updated with the latest news, events, and opportunities</p>
+                <div class="section-header" style="margin-bottom: 1.5rem;">
+                    <h2 class="section-title" style="margin-bottom: 0rem;">Student & Alumni Perspectives</h2>
+                    <p class="section-subtitle">Real stories from those who have walked the DBIT Comps path.</p>
                 </div>
-                
-                <div class="announcements-grid">
-                    <div class="announcement-card">
-                        <div class="announcement-icon">📚</div>
-                        <h3>Workshops</h3>
-                        <div class="announcement-items">
-                            <div class="announcement-item">
-                                <span class="item-title">Advanced Machine Learning Workshop</span>
-                                <span class="item-date">Dec 15, 2025</span>
+                <p class="deck-hint">Click the card to swap <i class="fas fa-sync-alt"></i></p>
+                <div class="testimonial-deck-wrapper">
+                    <div class="testimonial-deck" id="testimonial-deck" onclick="swapCard()">
+                        <div class="deck-card active-card" id="main-card">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="testimonial-text" id="test-text">The department pushed me to build real-world projects and think beyond exams.</p>
+                            
+                            <div class="testimonial-profile">
+                                <img src="images/student-thumb.jpg" alt="Profile" id="test-img" class="profile-img">
+                                <div class="profile-details">
+                                    <h4 id="test-name">Aryan Prajapati</h4>
+                                    <p id="test-role">Current Student, TE Comps</p>
+                                </div>
                             </div>
-                            <div class="announcement-item">
-                                <span class="item-title">Web Development Bootcamp</span>
-                                <span class="item-date">Dec 20, 2025</span>
-                            </div>
-                            <a href="events.html" class="view-all-link">View all workshops →</a>
                         </div>
-                    </div>
-                    
-                    <div class="announcement-card">
-                        <div class="announcement-icon">📢</div>
-                        <h3>Notices</h3>
-                        <div class="announcement-items">
-                            <div class="announcement-item">
-                                <span class="item-title">Semester End Examination Schedule</span>
-                                <span class="item-date">Dec 10, 2025</span>
-                            </div>
-                            <div class="announcement-item">
-                                <span class="item-title">Project Submission Deadline</span>
-                                <span class="item-date">Dec 18, 2025</span>
-                            </div>
-                            <a href="#" class="view-all-link">View all notices →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="announcement-card">
-                        <div class="announcement-icon">🎉</div>
-                        <h3>Events</h3>
-                        <div class="announcement-items">
-                            <div class="announcement-item">
-                                <span class="item-title">Annual Tech Fest - TechnoVanza</span>
-                                <span class="item-date">Jan 5-7, 2026</span>
-                            </div>
-                            <div class="announcement-item">
-                                <span class="item-title">Coding Competition</span>
-                                <span class="item-date">Dec 22, 2025</span>
-                            </div>
-                            <a href="events.html" class="view-all-link">View all events →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Recent Activities -->
-        <section class="recent-activities-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Recent Events & Activities</h2>
-                    <p class="section-subtitle">Highlights from our vibrant department community</p>
-                </div>
-                
-                <div class="activities-grid">
-                    <div class="activity-card">
-                        <div class="activity-image-placeholder">
-                            <div class="placeholder-icon">📸</div>
-                            <span>Event Photo</span>
-                        </div>
-                        <div class="activity-content">
-                            <div class="activity-date">November 28, 2025</div>
-                            <h3>National Level Coding Competition</h3>
-                            <p>Our students secured top positions in the inter-college programming contest, showcasing exceptional problem-solving skills and algorithmic thinking.</p>
-                            <div class="activity-meta">
-                                <span class="activity-category">Competition</span>
-                            </div>
-                        </div>
+                        <div class="deck-card ghost-card-1"></div>
+                        <div class="deck-card ghost-card-2"></div>
                     </div>
                     
-                    <div class="activity-card">
-                        <div class="activity-image-placeholder">
-                            <div class="placeholder-icon">🤖</div>
-                            <span>Project Demo</span>
-                        </div>
-                        <div class="activity-content">
-                            <div class="activity-date">November 25, 2025</div>
-                            <h3>AI & Robotics Workshop</h3>
-                            <p>Successful completion of a 3-day workshop on Artificial Intelligence and Robotics with hands-on projects and industry expert sessions.</p>
-                            <div class="activity-meta">
-                                <span class="activity-category">Workshop</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="activity-card">
-                        <div class="activity-image-placeholder">
-                            <div class="placeholder-icon">🏆</div>
-                            <span>Award Ceremony</span>
-                        </div>
-                        <div class="activity-content">
-                            <div class="activity-date">November 20, 2025</div>
-                            <h3>Student Research Excellence Award</h3>
-                            <p>Recognition ceremony for outstanding research contributions by our final year students in machine learning and cybersecurity domains.</p>
-                            <div class="activity-meta">
-                                <span class="activity-category">Achievement</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -466,6 +380,12 @@
                 </div>
             </div>
         </section>
+
+        <!-- Announcements -->
+
+        <!-- Recent Activities -->
+
+        
     </main>
 
     <!-- Footer -->
