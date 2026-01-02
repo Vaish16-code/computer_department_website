@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="images/favicon-img.jpg">
     <title>About Us - Computer Engineering Department</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/about.css">
@@ -27,8 +28,13 @@
             </button>
             
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link ">Home</a></li>
-                <li><a href="about.html" class="nav-link active">About</a></li>
+                 <li><a href="index.html" class="nav-link ">Home</a></li>
+                <li class="dropdown">
+                    <a href="#about" class="nav-link active">About</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#DBIT-Vision-Mission">DBIT Vision & Mission</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <a href="academics.html" class="nav-link">Academics</a>
                     <ul class="dropdown-menu">
@@ -52,7 +58,7 @@
             <div class="page-hero-content">
                 <h1>About Our Department</h1>
                 <p>Pioneering excellence in computer science education and research since our establishment</p>
-                <div class="hero-stats">
+                <!--<div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">25+</span>
                         <span class="stat-label">Years of Excellence</span>
@@ -65,30 +71,52 @@
                         <span class="stat-number">50+</span>
                         <span class="stat-label">Faculty Members</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </div>-->
 
-    <section class="DBIT-Vision-Mission">
-        <div class="container">
-            <div class="overview-grid">
-                <div class="overview-content">
-                    <h2>Don Bosco Institute of Technology Vision and Mission</h2>
-                    <div class="vision-mission">
-                        <div class="vision-card">
-                            <h3>Vision</h3>
-                            <p>DBIT will be known to have an innovative, enjoyable and holistic learning environment that enhances individual success, the Don Bosco way. We seek to make DBIT the preferred choice of students, employers hiring engineering graduates and practitioners seeking further education.</p>
-                        </div>
-                        <div class="mission-card">
-                            <h3>Mission</h3>
-                            <p>We aim to provide service in the best tradition of Don Bosco, by seeking to develop entrepreneurial attitude and social commitment in every student we train. DBIT will make a contribution to society through its educative process in a diverse and stimulating learning environment wherein students, faculty and staff can strive and grow.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-    </section>
+    </section> 
+      <section class="about-info">
+                <div class="information-about">
+                    <p>Department of Computer Engineering endeavors to provide best professional opportunities to our students and look forward to their bright future. We as a team resolve to take the department to heights of success and glory and prepare for the forthcoming challenges. Thanks to the efforts of our staff and students. I invite you to browse our website to get a glimpse of some of the exciting opportunities available through our department.</p>
+                    <br>
+                    <p>The objective is to empower our students with latest technical knowledge and skills by providing them with the best teaching faculty, state of the art lab facilities and excellent research and development environment. The motivation is not just to nurture their technical skills but to provide professional grooming and guidance so that our students come-up as thorough professionals and inspiring individuals. To meet the objectives the department pays special emphasis on teaching and hands on practical work. The students exhibit their learning in the final year projects. The final year projects of our students have won many awards</p>
+                </div>
+       </section>
+     
+
+       <section class="vision-mission-single">
+    <div class="container">
+        <h2 class="vm-title">Don Bosco Institute of Technology<br>Vision & Mission</h2>
+
+        <div class="vm-card">
+            <!-- Toggle -->
+            <div class="vm-toggle">
+                <button class="vm-btn active" onclick="showVision()">Vision</button>
+                <button class="vm-btn" onclick="showMission()">Mission</button>
+            </div>
+
+            <!-- Content -->
+            <div class="vm-content">
+                <p id="visionText">
+                    DBIT will be known to have an innovative, enjoyable and holistic learning environment
+                    that enhances individual success, the Don Bosco way. We seek to make DBIT the
+                    preferred choice of students, employers hiring engineering graduates and
+                    practitioners seeking further education.
+                </p>
+
+                <p id="missionText">
+                    We aim to provide service in the best tradition of Don Bosco, by seeking to develop
+                    entrepreneurial attitude and social commitment in every student we train. DBIT
+                    will make a contribution to society through its educative process in a diverse and
+                    stimulating learning environment wherein students, faculty and staff can strive
+                    and grow.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Department Overview -->
     <section class="Department-overview">
@@ -432,5 +460,31 @@
 </footer>
 
     <script src="js/script.js"></script>
+
+    <script>
+    const visionText = document.getElementById("visionText");
+    const missionText = document.getElementById("missionText");
+    const buttons = document.querySelectorAll(".vm-btn");
+
+    // Default state
+    visionText.classList.add("active");
+
+    function showVision() {
+        buttons[0].classList.add("active");
+        buttons[1].classList.remove("active");
+
+        visionText.classList.add("active");
+        missionText.classList.remove("active");
+    }
+
+    function showMission() {
+        buttons[1].classList.add("active");
+        buttons[0].classList.remove("active");
+
+        missionText.classList.add("active");
+        visionText.classList.remove("active");
+    }
+</script>
+
 </body>
 </html>

@@ -54,6 +54,105 @@
     font-weight: 500;
 }
 
+/* ...existing code... */
+
+.about-info {
+    padding: 4rem 0;
+    background: var(--white);
+}
+
+.information-about {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 3rem;  /* Increased horizontal padding for more space on left and right */
+    background: var(--light-grey);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.information-about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark-grey);
+    margin: 0;
+    text-align: justify;
+}
+
+/* Single Card Vision & Mission */
+
+.vision-mission-single {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.vm-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: var(--black);
+}
+
+.vm-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 3rem;
+}
+
+/* Toggle */
+.vm-toggle {
+    display: flex;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto 2rem;
+}
+
+.vm-btn {
+    background: transparent;
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.vm-btn.active {
+    background: var(--white);
+    color: var(--black);
+}
+
+/* Content */
+.vm-content {
+    position: relative;
+    min-height: 160px;
+}
+
+.vm-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.vm-content p.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
+
 /* Features Section */
 .features-section {
     padding: 6rem 0;
@@ -286,6 +385,7 @@
     color: var(--grey);
     font-weight: 500;
     white-space: nowrap;
+  
 }
 
 .view-all-link {
@@ -298,6 +398,7 @@
     transition: var(--transition);
 }
 
+
 .view-all-link:hover {
     color: var(--dark-grey);
     transform: translateX(5px);
@@ -309,7 +410,7 @@
     padding: 6rem 0 4rem;
     color: var(--white);
     position: relative;
-    min-height: 400px;
+    min-height: 200px;
 }
 
 .page-hero::before {
@@ -382,7 +483,7 @@
 
 /* Department Overview */
 .department-overview {
-    padding: 5rem 0;
+    padding: 5rem 0 7rem; /* top | left-right | bottom */
     background: var(--white);
 }
 
