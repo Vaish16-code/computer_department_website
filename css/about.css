@@ -54,7 +54,6 @@
     font-weight: 500;
 }
 
-/* ...existing code... */
 
 .about-info {
     padding: 4rem 0;
@@ -245,7 +244,7 @@
     border-radius: 12px;
     overflow: hidden;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .slider-card img {
@@ -827,3 +826,21 @@
     line-height: 1.6;
 }
 
+.infrastructure{
+    margin-bottom: 3rem;
+}
+
+.infra-info{
+    padding: 1rem 1rem;
+    margin: 0 auto 2rem;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align:justify;
+}
+.infra-info p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark-grey);
+    margin-bottom: 2rem;
+}

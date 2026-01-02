@@ -29,12 +29,7 @@
             
             <ul class="nav-menu" id="nav-menu">
                  <li><a href="index.html" class="nav-link ">Home</a></li>
-                <li class="dropdown">
-                    <a href="#about" class="nav-link active">About</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#DBIT-Vision-Mission">DBIT Vision & Mission</a></li>
-                    </ul>
-                </li>
+                <li><a href="about.html" class="nav-link active">About Us</a></li>
                 <li class="dropdown">
                     <a href="academics.html" class="nav-link">Academics</a>
                     <ul class="dropdown-menu">
@@ -243,7 +238,7 @@
             <div class="leadership-card">
                 <div class="leader-info">
                     <div class="leader-image">
-                        <img src="event_images\hod_image.jpeg" alt="Head of Department">
+                        <img src="event_images\hod.jpeg" alt="Head of Department">
                     </div>
                     <div class="leader-details">
                         <h3>Ms. Dipti Jadhav</h3>
@@ -332,31 +327,52 @@
     </section> -->
 
                       <!-- Image Showcase Slider -->
-            <section class="image-slider-section" id="facilities">
+            
+            <section class="infrastructure">
                 <div class="container">
-                    <h2 class="slider-title">Department Highlights</h2>
+                    <h2 class="slider-title">Department Infrastructure</h2>
+                   <div class="infra-info"><p>The department focuses on student development through project activity. To do this, teachers motivate students to carry out project development right from their second year of engineering. The facilities available in all the laboratories can be accessed throughout the working hours of the department.<br>
+                    <br>>Project Lab<br>
+                    >DBMS Lab<br>
+                    >Open Source Lab Lab<br>
+                    >Software Engineering Lab<br>
+                    >Image Procesing Lab<br>
+                    >Hardware Lab<br>
+                    >Advance Technology Lab<br>
+                    >Network and Security Lab<br>
+                   </p></div> 
 
                     <div class="slider-wrapper">
                         <button class="slider-btn left" onclick="slideLeft()">&#10094;</button>
 
                         <div class="slider-track" id="sliderTrack">
                             <div class="slider-card">
-                                <img src="event_images/image1.jpg" alt="Image 1">
+                                <img src="event_images\complab.jpg" alt="Image 1">
+                                <p>COMP LAB-1</p>
+                            </div>
+
+                            <div class="slider-card">
+                                <img src="event_images\Bosco Hall.jpg" alt="Image 2">
+                                <p>Bosco Hall</p>
+                            </div>
+
+                            <div class="slider-card">
+                                <img src="event_images\complab2.jpg" alt="Image 3">
                                 <p>Describe Image</p>
                             </div>
 
                             <div class="slider-card">
-                                <img src="event_images/image2.jpg" alt="Image 2">
+                                <img src="event_images\seminar_hall.jpg" alt="Image 4">
                                 <p>Describe Image</p>
                             </div>
 
-                            <div class="slider-card">
-                                <img src="event_images/image3.jpg" alt="Image 3">
+                             <div class="slider-card">
+                                <img src="event_images\seminar_hall.jpg" alt="Image 4">
                                 <p>Describe Image</p>
                             </div>
 
-                            <div class="slider-card">
-                                <img src="event_images/image4.jpg" alt="Image 4">
+                             <div class="slider-card">
+                                <img src="event_images\seminar_hall.jpg" alt="Image 4">
                                 <p>Describe Image</p>
                             </div>
                         </div>
@@ -484,6 +500,34 @@
         missionText.classList.add("active");
         visionText.classList.remove("active");
     }
+
+    let currentSlide = 0;
+const sliderTrack = document.getElementById('sliderTrack');
+const slides = sliderTrack.children;
+const totalSlides = slides.length;
+const slideWidth = slides[0].offsetWidth + 20; // Adjust for margin/padding if needed
+
+function slideLeft() {
+    if (currentSlide > 0) {
+        currentSlide--;
+        updateSlider();
+    }
+}
+
+function slideRight() {
+    if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        updateSlider();
+    }
+}
+
+function updateSlider() {
+    const translateX = -currentSlide * slideWidth;
+    sliderTrack.style.transform = `translateX(${translateX}px)`;
+}
+
+// Initialize slider position
+updateSlider();
 </script>
 
 </body>
