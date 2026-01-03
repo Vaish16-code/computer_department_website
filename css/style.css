@@ -39,6 +39,7 @@ body {
 
 
 /* Navigation */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -62,24 +63,37 @@ body {
 }
 
 .nav-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+   display: flex;
+    align-items: center;  /* Vertically center logo with text */
+    gap: 12px;           /* Clean space between image and text */
     color: var(--white);
     text-decoration: none;
 }
 
 .nav-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--white);
-    padding: 2px;
+    height: 45px;        /* Fixed height prevents it from being huge */
+    width: auto;         /* Auto width keeps the correct aspect ratio */
+    object-fit: contain; /* Prevents the image from looking squashed/stretched */
+    display: block;      /* Removes extra space below image */
 }
 
 .nav-title {
     font-size: 1.25rem;
     font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    color: var(--white);
+}
+/* Optional: Make it slightly smaller on mobile phones */
+@media (max-width: 768px) {
+    .nav-logo {
+        height: 35px;
+    }
+    .nav-title {
+        font-size: 1.2rem;
+    }
 }
 
 .nav-menu {
@@ -118,6 +132,7 @@ body {
 .nav-link:hover {
     color: var(--light-grey);
 }
+
 
 /* Dropdown */
 .dropdown {
