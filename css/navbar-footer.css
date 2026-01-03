@@ -1,0 +1,508 @@
+/* Navigation */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.nav-brand {
+   display: flex;
+    align-items: center;  /* Vertically center logo with text */
+    gap: 12px;           /* Clean space between image and text */
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-logo {
+    height: 45px;        /* Fixed height prevents it from being huge */
+    width: auto;         /* Auto width keeps the correct aspect ratio */
+    object-fit: contain; /* Prevents the image from looking squashed/stretched */
+    display: block;      /* Removes extra space below image */
+}
+
+.nav-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    color: var(--white);
+}
+/* Optional: Make it slightly smaller on mobile phones */
+@media (max-width: 768px) {
+    .nav-logo {
+        height: 35px;
+    }
+    .nav-title {
+        font-size: 1.2rem;
+    }
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--white);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--light-grey);
+}
+
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--black);
+    min-width: 200px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    list-style: none;
+    padding: 0.5rem 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+/* Footer Brand */
+/* =========================================
+   FOOTER STYLES (Compact & Professional)
+   ========================================= */
+
+/* Base Footer Layout */
+.site-footer {
+    background-color: #050505; /* Pure Blackish-Grey */
+    color: #aeaeae; /* Silver Text */
+    position: relative;
+    padding-top: 50px; /* REDUCED from 80px */
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+/* Decorative Top Line */
+.footer-top-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #ffffff, transparent);
+    opacity: 0.3; /* Subtle Shine */
+}
+
+/* --- NEW CODE (Paste this) --- */
+.container {
+    max-width: 1500px; /* Matches Home Page Width */
+    width: 90%;        /* Ensures it takes up space on smaller screens too */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Grid Layout */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 0.8fr 1fr 1.2fr; /* Adjusted for better spacing */
+    gap: 40px;
+    margin-bottom: 40px; /* REDUCED from 70px to remove bottom gap */
+    animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* --- Brand Column --- */
+.brand-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.footer-logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.footer-logo-img {
+    height: 45px;
+    width: auto;
+    background: #fff;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.logo-text-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo-main {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+}
+
+.logo-sub {
+    color: #888;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 2px;
+}
+
+.footer-desc {
+    color: #999;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 320px;
+}
+
+/* Accreditation Badges */
+.accreditation-badges {
+    display: flex;
+    gap: 10px;
+}
+
+.badge {
+    background: #151515;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.badge i { color: #fff; }
+
+.badge:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+    transform: translateY(-2px);
+}
+
+.badge:hover i { color: #000; }
+
+/* --- Headings & Links --- */
+.footer-heading {
+    color: #fff;
+    font-size: 1.05rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links a i {
+    font-size: 0.7rem;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.footer-links a:hover i {
+    opacity: 1;
+    color: #fff;
+}
+
+/* --- Contact Section --- */
+.contact-card {
+    background: #0f0f0f;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #1f1f1f;
+}
+
+.contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.contact-row:last-child { margin-bottom: 0; }
+
+.icon-box {
+    width: 18px;
+    color: #fff;
+    margin-top: 3px;
+    text-align: center;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-btn {
+    width: 38px;
+    height: 38px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 1rem;
+}
+
+.social-btn:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+    transform: translateY(-3px);
+}
+
+/* --- Copyright Bar --- */
+.footer-bar {
+    background: #000;
+    padding: 20px 0; /* Reduced Padding */
+    border-top: 1px solid #1a1a1a;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.footer-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legal-links a {
+    color: #666;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.legal-links a:hover { color: #fff; }
+
+.separator { margin: 0 10px; color: #333; }
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+        margin-bottom: 30px;
+    }
+    .footer-logo-link, .brand-wrapper, .contact-row, .accreditation-badges, .footer-links a, .social-icons {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-heading::after { left: 50%; transform: translateX(-50%); }
+    .footer-bar-content { flex-direction: column; gap: 10px; }
+}
+
+/* RESPONSIVE */
+
+/* Tablets */
+@media (max-width: 1100px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-bottom-links a {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: none; /* hidden initially */
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+/* Force Header/Hero sections to be Full Width */
+.page-header, 
+.hero, 
+.hero-section {
+    width: 100vw;              /* 100% of Viewport Width */
+    max-width: 100%;           /* No limit */
+    margin-left: calc(-50vw + 50%); /* Magic trick to center full-width items inside a container */
+    margin-right: calc(-50vw + 50%);
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;          /* Remove rounded corners if any */
+}
+
+/* Ensure the text inside the header stays centered and readable */
+.page-header .container, 
+.hero .container {
+    max-width: 1500px;         /* Keep text aligned with body content */
+    margin: 0 auto;
+    width: 90%;
+}
