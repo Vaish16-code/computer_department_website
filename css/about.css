@@ -56,7 +56,7 @@
 
 
 .about-info {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
     background: var(--white);
 }
 
@@ -76,13 +76,17 @@
     color: var(--dark-grey);
     margin: 0;
     text-align: justify;
+    margin-bottom: 1rem; /* reduce paragraph gaps */
+
 }
 
 /* Single Card Vision & Mission */
 
 .vision-mission-single {
-    padding: 5rem 0;
+    padding: 1rem 0;
     background: var(--white);
+      margin-top: 0 !important;
+
 }
 
 .vm-title {
@@ -99,7 +103,8 @@
     background: var(--black);
     color: var(--white);
     border-radius: 16px;
-    padding: 3rem;
+    padding: 1.5rem;
+    margin-top: 1rem;
 }
 
 /* Toggle */
@@ -406,7 +411,7 @@
 /* About Page Specific Styles */
 .page-hero {
     background: linear-gradient(135deg, var(--black) 0%, rgba(0, 0, 0, 0.9) 100%);
-    padding: 6rem 0 4rem;
+    padding: 4rem 0 3rem;
     color: var(--white);
     position: relative;
     min-height: 200px;
@@ -482,14 +487,32 @@
 
 /* Department Overview */
 .department-overview {
-    padding: 5rem 0 7rem; /* top | left-right | bottom */
+    padding: 3rem 0 5rem; /* top | left-right | bottom */
     background: var(--white);
+}
+
+.department-overview h2 {
+    text-align:center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: black;
+}
+
+.overview-content h2 {
+    grid-column: 1 / -1;   /* span full grid width */
+    text-align:center;
+    margin-bottom: 1rem;
+    
+}
+.overview-content {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 .overview-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    gap: 4rem;
+    gap: 2rem;
     align-items: start;
 }
 
@@ -579,8 +602,22 @@
 
 /* Journey Timeline */
 .journey-timeline {
-    padding: 7rem 0;
+    padding: 1rem 0;
     background: var(--light-grey);
+}
+
+.section-title::after {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #000;
+    margin: 12px auto 0;
+    border-radius: 2px;
 }
 
 .section-header {
@@ -604,6 +641,8 @@
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
+    margin-top: 1rem;
+
 }
 
 .timeline::before {
@@ -637,6 +676,7 @@
     padding-left: 2rem;
     padding-right: 0;
     margin-left: 50%;
+    margin-bottom: 2rem; /* reduce huge gaps */
 }
 
 .timeline-marker {
@@ -844,6 +884,7 @@
 
 .infrastructure{
     margin-bottom: 3rem;
+    padding: 3rem 0;
 }
 
 .infra-info{
@@ -1019,7 +1060,7 @@
    INFRASTRUCTURE SLIDER
 ================================ */
 .infrastructure {
-    padding: 5rem 0;
+    padding: 2rem 0;
     background: #fff;
 }
 
@@ -1027,6 +1068,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .infra-slider {
@@ -1113,4 +1155,64 @@
     .infra-arrow.right {
         right: -10px;
     }
+}
+/* ===============================
+   PSO & PEO BOX (Department Overview)
+================================ */
+
+.pso-peo-box {
+    background: var(--white);
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    padding: 1.8rem 2rem;      /* smaller padding */
+    max-height: 520px;         /* controlled height */
+    overflow-y: auto;          /* scroll if needed */
+    align-self: flex-end;      /* align base with Mission */
+}
+
+
+
+.pso-peo-box h3 {
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 0.8rem;
+    margin-top: 1.4rem;
+    font-size: 1.15rem;
+}
+
+.pso-peo-box h3:first-child {
+    margin-top: 0;
+}
+
+.pso-peo-box ul {
+    padding-left: 1.2rem;
+}
+
+.pso-peo-box li {
+    margin-bottom: 0.45rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--dark-grey);
+   
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    align-items: end; /* 🔥 aligns bases */
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+section {
+    padding: 3rem 0;   /* was likely 5–6rem */
 }

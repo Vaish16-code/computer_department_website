@@ -87,12 +87,12 @@
         /* Modern Student Achievements Styles */
         .student-achievements {
             background: #f5f5f5;
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         .student-achievements .section-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 70px;
             padding: 0 20px;
             max-width: 1400px;
             margin-left: auto;
@@ -116,7 +116,7 @@
         /* Achievement Category Section */
         .achievement-category-section {
             max-width: 1400px;
-            margin: 0 auto 60px;
+            margin: 0 auto 80px;
             padding: 0 20px;
         }
 
@@ -126,8 +126,8 @@
             letter-spacing: 1.5px;
             text-transform: uppercase;
             color: #666;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
+            margin-bottom: 30px;
+            padding-bottom: 12px;
             border-bottom: 2px solid #e0e0e0;
         }
 
@@ -752,6 +752,355 @@
             animation-delay: 0.2s;
         }
 
+        /* ==================== STUDENT HIGHLIGHTS SECTION ==================== */
+        .student-highlights {
+            background: #fff;
+            padding: 80px 0 60px;
+            position: relative;
+        }
+
+        .student-highlights .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .student-highlights h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .student-highlights .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 400;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .highlight-card {
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            cursor: pointer;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        .highlight-card .student-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #000;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-card:hover .student-image {
+            transform: scale(1.05);
+        }
+
+        .highlight-card h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .highlight-card .achievement-brief {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            min-height: 45px;
+        }
+
+        .highlight-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            border: 1.5px solid #000;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #000;
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .highlight-card:hover .highlight-badge {
+            background: #000;
+            color: #fff;
+        }
+
+        /* ==================== PROGRESSIVE REVEAL STYLES ==================== */
+        .achievement-cards-grid.collapsible {
+            position: relative;
+        }
+
+        .achievement-cards-grid.collapsible.collapsed .achievement-card:nth-child(n+4) {
+            display: none;
+        }
+
+        .view-more-container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .view-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border: 2px solid #000;
+            background: #fff;
+            color: #000;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .view-more-btn:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .view-more-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .view-more-btn:hover i {
+            transform: translateX(4px);
+        }
+
+        .view-more-btn.expanded i {
+            transform: rotate(180deg);
+        }
+
+        /* ==================== MICRO-BADGES ON ACHIEVEMENT CARDS ==================== */
+        .achievement-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .micro-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 12px;
+            border: 1.5px solid #000;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #000;
+            background: #fff;
+            white-space: nowrap;
+        }
+
+        .micro-badge i {
+            font-size: 0.85em;
+        }
+
+        /* ==================== FADE-IN SCROLL ANIMATIONS ==================== */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger animation for cards */
+        .achievement-card,
+        .highlight-card,
+        .project-card {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .achievement-card.visible,
+        .highlight-card.visible,
+        .project-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==================== IMPROVED STUDENT RESOURCES ==================== */
+        .student-resources {
+            background: #f8f8f8;
+            padding: 80px 0;
+        }
+
+        .student-resources .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .student-resources h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .student-resources .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 400;
+        }
+
+        .resources-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .resource-card {
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 20px;
+            padding: 50px 60px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 0 auto;
+        }
+
+        .resource-card .resource-icon {
+            font-size: 3.5rem;
+            color: #000;
+            margin-bottom: 25px;
+        }
+
+        .resource-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #000;
+            margin-bottom: 15px;
+        }
+
+        .resource-card > p {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 35px;
+            line-height: 1.6;
+        }
+
+        .resource-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .resource-cta-btn {
+            padding: 14px 32px;
+            border: 2px solid #000;
+            background: #fff;
+            color: #000;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .resource-cta-btn:hover {
+            background: #000;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive Highlights */
+        @media (max-width: 1200px) {
+            .highlights-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .highlights-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .student-highlights h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .highlights-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .student-highlights {
+                padding: 60px 0 40px;
+            }
+
+            .student-highlights h2 {
+                font-size: 1.9rem;
+            }
+
+            .highlight-card {
+                padding: 28px 20px;
+            }
+
+            .resource-card {
+                padding: 40px 30px;
+            }
+
+            .resource-cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .resource-cta-btn {
+                width: 100%;
+            }
+        }
+
         @keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
@@ -1039,29 +1388,74 @@
     <!-- Main Content -->
     <main class="main-content">
 
-        <!-- Student Resources -->
-        <section class="student-resources">
+        <!-- Student Highlights / Proud Moments -->
+        <section class="student-highlights fade-in-section">
             <div class="container">
-                <h2>Student Resources</h2>
-                <div class="resources-grid" style="max-width: 800px; margin: 0 auto;">
-                    <div class="resource-card" style="text-align: center;">
+                <h2>Student Highlights</h2>
+                <p class="section-subtitle">Celebrating our brightest achievers and their remarkable accomplishments</p>
+                
+                <div class="highlights-grid">
+                    <!-- Highlight 1 -->
+                    <div class="highlight-card">
+                        <img src="images/achievement/Shreya-Chakraborty.png" alt="Shreya Chakraborty" class="student-image">
+                        <h4>Shreya Chakraborty</h4>
+                        <p class="achievement-brief">Perfect 10 CGPA in TE Computer Engineering</p>
+                        <span class="highlight-badge">🎓 10 Pointer</span>
+                    </div>
+
+                    <!-- Highlight 2 -->
+                    <div class="highlight-card">
+                        <img src="images/achievement/Jayesh-Wani.png" alt="Jayesh Wani" class="student-image">
+                        <h4>Jayesh Wani</h4>
+                        <p class="achievement-brief">Winner at Google's Build and Blog Marathon</p>
+                        <span class="highlight-badge">🏆 Winner</span>
+                    </div>
+
+                    <!-- Highlight 3 -->
+                    <div class="highlight-card">
+                        <img src="images/banner/Saniya-Rawat.png" alt="Saniya Rawat" class="student-image">
+                        <h4>Saniya Rawat</h4>
+                        <p class="achievement-brief">Placed at SAP with exceptional package</p>
+                        <span class="highlight-badge">💼 Placed</span>
+                    </div>
+
+                    <!-- Highlight 4 -->
+                    <div class="highlight-card">
+                        <img src="images/achievement/Shweta-Nadar.png" alt="Shweta Nadar" class="student-image">
+                        <h4>Shweta Nadar</h4>
+                        <p class="achievement-brief">Multiple sports championships winner</p>
+                        <span class="highlight-badge">⚽ Sports Champion</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Student Resources -->
+        <section class="student-resources fade-in-section">
+            <div class="container">
+                <h2>Academic Resources</h2>
+                <p class="section-subtitle">Everything you need for exam preparation and academic success</p>
+                
+                <div class="resources-grid">
+                    <div class="resource-card">
                         <div class="resource-icon"><i class="fa-solid fa-book"></i></div>
-                        <h3>Access Question Papers by Year</h3>
-                        <p>Download previous year examination papers for exam preparation</p>
-                        <ul class="resource-links" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
-                            <li><a href="#" style="font-size: 1.1rem; font-weight: 600;">Second Year (SE)</a></li>
-                            <li><a href="#" style="font-size: 1.1rem; font-weight: 600;">Third Year (TE)</a></li>
-                            <li><a href="#" style="font-size: 1.1rem; font-weight: 600;">Final Year (BE)</a></li>
-                        </ul>
+                        <h3>Question Papers Archive</h3>
+                        <p>Access previous year examination papers to prepare effectively for your upcoming exams</p>
+                        <div class="resource-cta-buttons">
+                            <a href="#" class="resource-cta-btn">SE</a>
+                            <a href="#" class="resource-cta-btn">TE</a>
+                            <a href="#" class="resource-cta-btn">BE</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Student Projects -->
-        <section class="student-projects" id="student-projects">
+        <section class="student-projects fade-in-section" id="student-projects">
             <div class="container">
-                <h2>Student Projects</h2>
+                <h2>Ideas Built by Students</h2>
+                <p class="section-subtitle" style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 40px;">Innovative projects showcasing creativity, technical skills, and problem-solving excellence</p>
                 
                 <!-- Project Categories -->
                 <div class="project-categories">
@@ -1178,10 +1572,10 @@ Suyash Kadam </p>
         </section>
 
         <!-- Student Achievements -->
-        <section id="achievements" class="student-achievements">
+        <section id="achievements" class="student-achievements fade-in-section">
             <div class="section-header">
-                <h2>Student Achievements</h2>
-                <p>Celebrating excellence across academics, innovation, research, and leadership</p>
+                <h2>Excellence Beyond Classrooms</h2>
+                <p>Celebrating achievements across academics, innovation, research, sports, and leadership</p>
             </div>
 
             <!-- Academic Excellence -->
@@ -1195,6 +1589,10 @@ Suyash Kadam </p>
                                 <h4>Shreya Chakraborty</h4>
                                 <p>Academics-10 pointer TE Computer Engineering</p>
                                 <p>Date 4/02/2025</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-graduation-cap"></i> 10 Pointer</span>
+                                    <span class="micro-badge"><i class="fas fa-trophy"></i> TE</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1206,6 +1604,10 @@ Suyash Kadam </p>
                                 <h4>Tushita Prashant Patil</h4>
                                 <p>Semester 3 End of semester exams 10 pointer<br>Outstanding academic performance</p>
                                 <p>Date 7/03/2025</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-graduation-cap"></i> 10 Pointer</span>
+                                    <span class="micro-badge"><i class="fas fa-medal"></i> Sem 3</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1217,6 +1619,10 @@ Suyash Kadam </p>
                                 <h4>Shraddha Gajanan Desai</h4>
                                 <p>Semester 3 End of semester exams10 pointer</p>
                                 <p>Date 7/03/2025</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-graduation-cap"></i> 10 Pointer</span>
+                                    <span class="micro-badge"><i class="fas fa-medal"></i> Sem 3</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1235,6 +1641,10 @@ Suyash Kadam </p>
                                 <p>DBIT First 24-Hour Hackathon</p>
                                 <p>Achievement: COLDERS Secures 2nd Place at Codeverse</p>
                                 <p>Date: 2nd March 2025</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-award"></i> 2nd Place</span>
+                                    <span class="micro-badge"><i class="fas fa-code"></i> Hackathon</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1246,6 +1656,10 @@ Suyash Kadam </p>
                                 <p> TYNET 2.0: International Women's Hackathon</p>
                                 <p>Achievement: Selected as one of the top 10 finalist teams internationally</p>
                                    <p>Date: 11th December 2024</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-globe"></i> Top 10</span>
+                                    <span class="micro-badge"><i class="fas fa-code"></i> Hackathon</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1258,16 +1672,20 @@ Suyash Kadam </p>
                                 <p>My Idea Hackathon 2025</p>
                                 <p>Achievement: Top 10 and Special Prize Winner </p>
                                     <p>Date: 18th March 2025</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-trophy"></i> Winner</span>
+                                    <span class="micro-badge"><i class="fas fa-star"></i> Special Prize</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Achievements -->
+            <!-- Individual Achievements -->
             <div class="achievement-category-section">
-                <h3>Achievements</h3>
-                <div class="achievement-cards-grid">
+                <h3>Individual Achievements</h3>
+                <div class="achievement-cards-grid collapsible collapsed" id="individual-grid">
                     <div class="achievement-card">
                         <div class="achievement-profile">
                             <img src="images/achievement/Jayesh-Wani.png" alt="Jayesh Wani">
@@ -1276,6 +1694,10 @@ Suyash Kadam </p>
                                 <p>Event: Googles Build and Blog Marathon, Mumbai</p>
                                 <p>Achievement: Winner</p>
                                 <p>Date 6th December 2024</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-trophy"></i> Winner</span>
+                                    <span class="micro-badge"><i class="fab fa-google"></i> Google</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1287,6 +1709,10 @@ Suyash Kadam </p>
                                 <h4>Nicole Saldanha</h4>
                                 <p>Intercollegiate chess tournament at XIE: 1st place. All mumbai intercollegiate mumbai university chess tournament: Rank 14</p>
                                 <p>Date 11/01/2025</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-chess"></i> Chess</span>
+                                    <span class="micro-badge"><i class="fas fa-trophy"></i> 1st Place</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1298,22 +1724,24 @@ Suyash Kadam </p>
                                 <h4>Sanjay Chhedilal Yadav</h4>
                                 <p>Debugging Marathon at 1st Position</p>
                                 <p>Date 13/03/2025</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-trophy"></i> 1st Place</span>
+                                    <span class="micro-badge"><i class="fas fa-bug"></i> Debugging</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- Achievements -->
-            <div class="achievement-category-section">
-                <h3>Achievements</h3>
-                <div class="achievement-cards-grid">
                     <div class="achievement-card">
                         <div class="achievement-profile">
                             <img src="images/achievement/Yash-Shankar-Khatpe.png" alt="Yash Shankar Khatpe">
                             <div class="achievement-profile-info">
                                 <h4>Yash Shankar Khatpe </h4>
                                 <p>Google Developer Group on Campus Solution Challenge-Selected among the Top 105 teams</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fab fa-google"></i> GDG</span>
+                                    <span class="micro-badge"><i class="fas fa-star"></i> Top 105</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1324,6 +1752,10 @@ Suyash Kadam </p>
                             <div class="achievement-profile-info">
                                 <h4>Shubham Keluskar</h4>
                                 <p>Achievement: Department Triads Winner : 2024-2025<br>Date: 5th October 2024</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-trophy"></i> Winner</span>
+                                    <span class="micro-badge"><i class="fas fa-users"></i> Triads</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1334,15 +1766,24 @@ Suyash Kadam </p>
                             <div class="achievement-profile-info">
                                 <h4>Aarol D'Souza</h4>
                                 <p>Competitive Programming-2nd Place<br>Date of achievement- 28/09/2024</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-award"></i> 2nd Place</span>
+                                    <span class="micro-badge"><i class="fas fa-code"></i> Programming</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="view-more-container">
+                    <button class="view-more-btn" onclick="toggleAchievements('individual-grid', this)">
+                        View More Achievements <i class="fas fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
 
             <!-- Sports -->
             <div class="achievement-category-section">
-                <h3>Sports</h3>
+                <h3>Sports Achievements</h3>
                 <div class="achievement-cards-grid">
                     <div class="achievement-card">
                         <div class="achievement-profile">
@@ -1355,6 +1796,10 @@ Suyash Kadam </p>
                                 1st Place, Box Cricket – Hysteria (2024)<br>
                                 1st Place, Basketball – Hysteria (2024)<br>
                                 2nd Place, Rink Football – Hysteria (2024)</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-basketball-ball"></i> Basketball</span>
+                                    <span class="micro-badge"><i class="fas fa-trophy"></i> Multi-Sport</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1365,6 +1810,10 @@ Suyash Kadam </p>
                             <div class="achievement-profile-info">
                                 <h4>Abdullah Anis Ahmad Ansari</h4>
                                 <p>Carrom Doubles- 2nd place <br>Date 4/02/2025</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-award"></i> 2nd Place</span>
+                                    <span class="micro-badge"><i class="fas fa-gamepad"></i> Carrom</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1376,6 +1825,10 @@ Suyash Kadam </p>
                                 <h4>Euphoria Success</h4>
                                 <p>Team Achievement at Euphoria Sports Event</p>
                                 <p>The Computer Engineering department emerged as the Overall Champions of Euphoria 2025, showcasing exceptional talent across sports, cultural, literary, and technical events through teamwork, discipline, and leadership.</p>
+                                <div class="achievement-badges">
+                                    <span class="micro-badge"><i class="fas fa-trophy"></i> Champions</span>
+                                    <span class="micro-badge"><i class="fas fa-users"></i> Team</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -1434,9 +1887,10 @@ Suyash Kadam </p>
         </section>
 
         <!-- Placement Statistics -->
-        <section class="placement-stats" id="placement-stats">
+        <section class="placement-stats fade-in-section" id="placement-stats">
             <div class="container">
-                <h2>Placement Statistics</h2>
+                <h2>Where Our Students Go</h2>
+                <p class="section-subtitle" style="text-align: center; font-size: 1.1rem; color: #666; margin-bottom: 40px;">Outstanding placement records and career success stories</p>
                 <div class="stats-grid">
                     <div class="stat-card">
                         <h3>250+</h3>
@@ -2091,6 +2545,75 @@ Suyash Kadam </p>
 
             // Start dot updates
             updateDots();
+        });
+
+        // ==================== PROGRESSIVE REVEAL FUNCTIONALITY ====================
+        function toggleAchievements(gridId, button) {
+            const grid = document.getElementById(gridId);
+            if (!grid) return;
+            
+            if (grid.classList.contains('collapsed')) {
+                // Expand
+                grid.classList.remove('collapsed');
+                button.innerHTML = 'View Less <i class="fas fa-arrow-up"></i>';
+                button.classList.add('expanded');
+                
+                // Smooth scroll to show new cards
+                setTimeout(() => {
+                    const firstHiddenCard = grid.querySelector('.achievement-card:nth-child(4)');
+                    if (firstHiddenCard) {
+                        firstHiddenCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                }, 100);
+            } else {
+                // Collapse
+                grid.classList.add('collapsed');
+                button.innerHTML = 'View More Achievements <i class="fas fa-arrow-right"></i>';
+                button.classList.remove('expanded');
+                
+                // Scroll back to section start
+                grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        // ==================== SCROLL ANIMATIONS ====================
+        document.addEventListener('DOMContentLoaded', function() {
+            // Intersection Observer for fade-in sections
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const sectionObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in sections
+            document.querySelectorAll('.fade-in-section').forEach(section => {
+                sectionObserver.observe(section);
+            });
+
+            // Stagger animation for cards
+            const cardObserver = new IntersectionObserver(function(entries) {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        setTimeout(() => {
+                            entry.target.classList.add('visible');
+                        }, index * 50); // Stagger by 50ms
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards (with a slight delay to allow DOM to settle)
+            setTimeout(() => {
+                document.querySelectorAll('.achievement-card, .highlight-card, .project-card').forEach(card => {
+                    cardObserver.observe(card);
+                });
+            }, 100);
         });
     </script>
 </body>
