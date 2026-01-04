@@ -1096,7 +1096,7 @@ body {
 
 /* Student Projects */
 .student-projects {
-    padding: 3rem 0;
+    padding: 100px 0;
     background: var(--white);
 }
 
@@ -1104,12 +1104,13 @@ body {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin-bottom: 15px;
     color: var(--black);
+    letter-spacing: -0.5px;
 }
 
 .project-categories {
-    margin-bottom: 3rem;
+    margin-bottom: 50px;
 }
 
 .category-tabs {
@@ -1120,20 +1121,23 @@ body {
 }
 
 .tab-btn {
-    padding: 1rem 2rem;
+    padding: 14px 28px;
     border: 2px solid var(--black);
     background: transparent;
     color: var(--black);
-    border-radius: 8px;
+    border-radius: 30px;
     cursor: pointer;
     font-weight: 600;
     transition: var(--transition);
+    font-size: 1rem;
 }
 
 .tab-btn.active,
 .tab-btn:hover {
     background: var(--black);
     color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-section {
@@ -1146,28 +1150,31 @@ body {
 
 .project-section h3 {
     font-size: 1.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 40px;
     color: var(--black);
     text-align: center;
+    font-weight: 700;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 30px;
 }
 
 .project-card {
     background: var(--light-grey);
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: var(--transition);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #e8e8e8;
 }
 
 .project-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    border-color: #d0d0d0;
 }
 
 .project-card h4 {
@@ -1524,7 +1531,7 @@ body {
 
 /* Student Organizations */
 .student-organizations {
-    padding: 3rem 0;
+    padding: 100px 0;
     background: var(--light-grey);
 }
 
@@ -1532,24 +1539,26 @@ body {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin-bottom: 60px;
     color: var(--black);
+    letter-spacing: -0.5px;
 }
 
 .organizations-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 30px;
 }
 
 .org-card {
     background: var(--white);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: all 0.4s ease;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    border: 1px solid #e8e8e8;
 }
 
 .org-card::before {
@@ -1571,7 +1580,8 @@ body {
 
 .org-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+    border-color: transparent;
 }
 
 .org-card h3,
@@ -1643,7 +1653,7 @@ body {
 
 /* Placement Statistics */
 .placement-stats {
-    padding: 3rem 0;
+    padding: 100px 0;
     background: var(--white);
 }
 
@@ -1651,28 +1661,31 @@ body {
     text-align: center;
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin-bottom: 15px;
     color: var(--black);
+    letter-spacing: -0.5px;
 }
 
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 30px;
+    margin-bottom: 60px;
+    margin-top: 50px;
 }
 
 .stat-card {
     text-align: center;
-    padding: 2rem;
+    padding: 40px 30px;
     background: var(--black);
     color: var(--white);
-    border-radius: 12px;
-    transition: var(--transition);
+    border-radius: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .stat-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
 
 .stat-card h3 {
