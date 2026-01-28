@@ -71,11 +71,27 @@
   background-color: var(--white);
 }
 
+/* Achievements & Research grids - base */
+.achievements-grid,
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
 /* Mobile (stack) */
 @media (max-width: 768px) {
   .achievements-grid,
   .research-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* prevent overlap and add breathing room */
+  .achievements-grid .info-card,
+  .research-grid .info-card {
+    margin: 10px;
+    width: auto;
   }
 }
 
@@ -85,6 +101,7 @@
   .research-grid {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     justify-content: center;
+    gap: 1.5rem;
   }
 
   .achievements-grid .info-card,
@@ -150,7 +167,6 @@
 
 .info-card:hover li {
   color: var(--light-grey);
-  font-weight: 700;                  /* Even bolder on hover for better visibility */
 }
 .portfolio-link {
     display: inline-flex;
@@ -557,11 +573,7 @@
         gap: 30px;
     }
 
-    .page-hero-content h1 {
-    }
-
     .info-card {
-        margin-top: -30px !important; /* Reduce overlap on mobile */
         padding: 20px !important;
     }
 }

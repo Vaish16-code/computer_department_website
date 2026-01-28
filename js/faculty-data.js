@@ -3,6 +3,8 @@ const facultyDetails = {
     name: "Ms. Jayshree R. Sanap",
     designation: "Assistant Professor (Computer Engg.)",
     email: "jayshree@dbit.in",
+    linkedin: "https://in.linkedin.com/in/jayshree-r-sanap-b3679b121",
+    exp:"4",
     about: "Assistant Professor in the Computer Department currently pursuing a PhD in Computer Engineering at VJTI, Mumbai. Qualified UGC NET Dec 2024 and PET-2022 with four years of teaching experience across various engineering institutions.",
     education: [
       { degree: "PHD (Comp. Engg)", year: "Pursuing", institute: "VJTI, Matunga, Mumbai" },
@@ -48,6 +50,8 @@ const facultyDetails = {
     name: "Ms. Kirti Bhadange",
     designation: "Assistant Professor (Computer Engineering Department)",
     email: "kirti@dbit.in",
+    linkedin:"",
+    exp:"8",
     about: "Dedicated Assistant Professor specializing in Software Engineering and Database Management Systems. Currently pursuing a Ph.D. at VJTI with a focus on creative problem-solving and interactive teaching methodologies.",
     education: [
       { degree: "P.hd (Computer Engineering)", year: "Pursuing", institute: "VJTI, Matunga, Mumbai" },
@@ -84,6 +88,8 @@ const facultyDetails = {
     name: "Ms. Priti Andhale",
     designation: "Assistant Professor (Comps Dept)",
     email: "priti@dbit.in",
+    linkedin:"",
+    exp:"12",
     about: "Computer Engineering professor with 12 years of experience in teaching, research, and mentoring. Expertise spans Computer Security, DBMS, and multiple programming languages including Python, .NET, and Java.",
     education: [
       { degree: "M.E. in Computer Engineering", year: "2018", institute: "Mumbai University" },

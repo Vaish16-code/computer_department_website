@@ -1,63 +1,88 @@
-// portfolio-loader.js
+
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Get the ID from the URL (?id=seema-nehete)
-    const urlParams = new URLSearchParams(window.location.search);
-    const facultyId = urlParams.get('id');
+  const params = new URLSearchParams(location.search);
+  const facultyId = params.get('id');
 
-    // 2. Find the data
-    const data = facultyDetails[facultyId];
+  const hero = document.querySelector('.page-hero');
+  const details = document.querySelector('.portfolio-details');
 
-    if (data) {
-        // 3. Inject Basic Info
-        document.getElementById('prof-name').textContent = data.name;
-        document.getElementById('prof-designation').textContent = data.designation;
-        document.getElementById('prof-email').textContent = data.email;
-        document.getElementById('prof-about').textContent = data.about;
+  if (!facultyId || !facultyDetails[facultyId]) {
+  if (hero) hero.style.display = 'none';
+
+  if (details) {
+    details.style.display = 'flex';
+    details.style.minHeight = '100vh';
+    details.style.alignItems = 'center';
+    details.style.justifyContent = 'center';
+    details.style.textAlign = 'center';
+    details.style.padding = '2rem';
+
+    details.innerHTML = `
+      <h2 style="font-size:2rem; font-weight:600;">
+        Faculty profile not found.
+      </h2>
+    `;
+  }
+  return;
+}
+
+  const data = facultyDetails[facultyId];
+
+  document.getElementById('prof-name').textContent = data.name;
+  document.getElementById('prof-designation').textContent = data.designation;
+  document.getElementById('prof-email').textContent = data.email;
+  document.getElementById('prof-exp').textContent = data.exp;
+  document.getElementById('prof-about').textContent = data.about;
 
 
-        // 1. Education Loader
-        const eduContainer = document.getElementById('education-list');
-        data.education.forEach(edu => {
-            eduContainer.innerHTML += `
-                <div class="timeline-item portfolio-item">
-                    <div class="timeline-marker"><span class="year">${edu.year}</span></div>
-                    <div class="timeline-card">
-                        <h3>${edu.degree}</h3>
-                        <p>${edu.institute}</p>
-                    </div>
-                </div>`;
-        });
+  const profexpContainer=document.getElementById('prof-exp');
+  profexpContainer.innerHTML +='<span>+ Years</span>'
 
-        // 2. Experience Loader
-        const expContainer = document.getElementById('experience-list');
-        data.experience.forEach(exp => {
-            expContainer.innerHTML += `
-                <div class="timeline-item portfolio-item">
-                    <div class="timeline-marker"><span class="year">${exp.duration.split(' ')[0]}</span></div>
-                    <div class="timeline-card">
-                        <h3>${exp.role}</h3>
-                        <p><strong>${exp.organization}</strong></p>
-                        <p>${exp.duration}</p>
-                    </div>
-                </div>`;
-        });
-        
-
-        // 3. Highlights Loader
-        const highlightsContainer = document.getElementById('highlights-grid');
-        data.professionalHighlights.forEach(section => {
-            highlightsContainer.innerHTML += `
-                <div class="info-card">
-                    <h3>${section.category}</h3>
-                    <ul>
-                        ${section.items.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                </div>`;
-        });
-        
-
+  const link = document.getElementById('prof-linkedin');
+    if (data.linkedin) {
+    link.style.cursor = 'pointer';
+    link.addEventListener('click', () => {
+        window.open(data.linkedin, '_blank');
+    });
     } else {
-        // Fallback if ID is wrong
-        document.querySelector('.portfolio-details').innerHTML = "<h2>Faculty profile not found.</h2>";
+    link.textContent = 'Not Available';
+    link.style.opacity = 0.5;
+    link.style.pointerEvents = 'none';
     }
+
+  const eduContainer = document.getElementById('education-list');
+  data.education.forEach(edu => {
+    eduContainer.innerHTML += `
+      <div class="timeline-item portfolio-item">
+        <div class="timeline-marker"><span class="year">${edu.year}</span></div>
+        <div class="timeline-card">
+          <h3>${edu.degree}</h3>
+          <p>${edu.institute}</p>
+        </div>
+      </div>`;
+  });
+
+  const expContainer = document.getElementById('experience-list');
+  data.experience.forEach(exp => {
+    expContainer.innerHTML += `
+      <div class="timeline-item portfolio-item">
+        <div class="timeline-marker"><span class="year">${exp.duration.split(' ')[0]}</span></div>
+        <div class="timeline-card">
+          <h3>${exp.role}</h3>
+          <p><strong>${exp.organization}</strong></p>
+          <p>${exp.duration}</p>
+        </div>
+      </div>`;
+  });
+
+  const highlightsContainer = document.getElementById('highlights-grid');
+  data.professionalHighlights.forEach(section => {
+    highlightsContainer.innerHTML += `
+      <div class="info-card">
+        <h3>${section.category}</h3>
+        <ul>
+          ${section.items.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+      </div>`;
+  });
 });

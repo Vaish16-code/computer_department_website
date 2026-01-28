@@ -902,31 +902,34 @@
     margin-bottom: 2rem;
 }
 
-/* For Journey Vertical timeline smaller screens */
 @media (max-width: 768px) {
-    .timeline::before {
-        left: 12px;
-    }
 
-    .timeline-item,
-    .timeline-item:nth-child(even) {
-        width: 100%;
-        margin-left: 0;
-        padding-left: 3rem;
-        padding-right: 0;
-        justify-content: flex-start;
-    }
+  .timeline-item,
+  .timeline-item:nth-child(even) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* center cards */
+    justify-content: flex-start;
+    margin: 1.2rem 0;
+    padding: 0 !important;    /* clear left/right spacing */
+  }
 
-    .timeline-marker {
-        left: 0 !important;
-        right: auto;
-        transform: translateX(0);
-    }
+  .timeline-marker {
+    position: relative;
+    left: 50% !important;
+    transform: translateX(-50%);
+    margin-bottom: 0.75rem;
+  }
 
-    .timeline-card {
-        border-left: 4px solid var(--black);
-        border-right: none;
-    }
+  .timeline-card {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    border-left: 4px solid var(--black);
+    border-right: none;
+    text-align: center;
+  }
 
     /* Vision Mission Cards */
     .vm-card {
