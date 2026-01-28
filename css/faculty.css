@@ -65,25 +65,34 @@
   display: grid;
 }
 
-.sub-container {
-  display: grid;
-  gap: 2rem;
-  align-items: stretch; /* 🔑 equal height */
-  grid-template-columns: 1fr;
-}
-
-
 .faculty-achievements,
 .research-areas {
   padding: 1rem 0 2rem;
   background-color: var(--white);
 }
 
-.achievements-grid,
-.research-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1rem;
+/* Mobile (stack) */
+@media (max-width: 768px) {
+  .achievements-grid,
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet and up (auto 2–3 cols, cap card width) */
+@media (min-width: 769px) {
+  .achievements-grid,
+  .research-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-content: center;
+  }
+
+  .achievements-grid .info-card,
+  .research-grid .info-card {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 /* Shared Card */
@@ -225,6 +234,7 @@
     object-fit: contain;            /* Show full image without cropping */
     object-position: center;
   }
+  
 }
 
 /* Assistant Professors horizontal scroll on desktop */
@@ -496,4 +506,117 @@
     padding: 0.6rem 0.8rem;
     font-size: 0.8rem;
   }
+}
+
+/* Faculty Timeline Styling */
+.faculty-timeline {
+    border-left: 3px solid var(--black);
+    padding-left: 25px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.resume-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+/* The "Dot" on the timeline */
+.resume-item::before {
+    content: '';
+    position: absolute;
+    left: -33px; /* Adjust based on padding */
+    top: 5px;
+    width: 14px;
+    height: 14px;
+    background: var(--black);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.resume-item h4 {
+    font-size: 1.1rem;
+    color: var(--black);
+    margin-bottom: 5px;
+}
+
+.resume-item h5 {
+    display: inline-block;
+    background: var(--light-grey);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+/* Tablet & Mobile: Stack the Education and Experience columns */
+@media (max-width: 992px) {
+    .portfolio-details .sub-container {
+        grid-template-columns: 1fr !important; /* Forces 1 column layout */
+        gap: 30px;
+    }
+
+    .page-hero-content h1 {
+    }
+
+    .info-card {
+        margin-top: -30px !important; /* Reduce overlap on mobile */
+        padding: 20px !important;
+    }
+}
+
+/* Mobile Small: Adjust Timeline Spacing */
+@media (max-width: 576px) {
+    .faculty-timeline {
+        margin-left: 5px;
+        padding-left: 20px;
+    }
+
+    .resume-item::before {
+        left: -28px; /* Re-align the dot for smaller margins */
+    }
+
+    .resume-item h4 {
+        font-size: 1rem;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+.stat-header{
+  display: block;
+  font-size: 1.5rem;
+  color: var(--white);
+  font-weight: 700;
+}
+@media (max-width: 480px){
+  .stat-header{
+    font-size: 1rem;
+  }
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* Large devices: side-by-side */
+@media (min-width: 992px) {
+    .portfolio-grid {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 60px;
+    }
+    .timeline-card {
+      padding: 20px;
+    }
+
+    .portfolio-grid .resume-col {
+        width: 50%;
+    }
 }

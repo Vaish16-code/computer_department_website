@@ -1,24 +1,14 @@
 /* ---------- Faculty Card Template ---------- */
 function createFacultyCard(data) {
-  // Logic to handle different file types (PDF/DOCX)
-  let portfolioUrl = data.portfolio;
-
-  if (data.portfolio && data.portfolio !== "xyz") {
-    const isWordDoc = data.portfolio.toLowerCase().endsWith('.docx') || 
-                      data.portfolio.toLowerCase().endsWith('.doc');
-
-    if (isWordDoc) {
-      // Use Google Docs Viewer to open .docx in a new tab instead of downloading
-      portfolioUrl = `https://docs.google.com/viewer?url=${encodeURIComponent(window.location.origin + '/' + data.portfolio)}&embedded=true`;
-    }
-  } else {
-    portfolioUrl = "#";
-  }
+  // Use a slugified version of the name as a unique ID
+  const facultyId = data.name.toLowerCase().replace(/\s+/g, '-').replace(/[.]/g, '');
+  
+  // Point all "Know More" buttons to our new dynamic template
+  const portfolioUrl = `portfolio.html?id=${facultyId}`;
 
   return `
     <div class="faculty-card">
       <img src="${data.image}" alt="${data.name}" class="faculty-img">
-
       <div class="faculty-body">
         <h3>${data.name}</h3>
         <p class="faculty-qualification">${data.qualification}</p>
@@ -26,15 +16,9 @@ function createFacultyCard(data) {
         <p><strong>Experience:</strong> ${data.experience}</p>
         <p class="faculty-contact">${data.email}</p>
         
-        ${data.portfolio !== "xyz" ? `
-          <a href="${portfolioUrl}" target="_blank" rel="noopener noreferrer" class="portfolio-link">
-              <i class="fa-solid fa-user-tie"></i> Know More
-          </a>
-        ` : `
-          <span class="portfolio-link disabled">
-              <i class="fa-solid fa-user-tie"></i> Resume Pending
-          </span>
-        `}
+        <a href="${portfolioUrl}" class="portfolio-link">
+            <i class="fa-solid fa-user-tie"></i> Know More
+        </a>
       </div>
     </div>
   `;
