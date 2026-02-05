@@ -32,7 +32,6 @@ const hod = {
   specialization: "Human Machine Interaction",
   experience: "15+ years",
   email: "dipti@dbit.in",
-  portfolio: "https://compsweb.github.io/Ms.Dipti-Jadhav/Template/",
   image: "images/hod-pic.png"
 };
 
@@ -43,7 +42,6 @@ const professors = [
     specialization: "Machine Vision, Data Science, ICT in Agriculture",
     experience: "10+ years",
     email: "amiya@dbit.in",
-    portfolio: "https://compsweb.github.io/Dr.-Amiya-Kumar-Tripathy/",
     image: "images/faculty/amiya-pic.png"
   }
 ];
@@ -55,7 +53,6 @@ const associateProfessors = [
     specialization: "Web Data Mining",
     experience: "19+ years",
     email: "phiroj@dbit.in",
-    portfolio: "https://compsweb.github.io/Dr.-Phiroj-Shaikh/",
     image: "images/faculty/phiroj-pic.png"
   }
 ];
@@ -67,71 +64,63 @@ const assistantProfessors = [
     specialization: "Machine learning and Big Data Analytics",
     experience: "21+ years",
     email: "seema@dbit.in",
-    portfolio: "https://compsweb.github.io/Ms.-Seema-Nehete/",
-    image: "images/faculty/seema-pic.png"
+    image: "images/faculty/seema-pic.jpg"
   },
+  // {
+  //   name: "Mr. Imran Ali Mirza",
+  //   qualification: "M.E in Computer Engineering",
+  //   specialization: "Analytics",
+  //   experience: "20+ years",
+  //   email: "mirza@dbit.in",
+  //   image: "images/faculty/imran-pic.png"
+  // },
+  // {
+  //   name: "Ms. Sejal Chopra",
+  //   qualification: "M.E. in Electronics and Telecommunication",
+  //   specialization: "Communications & Signal Processing",
+  //   experience: "15+ years",
+  //   email: "sejal@dbit.in",
+  //   image: "images/faculty/sejal-pic.png"
+  // },
+  // {
+  //   name: "Ms. Shainila Mulla",
+  //   qualification: "Masters in Computer Engineering",
+  //   specialization: "Operating System",
+  //   experience: "14+ years",
+  //   email: "shainila@dbit.in",
+  //   image: "images/faculty/shainila-pic.png"
+  // },
   {
-    name: "Mr. Imran Ali Mirza",
-    qualification: "M.E in Computer Engineering",
-    specialization: "Analytics",
-    experience: "20+ years",
-    email: "mirza@dbit.in",
-    portfolio: "https://compsweb.github.io/Imran/",
-    image: "images/faculty/imran-pic.png"
-  },
-  {
-    name: "Ms. Sejal Chopra",
-    qualification: "M.E. in Electronics and Telecommunication",
-    specialization: "Communications & Signal Processing",
-    experience: "15+ years",
-    email: "sejal@dbit.in",
-    portfolio: "https://compsweb.github.io/Ms.Sejal-Chopra/",
-    image: "images/faculty/sejal-pic.png"
-  },
-  {
-    name: "Ms. Shainila Mulla",
-    qualification: "Masters in Computer Engineering",
-    specialization: "Operating System",
-    experience: "14+ years",
-    email: "shainila@dbit.in",
-    portfolio: "https://compsweb.github.io/Ms.-Shainila-Mulla/Template/",
-    image: "images/faculty/shainila-pic.png"
+    name: "Ms. Sana Shaikh",
+    qualification: "M.E. in Computer Engineering",
+    specialization: "Data Analysis",
+    experience: "17+ years",
+    email: "sana@dbit.in",
+    image: "images/faculty/sana-pic.png"
   },
   {
     name: "Ms. Mayura Gavhane",
     qualification: "M.E Computers",
     specialization: "Programming, Security & Blockchain",
-    experience: "14+ years",
+    experience: "15+ years",
     email: "mayura@dbit.in",
-    portfolio: "https://compsweb.github.io/Mayura-Gavhane/",
     image: "images/faculty/mayura-pic.png"
   },
   {
     name: "Ms. Hiteshri Shirtavde",
     qualification: "M.Tech in Computer Science",
     specialization: "Image processing",
-    experience: "14+ years",
+    experience: "15+ years",
     email: "hiteshri@dbit.in",
-    portfolio: "https://compsweb.github.io/Ms.-Hiteshri-Shirtavde/hiteshri/index.html",
     image: "images/faculty/hiteshri-pic.png"
   },
   {
-    name: "Ms. Deepa Goel",
-    qualification: "M.Tech in Computer Science",
-    specialization: "DBMS and Operating System",
-    experience: "14+ years",
-    email: "deepa@dbit.in",
-    portfolio: "https://compsweb.github.io/Ms.-Deepa-Goel/deepa/index.html",
-    image: "images/faculty/deepa-pic.png"
-  },
-  {
-    name: "Ms. Sana Shaikh",
-    qualification: "M.E. in Computer Engineering",
-    specialization: "Data Analysis",
-    experience: "13+ years",
-    email: "sana@dbit.in",
-    portfolio: "https://compsweb.github.io/Ms-Sana-Shaikh/",
-    image: "images/faculty/sana-pic.png"
+  name: "Prof. Aarti Raman Sonawane",
+  qualification: "M.E. Computer Engineering",
+  specialization: "AI & Data Science, Software Testing, AI Fundamentals",
+  experience: "14+ years",
+  email: "aarti@dbit.in",
+  image: "images/faculty/aarti-pic.jpg"
   },
   {
     name: "Ms. Priti Andhale",
@@ -143,15 +132,6 @@ const assistantProfessors = [
     image: "images/faculty/priti-pic.png"
   },
   {
-    name: "Ms. Kalpita Wagaskar",
-    qualification: "M.Tech. in Computer Engineering",
-    specialization: "Artificial Intelligence & Grid Computing",
-    experience: "11+ years",
-    email: "kalpita@dbit.in",
-    portfolio: "https://compsweb.github.io/Ms.-Kalpita-Wagaskar/Template/",
-    image: "images/faculty/kalpita-pic.png"
-  },
-  {
     name: "Ms. Pooja Bansode",
     qualification: "Masters in Computer Engineering",
     specialization: "Data Analytics",
@@ -159,6 +139,15 @@ const assistantProfessors = [
     email: "pooja@dbit.in",
     portfolio: "https://compsweb.github.io/Ms.-Pooja-Bansode/",
     image: "images/faculty/pooja-pic.png"
+  },
+  {
+    name: "Ms. Varsha Kulkarni",
+    qualification: "M.E Computer Engineering",
+    specialization: "Data analysis",
+    experience: "8+ years",
+    email: "varsha@dbit.in",
+    portfolio: "https://compsweb.github.io/Ms.-Varsha-Kulkarni/",
+    image: "images/faculty/varsha-pic.png"
   },
   {
     name: "Ms. Kirti Bhadange",
@@ -179,23 +168,32 @@ const assistantProfessors = [
     image: "images/faculty/himani-pic.png"
   },
   {
+    name: "Ms. Deepa Goel",
+    qualification: "M.Tech in Computer Science",
+    specialization: "DBMS and Operating System",
+    experience: "5+ years",
+    email: "deepa@dbit.in",
+    portfolio: "https://compsweb.github.io/Ms.-Deepa-Goel/deepa/index.html",
+    image: "images/faculty/deepa-pic.png"
+  },
+  {
     name: "Ms. Jayshree R. Sanap",
     qualification: "Pursuing PhD",
     specialization: "Image Processing, Machine Learning, Deep learning",
-    experience: "5+ years",
+    experience: "4+ years",
     email: "jayshree@dbit.in",
     portfolio: "documents/faculty-resumes/jayshree-resume.pdf",
     image: "images/faculty/jayshree-pic.png"
   },
   {
-    name: "Ms. Varsha Kulkarni",
-    qualification: "M.E Computer Engineering",
-    specialization: "Data analysis",
-    experience: "2+ years",
-    email: "varsha@dbit.in",
-    portfolio: "https://compsweb.github.io/Ms.-Varsha-Kulkarni/",
-    image: "images/faculty/varsha-pic.png"
-  }
+  name: "Ms. Kumudbala Saxena",
+  qualification: "M.Tech Computer Science Engineering",
+  specialization: "AI/ML, Cyber Security, Web Technologies",
+  experience: "3+ years",
+  email: "kumudbala.college@gmail.com",
+  image: "images/faculty/kumudbala-pic.jpg"
+}
+
 ];
 
 /* ---------- Render Faculty Cards ---------- */

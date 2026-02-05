@@ -38,16 +38,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const profexpContainer=document.getElementById('prof-exp');
   profexpContainer.innerHTML +='<span>+ Years</span>'
 
-  const link = document.getElementById('prof-linkedin');
+  const stat = document.getElementById('prof-stat');
+  const label = document.getElementById('prof-label');
+  const link = document.getElementById('prof-link');
     if (data.linkedin) {
+    label.textContent = "LinkedIn";
+    link.textContent = "View Profile";
     link.style.cursor = 'pointer';
     link.addEventListener('click', () => {
         window.open(data.linkedin, '_blank');
     });
-    } else {
-    link.textContent = 'Not Available';
-    link.style.opacity = 0.5;
+    }
+    else if(data.googleScholar){
+    label.textContent = "Google Scholar";
+    link.textContent = "View Profile";
+    link.style.cursor = 'pointer';
+    link.addEventListener('click', () => {
+        window.open(data.googleScholar, '_blank');
+    });
+    }
+    else if(data.mobileNumber){
+    label.textContent = "Contact";
+    link.textContent = data.mobileNumber;
     link.style.pointerEvents = 'none';
+    }
+    else{
+      stat.style.display='none';
     }
 
   const eduContainer = document.getElementById('education-list');
