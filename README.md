@@ -80,7 +80,7 @@ Update these sections with real data:
 
 ### Step 3: Images
 Add the following images to the `images/` folder:
-- `college-logo.png` - College/Department logo
+- `DBIT PNG.png` - College/Department logo
 - `hod-photo.jpg` - Head of Department photo
 - Faculty photos in `images/faculty/` subfolder
 - Lab photos in `images/labs/` subfolder

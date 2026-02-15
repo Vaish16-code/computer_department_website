@@ -3,10 +3,10 @@
 const navbarHTML = `
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="nav-brand">
-                <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
+            <a href="index.html" class="nav-brand">
+                <img src="images/DBIT PNG.png" alt="CSE Logo" class="nav-logo">
                 <span class="nav-title">Department of Computer Engineering</span>
-            </div>
+            </a>
             
             <button class="mobile-menu-btn" id="mobile-menu-btn">
                 <span class="hamburger-line"></span>
@@ -36,7 +36,7 @@ const footerHTML = `
                 <div class="footer-col brand-col">
                     <div class="brand-wrapper">
                         <a href="index.html" class="footer-logo-link">
-                            <img src="images/college-logo.png" alt="DBIT Logo" class="footer-logo-img">
+                            <img src="images/DBIT PNG.png" alt="DBIT Logo" class="footer-logo-img">
                             <div class="logo-text-group">
                                 <span class="logo-main">DBIT | COMPS</span>
                                 <span class="logo-sub">Excellence in Tech</span>
