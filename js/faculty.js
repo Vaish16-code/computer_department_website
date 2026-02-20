@@ -1,8 +1,11 @@
 /* ---------- Faculty Card Template ---------- */
 function createFacultyCard(data) {
   // Use a slugified version of the name as a unique ID
-  const facultyId = data.name.toLowerCase().replace(/\s+/g, '-').replace(/[.]/g, '');
-  
+  const facultyId = data.name
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[.]/g, "");
+
   // Point all "Know More" buttons to our new dynamic template
   const portfolioUrl = `portfolio.html?id=${facultyId}`;
 
@@ -30,9 +33,9 @@ const hod = {
   name: "Ms. Dipti Jadhav",
   qualification: "Pursuing PhD",
   specialization: "Human Machine Interaction",
-  experience: "15+ years",
+  experience: "20+ years",
   email: "dipti@dbit.in",
-  image: "images/hod-pic.png"
+  image: "images/faculty/hod-photo.jpeg",
 };
 
 const professors = [
@@ -42,8 +45,8 @@ const professors = [
     specialization: "Machine Vision, Data Science, ICT in Agriculture",
     experience: "10+ years",
     email: "amiya@dbit.in",
-    image: "images/faculty/amiya-pic.png"
-  }
+    image: "images/faculty/amiya-pic.png",
+  },
 ];
 
 const associateProfessors = [
@@ -53,8 +56,8 @@ const associateProfessors = [
     specialization: "Web Data Mining",
     experience: "19+ years",
     email: "phiroj@dbit.in",
-    image: "images/faculty/phiroj-pic.png"
-  }
+    image: "images/faculty/phiroj-pic.png",
+  },
 ];
 
 const assistantProfessors = [
@@ -64,16 +67,16 @@ const assistantProfessors = [
     specialization: "Machine learning and Big Data Analytics",
     experience: "21+ years",
     email: "seema@dbit.in",
-    image: "images/faculty/seema-pic.jpg"
+    image: "images/faculty/seema-pic.jpg",
   },
-  // {
-  //   name: "Mr. Imran Ali Mirza",
-  //   qualification: "M.E in Computer Engineering",
-  //   specialization: "Analytics",
-  //   experience: "20+ years",
-  //   email: "mirza@dbit.in",
-  //   image: "images/faculty/imran-pic.png"
-  // },
+  {
+    name: "Mr. Imran Ali Mirza",
+    qualification: "M.E in Computer Engineering",
+    specialization: "Analytics",
+    experience: "20+ years",
+    email: "mirza@dbit.in",
+    image: "images/faculty/imran-pic.jpg",
+  },
   // {
   //   name: "Ms. Sejal Chopra",
   //   qualification: "M.E. in Electronics and Telecommunication",
@@ -82,21 +85,13 @@ const assistantProfessors = [
   //   email: "sejal@dbit.in",
   //   image: "images/faculty/sejal-pic.png"
   // },
-  // {
-  //   name: "Ms. Shainila Mulla",
-  //   qualification: "Masters in Computer Engineering",
-  //   specialization: "Operating System",
-  //   experience: "14+ years",
-  //   email: "shainila@dbit.in",
-  //   image: "images/faculty/shainila-pic.png"
-  // },
   {
     name: "Ms. Sana Shaikh",
     qualification: "M.E. in Computer Engineering",
     specialization: "Data Analysis",
     experience: "17+ years",
     email: "sana@dbit.in",
-    image: "images/faculty/sana-pic.png"
+    image: "images/faculty/sana-pic.png",
   },
   {
     name: "Ms. Mayura Gavhane",
@@ -104,7 +99,7 @@ const assistantProfessors = [
     specialization: "Programming, Security & Blockchain",
     experience: "15+ years",
     email: "mayura@dbit.in",
-    image: "images/faculty/mayura-pic.png"
+    image: "images/faculty/mayura-pic.png",
   },
   {
     name: "Ms. Hiteshri Shirtavde",
@@ -112,15 +107,23 @@ const assistantProfessors = [
     specialization: "Image processing",
     experience: "15+ years",
     email: "hiteshri@dbit.in",
-    image: "images/faculty/hiteshri-pic.png"
+    image: "images/faculty/hiteshri-pic.png",
   },
   {
-  name: "Prof. Aarti Raman Sonawane",
-  qualification: "M.E. Computer Engineering",
-  specialization: "AI & Data Science, Software Testing, AI Fundamentals",
-  experience: "14+ years",
-  email: "aarti@dbit.in",
-  image: "images/faculty/aarti-pic.jpg"
+    name: "Ms. Shainila Mulla",
+    qualification: "Masters in Computer Engineering",
+    specialization: "Operating System",
+    experience: "15+ years",
+    email: "shainila@dbit.in",
+    image: "images/faculty/shainila-pic.png",
+  },
+  {
+    name: "Prof. Aarti Raman Sonawane",
+    qualification: "M.E. Computer Engineering",
+    specialization: "AI & Data Science, Software Testing, AI Fundamentals",
+    experience: "14+ years",
+    email: "aarti@dbit.in",
+    image: "images/faculty/aarti-pic.jpg",
   },
   {
     name: "Ms. Priti Andhale",
@@ -129,7 +132,7 @@ const assistantProfessors = [
     experience: "12+ years",
     email: "priti@dbit.in",
     portfolio: "documents/faculty-resumes/priti-resume.pdf",
-    image: "images/faculty/priti-pic.png"
+    image: "images/faculty/priti-pic.png",
   },
   {
     name: "Ms. Pooja Bansode",
@@ -138,7 +141,7 @@ const assistantProfessors = [
     experience: "10+ years",
     email: "pooja@dbit.in",
     portfolio: "https://compsweb.github.io/Ms.-Pooja-Bansode/",
-    image: "images/faculty/pooja-pic.png"
+    image: "images/faculty/pooja-pic.png",
   },
   {
     name: "Ms. Varsha Kulkarni",
@@ -147,7 +150,7 @@ const assistantProfessors = [
     experience: "8+ years",
     email: "varsha@dbit.in",
     portfolio: "https://compsweb.github.io/Ms.-Varsha-Kulkarni/",
-    image: "images/faculty/varsha-pic.png"
+    image: "images/faculty/varsha-pic.png",
   },
   {
     name: "Ms. Kirti Bhadange",
@@ -156,7 +159,7 @@ const assistantProfessors = [
     experience: "8+ years",
     email: "kirti@dbit.in",
     portfolio: "documents/faculty-resumes/kirti-resume.pdf",
-    image: "images/faculty/kirti-pic.png"
+    image: "images/faculty/kirti-pic.png",
   },
   {
     name: "Ms. Himani Joshi",
@@ -165,7 +168,7 @@ const assistantProfessors = [
     experience: "7+ years",
     email: "himani@dbit.in",
     portfolio: "https://compsweb.github.io/Ms.-Himani-Josh/",
-    image: "images/faculty/himani-pic.png"
+    image: "images/faculty/himani-pic.png",
   },
   {
     name: "Ms. Deepa Goel",
@@ -174,7 +177,7 @@ const assistantProfessors = [
     experience: "5+ years",
     email: "deepa@dbit.in",
     portfolio: "https://compsweb.github.io/Ms.-Deepa-Goel/deepa/index.html",
-    image: "images/faculty/deepa-pic.png"
+    image: "images/faculty/deepa-pic.png",
   },
   {
     name: "Ms. Jayshree R. Sanap",
@@ -183,17 +186,16 @@ const assistantProfessors = [
     experience: "4+ years",
     email: "jayshree@dbit.in",
     portfolio: "documents/faculty-resumes/jayshree-resume.pdf",
-    image: "images/faculty/jayshree-pic.png"
+    image: "images/faculty/jayshree-pic.png",
   },
   {
-  name: "Ms. Kumudbala Saxena",
-  qualification: "M.Tech Computer Science Engineering",
-  specialization: "AI/ML, Cyber Security, Web Technologies",
-  experience: "3+ years",
-  email: "kumudbala.college@gmail.com",
-  image: "images/faculty/kumudbala-pic.jpg"
-}
-
+    name: "Ms. Kumudbala Saxena",
+    qualification: "M.Tech Computer Science Engineering",
+    specialization: "AI/ML, Cyber Security, Web Technologies",
+    experience: "3+ years",
+    email: "kumudbala.college@gmail.com",
+    image: "images/faculty/kumudbala-pic.jpg",
+  },
 ];
 
 /* ---------- Render Faculty Cards ---------- */
@@ -205,19 +207,31 @@ if (hodContainer) hodContainer.innerHTML = createFacultyCard(hod);
 // Render Professors
 const profContainer = document.getElementById("professors");
 if (profContainer) {
-  professors.forEach(faculty => profContainer.insertAdjacentHTML("beforeend", createFacultyCard(faculty)));
+  professors.forEach((faculty) =>
+    profContainer.insertAdjacentHTML("beforeend", createFacultyCard(faculty)),
+  );
 }
 
 // Render Associate Professors
 const associateContainer = document.getElementById("associate-professors");
 if (associateContainer) {
-  associateProfessors.forEach(faculty => associateContainer.insertAdjacentHTML("beforeend", createFacultyCard(faculty)));
+  associateProfessors.forEach((faculty) =>
+    associateContainer.insertAdjacentHTML(
+      "beforeend",
+      createFacultyCard(faculty),
+    ),
+  );
 }
 
 // Render Assistant Professors
 const assistantContainer = document.getElementById("assistant-professors");
 if (assistantContainer) {
-  assistantProfessors.forEach(faculty => assistantContainer.insertAdjacentHTML("beforeend", createFacultyCard(faculty)));
+  assistantProfessors.forEach((faculty) =>
+    assistantContainer.insertAdjacentHTML(
+      "beforeend",
+      createFacultyCard(faculty),
+    ),
+  );
 }
 
 /* ---------- ACHIEVEMENTS & RESEARCH AREAS ---------- */
@@ -228,7 +242,7 @@ function achievementCard(data) {
       <h3>${data.title}</h3>
       <p>${data.description}</p>
       <ul>
-        ${data.items.map(item => `<li>${item}</li>`).join("")}
+        ${data.items.map((item) => `<li>${item}</li>`).join("")}
       </ul>
     </div>
   `;
@@ -253,8 +267,8 @@ const achievements = [
     items: [
       "Gesture Aided Speech for Deaf and Mute – Dipti Jadhav, Amiya Kumar Tripathy (I2CT 2018, IEEE)",
       "Pneumonia Detection in X-rays Using OpenCV and Deep Learning – Shainila Mulla et al. (ICCICT 2021, IEEE)",
-      "Minor Research Grant (University of Mumbai) – Dr. Seema Prashant Nehete (2019–20)"
-    ]
+      "Minor Research Grant (University of Mumbai) – Dr. Seema Prashant Nehete (2019–20)",
+    ],
   },
   {
     title: "Academic Leadership & Curriculum Development",
@@ -263,8 +277,8 @@ const achievements = [
     items: [
       "Dr. Seema Prashant Nehete – Member, Syllabus Setting Committee under NEP 2024 (Semester III)",
       "Dr. Amiya Kumar Tripathy – Director, Center for GeoAI & Machine Learning, DBIT Mumbai",
-      "Dr. Phiroj Shaikh – Session Chair at National-Level Technical Symposium (INNOVATION SPARK-10)"
-    ]
+      "Dr. Phiroj Shaikh – Session Chair at National-Level Technical Symposium (INNOVATION SPARK-10)",
+    ],
   },
   {
     title: "Conferences, Workshops & Professional Activities",
@@ -273,9 +287,9 @@ const achievements = [
     items: [
       "Research paper presentation at International Conference on Web Sciences (ICWS-2009)",
       "Organization and participation in AICTE/ISTE approved workshops on Data Mining, Soft Computing, Linux, and Computer Networking",
-      "Active involvement in faculty development programs and student-centric technical initiatives"
-    ]
-  }
+      "Active involvement in faculty development programs and student-centric technical initiatives",
+    ],
+  },
 ];
 
 /* ---------- RESEARCH AREAS DATA ---------- */
@@ -283,30 +297,33 @@ const achievements = [
 const researchAreas = [
   {
     area: "Artificial Intelligence & Deep Learning",
-    faculty: "Dr. Seema Nehete, Ms. Himani Joshi, Ms. Jayshree Sanap"
+    faculty: "Dr. Seema Nehete, Ms. Himani Joshi, Ms. Jayshree Sanap",
   },
   {
     area: "Data Science, Analytics & GeoAI",
-    faculty: "Dr. Amiya Kumar Tripathy, Mr. Imran Ali Mirza"
+    faculty: "Dr. Amiya Kumar Tripathy, Mr. Imran Ali Mirza",
   },
   {
     area: "Image Processing & Computer Vision",
-    faculty: "Ms. Hiteshri Shirtavde, Ms. Shainila Mulla"
-  }
+    faculty: "Ms. Hiteshri Shirtavde, Ms. Shainila Mulla",
+  },
 ];
 
 /* ---------- RENDER ACHIEVEMENTS & RESEARCH ---------- */
 
 const achievementsContainer = document.getElementById("achievements");
 if (achievementsContainer) {
-  achievements.forEach(item =>
-    achievementsContainer.insertAdjacentHTML("beforeend", achievementCard(item))
+  achievements.forEach((item) =>
+    achievementsContainer.insertAdjacentHTML(
+      "beforeend",
+      achievementCard(item),
+    ),
   );
 }
 
 const researchContainer = document.getElementById("research-areas");
 if (researchContainer) {
-  researchAreas.forEach(item =>
-    researchContainer.insertAdjacentHTML("beforeend", researchCard(item))
+  researchAreas.forEach((item) =>
+    researchContainer.insertAdjacentHTML("beforeend", researchCard(item)),
   );
 }

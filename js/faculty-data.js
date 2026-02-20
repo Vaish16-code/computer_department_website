@@ -1,4 +1,102 @@
 const facultyDetails = {
+  "ms-dipti-jadhav": {
+  name: "Dr. Dipti Jadhav",
+  designation: "Assistant Professor & Head, Department of Computer Engineering",
+  email: "dipti@dbit.in",
+  mobileNumber: "+91 9223370153",
+  orcid: "https://orcid.org/0000-0001-5247-613X",
+  organization: "Don Bosco Institute of Technology, Kurla, Mumbai",
+  exp: "20",
+  about: "Ph.D. in Computer Engineering with over 20 years of academic experience in teaching, research, administration, and student development. Currently serving as Head of the Department and Chairperson of the Board of Studies (Computer Engineering). Research focus includes Human Machine Interaction (HMI), inclusive design, assistive technologies, AR/VR, and innovation in education. Actively involved in curriculum revision for Mumbai University and developing a Centre of Excellence in HMI.",
+  
+  education: [
+    { degree: "PhD (Computer Science and Engineering)", year: "2025", institute: "Assam Don Bosco University" },
+    { degree: "M.E. (Information Technology)", year: "2014", institute: "Vivekanand Education Society's Institute of Technology, Chembur" },
+    { degree: "B.E. (Computer Engineering)", year: "2004", institute: "Sanjivani College of Engineering, Pune University" },
+    { degree: "Diploma (Computer Technology)", year: "2001", institute: "Mumbai Board" }
+  ],
+
+  experience: [
+    { role: "Assistant Professor & Head", organization: "Don Bosco Institute of Technology, Kurla, Mumbai", duration: "1 July 2015 – Present" },
+    { role: "Lecturer", organization: "Don Bosco Institute of Technology, Kurla, Mumbai", duration: "8 Years" },
+    { role: "Lecturer", organization: "Sanjivani K.B.P. Polytechnic, Kopargaon, Ahmednagar", duration: "2 Years" }
+  ],
+
+  professionalHighlights: [
+  {
+    "category": "Research Areas",
+    "items": [
+      "Human Machine Interaction (HMI)",
+      "Inclusive Design & Assistive Technologies",
+      "AR/VR/MR/XR Technologies",
+      "Image Processing",
+      "Computer Graphics",
+      "Educational Innovation & Design Thinking"
+    ]
+  },
+  {
+    "category": "Administrative Roles & Leadership",
+    "items": [
+      "Head of Department (Computer Engineering)",
+      "Chairperson, Board of Studies (Computer Engineering)",
+      "Training and Placement Coordinator",
+      "Contributor to Mumbai University UG Syllabus Revision",
+      "Developing Centre of Excellence in Human Machine Interaction"
+    ]
+  },
+  {
+    "category": "Research Funding",
+    "items": [
+      "Technology-Driven Assistive Learning Tool for Personalized Dyscalculia Interventions (2025) – 1400 CHF funded by Biomedical Sensors & Systems Lab, University of Memphis, USA",
+      "IoT for Emergent and Resource Constraint People (2017) – Rs.30,000 funded by Mumbai University",
+      "Gesture Aided Speech for Deaf and Mute (2015) – Rs.40,000 funded by Mumbai University"
+    ]
+  },
+  {
+    "category": "Top Research Publications",
+    "items": [
+      "Technology-Driven Assistive Learning Tool for Personalized Dyscalculia Interventions – European Journal of Investigation in Health, Psychology and Education (2025)",
+      "EfficientNetB1 Model for Lung Cancer Detection – IEEE ICITEICS (2024)",
+      "Questify: Intelligent Web Page Assistant – ICACTA (2023) – Best Paper Award",
+      "EDSense – Personalized Intervention Tool for Dyscalculia – ICACTA (2023)",
+      "NAYAN-DRISHTI: Navigation Aid for the Visually Impaired – Springer (2022)",
+      "Gesture Aided Voice for Voiceless – IHCI Springer LNCS (2018)",
+      "Gesture Aided Speech for Deaf and Mute – I2CT (2018)"
+    ]
+  },
+  {
+    "category": "Certifications",
+    "items": [
+      "Intro to AR/VR/MR/XR – University of Michigan (2023)",
+      "Introduction to Augmented Reality and ARCore – Google (2023)",
+      "User Experience: Research & Prototyping – UC San Diego",
+      "Human-Centered Design – UC San Diego",
+      "Design Principles – UC San Diego",
+      "Social Computing – UC San Diego",
+      "Design Thinking for Innovation – University of Virginia"
+    ]
+  },
+  {
+    "category": "Workshops & Professional Training",
+    "items": [
+      "Summer School on Writing CHI Paper – IDC IIT Bombay",
+      "India HCI 2016 Workshop – HCI for Healthcare",
+      "Tableau Data Visualization Workshop",
+      "Open Source Technologies for Engineering Education",
+      "Advanced Image Acquisition & Processing",
+      "Service Oriented Architecture (SOA)",
+      "Fundamentals of Free/Open Source Software"
+    ]
+  },
+  {
+    "category": "International Collaboration",
+    "items": [
+      "Research Collaboration with University of Memphis, USA",
+      "Project Collaboration with IDC, IIT Bombay"
+    ]
+  }
+]
+},
   "dr-seema-nehete": {
     "name": "Dr. Seema Prashant Nehete",
     "designation": "Assistant Professor",
@@ -69,6 +167,70 @@ const facultyDetails = {
       }
     ]
   },
+  "mr-imran-ali-mirza": {
+  name: "Mr. Mirza Ali Imran",
+  designation: "Assistant Professor & Head (Basic Science and Humanities)",
+  email: "mirza@dbit.in",
+  linkedin: "",
+  exp: "20",
+  about: "Assistant Professor with over 20 years of teaching and academic leadership experience. Has served in multiple institutional roles including Head of Computer Engineering, Dean (Administration), and IT Manager. Expertise focuses on student-centric learning, programming, and integrating emerging technologies into the undergraduate curriculum.",
+  
+  education: [
+    {
+      degree: "M.E./M.Tech in Computer Engineering",
+      year: "Mid-2000s",
+      institute: "University of Mumbai"
+    }
+  ],
+
+  experience: [
+    {
+      role: "Assistant Professor & Head (BS&H)",
+      organization: "Don Bosco Institute of Technology, Kurla",
+      duration: "Current"
+    },
+    {
+      role: "Former Head of Department (Computer Engineering)",
+      organization: "Don Bosco Institute of Technology, Kurla",
+      duration: "Various Tenures"
+    },
+    {
+      role: "Dean (Administration) & IT Manager",
+      organization: "Don Bosco Institute of Technology, Kurla",
+      duration: "Past Tenures"
+    }
+  ],
+
+  professionalHighlights: [
+    {
+      category: "Academic Leadership",
+      items: [
+        "Head of the Department, Basic Science and Humanities",
+        "Former Dean (Administration) and IT Manager at DBIT",
+        "Coordinator for major technical and co-curricular initiatives",
+        "Policy implementation and digital infrastructure management"
+      ]
+    },
+    {
+      category: "Research Interests",
+      items: [
+        "Cloud Computing and Virtualisation (ProtoCloud Project)",
+        "Real-Time Yoga Posture Recognition using Machine Learning",
+        "Transformer-based Neural Joke Generator (NLP & Generative AI)",
+        "AI applications in Education"
+      ]
+    },
+    {
+      category: "Student Mentorship",
+      items: [
+        "Active mentor for student technical clubs and events",
+        "Coordinator for technical fests including game development events",
+        "Guidance of AI/ML-based application-oriented projects",
+        "Institute-level outreach through technical festivals"
+      ]
+    }
+  ]
+},
   "ms-jayshree-r-sanap": {
     "name": "Ms. Jayshree R. Sanap",
     "designation": "Assistant Professor (Computer Engg.)",
@@ -182,6 +344,113 @@ const facultyDetails = {
       }
     ]
   },
+  "ms-shainila-mulla": {
+  name: "Ms. Shainila Shaikh",
+  designation: "Assistant Professor",
+  email: "shainila@dbit.in",
+  alternateEmail: "shainilam@gmail.com",
+  linkedin: "",
+  googleScholar: "",
+  organization: "Don Bosco Institute of Technology, Kurla, Mumbai",
+  exp: "15",
+
+  about: "Dedicated academic professional with over 15 years of experience in education, research, and digital classroom leadership. Expertise in curriculum development, project planning, faculty professional development, and student mentorship. A student-focused educator committed to inclusive, engaging, and technology-enhanced learning environments. Strong background in database administration, enterprise application development, cybersecurity fundamentals, and data analytics tools.",
+
+  education: [
+    {
+      degree: "M.E.",
+      year: "2017",
+      institute: "Mumbai University"
+    },
+    {
+      degree: "B.E. (Computer Engineering)",
+      year: "2008",
+      institute: "Mumbai University"
+    }
+  ],
+
+  experience: [
+    {
+      role: "Lecturer",
+      organization: "Don Bosco Institute of Technology",
+      duration: "2008 – 2019"
+    },
+    {
+      role: "Assistant Professor",
+      organization: "Don Bosco Institute of Technology",
+      duration: "2020 – Present"
+    }
+  ],
+
+  professionalHighlights: [
+    {
+      "category": "Areas of Specialization",
+      "items": [
+        "Database Administration & SQL",
+        "Oracle Database Architecture & Optimization",
+        "Enterprise Application Development (IBM WebSphere)",
+        "Web & UI Technologies",
+        "Cybersecurity Fundamentals",
+        "Data Analysis & Business Intelligence Tools"
+      ]
+    },
+    {
+      "category": "Professional Certifications",
+      "items": [
+        "Oracle Database 9i Administrator Certified Associate",
+        "SQL Mastery Certification (100% Score)",
+        "Oracle 9i Fundamentals Certification (98% Score)",
+        "IBM Certified Associate Developer – Rational Application Developer for WebSphere V6.0",
+        "Coursera Certified: Cybersecurity and the Internet of Things",
+        "Coursera Certified: Excel Skills for Business (Intermediate)"
+      ]
+    },
+    {
+      "category": "Industry & Teaching Expertise",
+      "items": [
+        "Instructor for Oracle Certified Associate Course (Oct–Dec 2011)",
+        "Adobe Flex Instructor – Campus Training for Rich Internet Applications",
+        "Strong grounding in Database Design & Management",
+        "SQL Query Optimization",
+        "Enterprise Software Development Lifecycle Understanding",
+        "Exposure to UI/UX Tools and Design Frameworks",
+        "IoT Security Awareness",
+        "Data Visualization and Analysis using Excel"
+      ]
+    },
+    {
+      "category": "Peer Reviewed Conference Publications",
+      "items": [
+        "Productivity Analysis of Employees in Corporate Sector Using Gesture Recognition – IEEE ICITEICS (2024)",
+        "FortiShare: Predictive Cloud File Sharing System for Detecting Intrusions – IEEE ICAST (2023)",
+        "Smart BAT – Smart Budget Analyzer and Tracker – IEEE ICACTA (2023)",
+        "Automated Cloud-Based Rural Banking System (2024)",
+        "Job Analista: Smart Resume Analyzer and Recommendation System (2024)",
+        "Pneumonia Detection in X-rays Using OpenCV and Deep Learning – IEEE ICCICT (2021)",
+        "Monitoring Counterfeit Drugs using CounterChain – IEEE ICAC3 (2019)",
+        "Automated Resume Evaluation System using NLP – IEEE ICAC3 (2019)",
+        "Event Based Query Offloading in Mobile Cloud Computing – IEEE ICPCSI (2017)",
+        "Personalized Job Role Recommendations using Predictive Analytics – IEEE ICTSD (2015)"
+      ]
+    },
+    {
+      "category": "Faculty Development Programs & Workshops",
+      "items": [
+        "ATAL FDP on Tools and Techniques for Modern Data Science – VESIT (Dec 2023)",
+        "International Faculty Development Program – Bennett University (Nov 2024)",
+        "Faculty Development Program on Data Visualization using Tableau (2020)",
+        "ISTE Approved STTP on Machine Learning Applications for Spatio Temporal Data Analytics (2019)",
+        "Webinar on Lean Product Development with Design Thinking (2020)",
+        "Webinar on Digital Agriculture with AI and Image Processing (2021)",
+        "Webinar on Mobile Forensics: Opportunities and Challenges (2021)",
+        "Webinar on Fighting Financial Crimes using AI (2021)",
+        "Webinar on Language Acquisition with AI Agents in Immersive Environments (2021)",
+        "Participated in Smart India Hackathon (2017 & 2020)"
+      ]
+    }
+  ]
+},
+
   "ms-priti-andhale": {
     "name": "Ms. Priti Andhale",
     "designation": "Assistant Professor (Comps Dept)",
