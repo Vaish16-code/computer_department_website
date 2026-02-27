@@ -17,7 +17,7 @@ const facultyDetails = {
   ],
 
   experience: [
-    { role: "Assistant Professor & Head", organization: "Don Bosco Institute of Technology, Kurla, Mumbai", duration: "1 July 2015 – Present" },
+    { role: "Assistant Professor & Head", organization: "Don Bosco Institute of Technology, Kurla, Mumbai", duration: "2015" },
     { role: "Lecturer", organization: "Don Bosco Institute of Technology, Kurla, Mumbai", duration: "8 Years" },
     { role: "Lecturer", organization: "Sanjivani K.B.P. Polytechnic, Kopargaon, Ahmednagar", duration: "2 Years" }
   ],

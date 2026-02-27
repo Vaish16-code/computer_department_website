@@ -82,7 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
   data.experience.forEach(exp => {
     expContainer.innerHTML += `
       <div class="timeline-item portfolio-item">
-        <div class="timeline-marker"><span class="year">${exp.duration.split(' ')[0]}</span></div>
+        <div class="timeline-marker"><span class="year">${exp.duration.includes('-') 
+  ? exp.duration.split('-')[0].trim() 
+  : exp.duration}</span></div>
         <div class="timeline-card">
           <h3>${exp.role}</h3>
           <p><strong>${exp.organization}</strong></p>
