@@ -738,6 +738,56 @@
     line-height: 1.7;
 }
 
+/* 🔥 Timeline Highlight Improvements */
+
+.timeline-highlight {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.timeline-highlight li {
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
+    color: var(--dark-grey);
+}
+
+.timeline-highlight li strong {
+    color: var(--black);
+    font-weight: 600;
+}
+
+/* ⭐ Special highlight (NAAC A Grade) */
+.timeline-highlight .highlight {
+    color: #111112;
+    font-weight: 700;
+}
+
+/* Intake Growth */
+.intake-growth {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.sub-text {
+    font-size: 0.9rem;
+    color: var(--grey);
+}
+
+/* Autonomous highlight */
+.highlight.big {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0c0c0c;
+}
+
+.highlight.big span {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--grey);
+    margin-top: 0.3rem;
+}
+
 /* Leadership Section */
 .leadership-section {
     padding: 5rem 0;
