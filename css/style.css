@@ -20,7 +20,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 74px;
 }
 
 body {
@@ -29,7 +29,7 @@ body {
     color: var(--dark-grey);
     background: var(--white);
     overflow-x: hidden;
-    padding-top: 80px; /* Account for fixed navbar */
+    padding-top: 74px; /* Account for fixed navbar */
 }
 
 /* Announcements Section */

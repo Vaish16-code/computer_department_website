@@ -8,7 +8,7 @@
     z-index: 1000;
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
     transition: var(--transition);
 }
 
@@ -16,36 +16,34 @@
     max-width: 100%;       /* Changed from 1200px to 100% to hit the edges */
     width: 100%;           /* Ensure it spans the full width */
     margin: 0;             /* Remove auto centering */
-    padding: 0 40px;       /* Added 40px padding to the sides */
+    padding: 0 24px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 74px;
 }
 
 .nav-brand {
    display: flex;
     align-items: center;  /* Vertically center logo with text */
-    gap: 12px;           /* Clean space between image and text */
+    gap: 10px;
     color: var(--white);
     text-decoration: none;
-    padding-left: 10px;
+    padding-left: 0;
 }
 
 .nav-logo {
-    height: 45px;        /* Fixed height prevents it from being huge */
+    height: 38px;
     width: auto;         /* Auto width keeps the correct aspect ratio */
     object-fit: contain; /* Prevents the image from looking squashed/stretched */
     display: block;      /* Removes extra space below image */
 }
 
 .nav-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    letter-spacing: -0.5px;
-    line-height: 1;
+    letter-spacing: -0.2px;
+    line-height: 1.05;
     color: var(--white);
 }
 
@@ -72,7 +70,7 @@
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.35rem;
     align-items: center;
 }
 
@@ -80,9 +78,29 @@
     color: var(--white);
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.98rem;
     padding: 0.5rem 0;
     position: relative;
     transition: var(--transition);
+    white-space: nowrap;
+}
+
+@media (max-width: 1260px) {
+    .nav-title {
+        font-size: 1.05rem;
+    }
+
+    .nav-logo {
+        height: 34px;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 0.93rem;
+    }
 }
 
 .nav-link::after {
