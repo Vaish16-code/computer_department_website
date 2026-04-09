@@ -1122,6 +1122,114 @@ const facultyDetails = {
       ]
     }
   ]
-}
+},
+"dr-amiya-kumar-tripathy": {
+    name: "Dr. Amiya Kumar Tripathy",
+    designation: "Professor",
+    email: "amiya@dbit.in",
+    linkedin: "https://www.linkedin.com/in/amiya-tripathy-81373a11/",
+    exp: "10",
+    about: "Motivated and talented Data Science Professor driven to inspire students to pursue academic and personal excellence. Consistently strives to create a challenging and engaging learning environment in which students become life-long scholars and learners. Dedicated professional with an excellent track record of research success and a strong passion for nurturing and motivating students through academic and personal growth.",
+    education: [
+      { degree: "Doctor of Philosophy (PH.D.)", year: "March 2013", institute: "Indian Institute of Technology Bombay (IIT), Mumbai" },
+      { degree: "Master of Technology (M. TECH.)", year: "July 2004", institute: "Motilal Nehru National Institute of Technology (MNNIT), Allahabad" },
+      { degree: "Bachelor of Engineering (B.E.)", year: "July 1996", institute: "Marathwada University, Aurangabad, Maharashtra" },
+      { degree: "Bachelor of Science (B.SC.)", year: "July 1992", institute: "Khallikote College Berhampur, Berhampur University, Odisha" }
+    ],
+    experience: [
+      { role: "Professor", organization: "Department of Computer Engineering, Don Bosco Institute of Technology (DBIT), Mumbai", duration: "Present" },
+      { role: "Director", organization: "Centre for GeoAI & Machine Learning, DBIT Mumbai", duration: "Present" },
+      { role: "Mentor", organization: "Computer & IT Engineering, DBIT Mumbai", duration: "July 2018 - Present" },
+      { role: "Chairperson", organization: "IEEE-GRSS (Geoscience & Remote Sensing Society), Bombay Chapter", duration: "2021 - 2022" },
+      { role: "Dean (Research and Development)", organization: "Don Bosco Institute of Technology (DBIT), Mumbai", duration: "June 2015 - July 2018" },
+      { role: "Adjunct Professor", organization: "School of Science, Edith Cowan University (ECU), Perth, Australia", duration: "Past Tenure" },
+      { role: "Visiting Researcher", organization: "Rajamangala University of Technology, Tawan-ok, Bangkok, Thailand", duration: "Past Tenure" }
+    ],
+    professionalHighlights: [
+      {
+        category: "Research Specializations",
+        items: [
+          "Expertise in Machine Vision and Data Science",
+          "ICT and Modeling for Agriculture (70% focus)",
+          "Extensive breadth of experience in Industry, Consultancy, and Research",
+          "Dedicated focus on GeoAI and Machine Learning applications"
+        ]
+      },
+      {
+        category: "International & Institutional Roles",
+        items: [
+          "Director of the Center for GeoAI & Machine Learning at DBIT Mumbai",
+          "Adjunct Professor at Edith Cowan University, Perth, Australia",
+          "Visiting Researcher at Rajamangala University of Technology, Thailand",
+          "Former Dean of Research and Development at DBIT"
+        ]
+      },
+      {
+        category: "Professional Leadership",
+        items: [
+          "Served as Chairperson for IEEE-GRSS Bombay Chapter (2021-2022)",
+          "Active mentor for Computer and IT Engineering students",
+          "Consistently involved in high-impact research with numerous refereed publications",
+          "Dedicated to fostering life-long learning and scholarly exploration"
+        ]
+      }
+    ]
+  },
+  "dr-phiroj-shaikh": {
+    name: "Dr. Phiroj Shaikh",
+    designation: "Associate Professor",
+    email: "phiroj@dbit.in",
+    linkedin: "",
+    exp: "19",
+    about: "Professional academic expert with over 19 years of experience in computer science and technology. Highly skilled in academic administration, sessional management, and departmental leadership. Proven track record in curriculum development, research publication, and institutional accreditation processes including NBA and NAAC.",
+    education: [
+      { degree: "Doctor of Philosophy in Computer Science and Technology", year: "2018", institute: "G.H. Raisoni College of Engineering (R.T.M. Nagpur University)" },
+      { degree: "Master of Technology in Computer Science and Technology", year: "2009", institute: "G.H. Raisoni College of Engineering (R.T.M. Nagpur University)" },
+      { degree: "Bachelor of Engineering in Computer Technology", year: "2000", institute: "KITS, Ramtek (R.T.M. Nagpur University)" }
+    ],
+    experience: [
+      { role: "Associate Professor", organization: "Don Bosco Institute of Technology (DBIT), Mumbai", duration: "Current" },
+      { role: "Head of Department (IT Dept)", organization: "Priyadarshini College of Engineering (PCE), Nagpur", duration: "June 2017 - April 2018" },
+      { role: "Training & Placement Incharge", organization: "Computer Technology Dept, PCE, Nagpur", duration: "2015 - 2016" },
+      { role: "NBA Co-coordinator", organization: "Computer Technology Dept, PCE, Nagpur", duration: "2014 - 2015" }
+    ],
+    professionalHighlights: [
+      {
+        category: "Research & Publications",
+        items: [
+          "40+ International Journal Publications and 10+ International Conference papers",
+          "Session Chair at 'INNOCATION' SPARK-10, National Level Technical Symposium",
+          "Research paper presentation at International Conference on Web Sciences (ICWS-2009)",
+          "Research paper presentation at National Conference BITCONCSE, Bhilai"
+        ]
+      },
+      {
+        category: "Institutional Leadership",
+        items: [
+          "Expertise in NBA/NAAC documentation and SAR completion for department-specific requirements",
+          "Proposal drafting for various AICTE research schemes and grants",
+          "Management of centralized sessional question paper moderation and printing",
+          "Coordination of industrial tours and student outreach programs"
+        ]
+      },
+      {
+        category: "Certifications & Training",
+        items: [
+          "IIT BOMBAY NMEICT Workshop on 'Computer Networking'",
+          "One week International Faculty Empowerment Programme 'MISSION10X' on Effective Teaching",
+          "AICTE-ISTE Approved training on 'GNU / LINUX AT WORK' and 'Training & Placement'",
+          "IBM-ACE Certification from IBM Global Pvt. Ltd., Bangalore"
+        ]
+      },
+      {
+        category: "Professional Memberships",
+        items: [
+          "Member of International Association of Computer Science & Information Technology (IACSIT)",
+          "Member of International Association of Engineers (IAENG)",
+          "Associate Member of Institute of Research Engineers & Doctors (IRED)"
+        ]
+      }
+    ]
+  }
 
 };
