@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
+  flex: 1;
 }
 .container h2{
     margin-bottom: 20px;
@@ -26,7 +27,7 @@
   
 }
 #hod-card .faculty-card{
-  padding-right:200px;
+  padding-right:0px;
 } 
 .faculty-card:hover {
   transform: translateY(-5px);
@@ -35,7 +36,7 @@
 
 
 .faculty-img {
-  height: auto;
+  height: 200px;
   object-fit: contain;               /* Show full image without cropping - maintains aspect ratio */
   object-position: center;
   padding: 30px;
@@ -193,8 +194,16 @@
     align-self: flex-start;
 }
 #hod-card .portfolio-link,#associate-professors .portfolio-link,#professors .portfolio-link {
-  margin-top:18px;
+  margin-bottom:18px;
 }
+#lab-asst .faculty-card{
+  align-items: center;
+  gap: 10px;
+}
+#lab-asst .faculty-body{
+  padding: 0px 100px 0px 0px;
+}
+
 /* Ensure Assistant Professors button width matches other cards */
 #assistant-professors .portfolio-link {
     width: 130px;
@@ -220,16 +229,29 @@
   align-items: center;
   max-width: 2000px;
 }
-
-#hod-card{
+.sub-container{
+  display: flex;
+  gap: 20px;
+  flex-direction:row ;
+  justify-content: center;
 }
+
+.sub-container .faculty-category{
+  flex: 0 0 calc(50% - 5px);
+}
+
+/* @media (min-width: 768px) and (max-width:1024px){
+#lab-asst .faculty-body{
+  padding: 20px;
+} */
+
 @media (min-width: 768px) {
   .faculty-card {
     display: flex;
     flex-direction: row;
     gap: 10px;
-
   }
+  
 
   .faculty-card .faculty-img {
     height: 280px;                    /* Fixed height container - same as Assistant Professors */
@@ -237,15 +259,24 @@
     object-fit: contain;               /* Show full image without cropping */
     object-position: center;
   }
-  .sub-container {
-    /* grid-template-columns: 1fr; */
-    grid-template-columns: repeat(2, 1fr);
-  }
+  #lab-asst .faculty-card{
+    flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+#lab-asst .faculty-body{
+  padding: 0px 100px 0px 0px;
+}
 }
 
+@media (min-width:1024px) {
+#hod-card .faculty-card{
+  padding-right:200px;
+} 
+}
 @media (min-width: 768px) and (max-width: 1024px) {
   .faculty-card {
-    grid-template-columns: 1fr;   /* stack image and text vertically */
+    flex-direction: column;
   }
 
   .faculty-card .faculty-img {
@@ -253,6 +284,17 @@
     padding: 25px;                /* Slightly reduced padding */
     object-fit: contain;           /* Show full image without cropping */
     object-position: center;
+    margin:0 auto;
+  }
+  .sub-container{
+    flex-direction: column;
+  }
+  #hod-card .faculty-card,#professors .faculty-card,#associate-professors .faculty-card{
+    padding-right: 0;
+    flex-direction: row;
+  }
+  .faculty-category h2{
+    margin-top: 20px;
   }
 }
 
@@ -268,6 +310,12 @@
   #hod-card .faculty-card{
   padding-right:0px;
 } 
+.sub-container{
+  flex-direction:column ;
+}
+.faculty-category h2{
+  margin-top: 10px;
+}
 }
 
 @media (max-width: 480px) {
@@ -277,7 +325,9 @@
     object-fit: contain;            /* Show full image without cropping */
     object-position: center;
   }
-  
+  .sub-container{
+    flex-direction:column;
+  }
 }
 
 /* Assistant Professors horizontal scroll on desktop */
@@ -367,6 +417,7 @@
     gap: 1.5rem;
     overflow-x: visible;
   }
+  
 
   #assistant-professors .faculty-img {
     height: 240px;                  /* Smaller container on tablets */
@@ -406,10 +457,6 @@
 
   .faculty-section h2 {
     font-size: 2rem;
-  }
-
-  .sub-container {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -461,6 +508,10 @@
   #assistant-professors {
     gap: 1.25rem;
   }
+  #lab-asst .faculty-body{
+    padding: 1.2rem;
+  text-align: center;
+}
 }
 
 /* Small Mobile Devices */
@@ -599,11 +650,6 @@
 
 /* Tablet & Mobile: Stack the Education and Experience columns */
 @media (max-width: 992px) {
-    .portfolio-details .sub-container {
-        grid-template-columns: 1fr !important; /* Forces 1 column layout */
-        gap: 30px;
-    }
-
     .info-card {
         padding: 20px !important;
     }
