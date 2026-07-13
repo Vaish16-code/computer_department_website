@@ -1,5 +1,5 @@
 /* ---------- Faculty Card Template ---------- */
-function createFacultyCard(data) {
+function createFacultyCard(data,val) {
   // Use a slugified version of the name as a unique ID
   const facultyId = data.name
     .toLowerCase()
@@ -7,7 +7,10 @@ function createFacultyCard(data) {
     .replace(/[.]/g, "");
 
   // Point all "Know More" buttons to our new dynamic template
-  const portfolioUrl = `portfolio.html?id=${facultyId}`;
+  let portfolioUrl=""
+  if(val==0){
+     portfolioUrl= `portfolio.html?id=${facultyId}`;
+  }
 
   return `
     <div class="faculty-card">
@@ -15,13 +18,13 @@ function createFacultyCard(data) {
       <div class="faculty-body">
         <h3>${data.name}</h3>
         <p class="faculty-qualification">${data.qualification}</p>
-        <p><strong>Specialization:</strong> ${data.specialization}</p>
+        ${val==0?`<p><strong>Specialization:</strong> ${data.specialization}</p>
         <p><strong>Experience:</strong> ${data.experience}</p>
         <p class="faculty-contact">${data.email}</p>
         
         <a href="${portfolioUrl}" class="portfolio-link">
             <i class="fa-solid fa-user-tie"></i> Know More
-        </a>
+        </a>`:"" }
       </div>
     </div>
   `;
@@ -198,17 +201,26 @@ const assistantProfessors = [
   },
 ];
 
+const labAssistant=[
+  {
+    name:"Rupesh Sambhaji Pol",
+    qualification:"CCNA Certified",
+    experience:"",
+    image:"images/faculty/rupesh-pic.jpeg"
+  }
+]
+
 /* ---------- Render Faculty Cards ---------- */
 
 // Render HOD
 const hodContainer = document.getElementById("hod-card");
-if (hodContainer) hodContainer.innerHTML = createFacultyCard(hod);
+if (hodContainer) hodContainer.innerHTML = createFacultyCard(hod,0);
 
 // Render Professors
 const profContainer = document.getElementById("professors");
 if (profContainer) {
   professors.forEach((faculty) =>
-    profContainer.insertAdjacentHTML("beforeend", createFacultyCard(faculty)),
+    profContainer.insertAdjacentHTML("beforeend", createFacultyCard(faculty,0)),
   );
 }
 
@@ -218,7 +230,7 @@ if (associateContainer) {
   associateProfessors.forEach((faculty) =>
     associateContainer.insertAdjacentHTML(
       "beforeend",
-      createFacultyCard(faculty),
+      createFacultyCard(faculty,0),
     ),
   );
 }
@@ -229,9 +241,20 @@ if (assistantContainer) {
   assistantProfessors.forEach((faculty) =>
     assistantContainer.insertAdjacentHTML(
       "beforeend",
-      createFacultyCard(faculty),
+      createFacultyCard(faculty,0),
     ),
   );
+}
+
+//Render Lab Assistant
+const labAssistantContainer=document.getElementById("lab-asst");
+if(labAssistantContainer){
+  labAssistant.forEach((staff)=>{
+    labAssistantContainer.insertAdjacentHTML(
+      "beforeend",
+      createFacultyCard(staff,-1),
+    )
+  })
 }
 
 /* ---------- ACHIEVEMENTS & RESEARCH AREAS ---------- */

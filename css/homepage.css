@@ -147,21 +147,31 @@
     transform: translateX(-50%);
     z-index: 3;
     animation: bounce 2s infinite;
+    
 }
 
+.scroll-indicator button:hover{
+    cursor: pointer;
+}
 .scroll-arrow {
+    background: transparent;
+    border: none;
+}
+
+.scroll-arrow::before {
+    content: "";
+    display: block;
     width: 24px;
     height: 24px;
-    border-right: 2px solid var(--white);
-    border-bottom: 2px solid var(--white);
+    border-right: 2px solid var(--black);
+    border-bottom: 2px solid var(--black);
     transform: rotate(45deg);
-    opacity: 0.7;
+    opacity: 0.4;
 }
 
 /* About Section */
 .about-section {
     padding: 4rem 0;
-    background: var(--light-grey);
 }
 
 .social-links {
@@ -184,7 +194,7 @@
 
 /* Main Sections */
 .main-content {
-    background: var(--white);
+    background: var(--light-grey);
 }
 
 .section-header {
@@ -506,7 +516,7 @@
 /* what we do section */
 
 .what-we-do {
-    padding: 0 0 2rem ;
+    padding: 0 0 6rem ;
     background: var(--white);
 }
 
@@ -714,7 +724,7 @@
 
 .testimonials-section {
     padding: 2rem 0 4rem;
-    background: var(--light-grey);
+    background: var(--white);
 }
 
 .testimonial-deck-wrapper {
@@ -1032,7 +1042,10 @@
 }
 
 /* Events & News Section */
-.events-news-section { padding: 80px 0; background-color: var(--white); }
+.events-news-section{
+    background: linear-gradient(var(--white),var(--light-grey));
+    padding-bottom: 1rem;
+}
 .events-grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -1066,7 +1079,7 @@
 /* Enquire Now CTA */
 .enquire-now-section { 
     padding: 60px 0; 
-    background: linear-gradient(135deg, #f1f1f1 0%, #e9e9e9 100%);
+    background-color: var(--light-grey);
 }
 .enquire-container { 
     display: flex; 
