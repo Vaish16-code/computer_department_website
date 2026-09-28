@@ -2238,8 +2238,6 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 9999;
-<<<<<<< HEAD
-=======
 }
 /* Force Header/Hero sections to be Full Width */
 .page-header, 
@@ -2780,5 +2778,4 @@ body {
     .calendar-card {
         padding: 1.5rem;
     }
->>>>>>> 37bfd67 (Update students page with infinite scroll carousel, add placement banners, and remove academics dropdown from navbar)
 }
