@@ -1092,3 +1092,267 @@
 @media (max-width: 768px) {
     .enquire-container { text-align: center; justify-content: center; }
 }
+
+/* ==========================================================================
+   Department Highlights & Glimpses Section
+   ========================================================================== */
+.glimpse-section {
+    padding: 5rem 0 6rem;
+    background: var(--light-grey);
+}
+
+.glimpse-showcase-card {
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid #e6e6e6;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.glimpse-showcase-card:hover {
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.09);
+}
+
+.glimpse-banner-preview {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1.5rem 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glimpse-banner-image {
+    width: 100%;
+    max-height: 540px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.glimpse-banner-preview:hover .glimpse-banner-image {
+    transform: scale(1.015);
+    box-shadow: 0 8px 26px rgba(0, 0, 0, 0.12);
+}
+
+.glimpse-banner-badge {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    color: var(--white);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glimpse-banner-preview:hover .glimpse-banner-badge {
+    background: var(--black);
+    transform: translateY(-2px);
+}
+
+.glimpse-card-body {
+    padding: 2.5rem 3rem;
+}
+
+.glimpse-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.glimpse-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: var(--light-grey);
+    color: var(--dark-grey);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #e0e0e0;
+}
+
+.glimpse-tag-dark {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+}
+
+.glimpse-card-title {
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.glimpse-card-text {
+    font-size: 1.05rem;
+    color: #4a4a4a;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.glimpse-panel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ebebeb;
+}
+
+.glimpse-panel-col {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+}
+
+.glimpse-panel-col .panel-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+}
+
+.glimpse-panel-col .panel-details h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.6rem;
+}
+
+.glimpse-panel-col .panel-details p {
+    font-size: 0.92rem;
+    color: #555;
+    margin-bottom: 0.35rem;
+    line-height: 1.5;
+}
+
+/* Lightbox Modal */
+.glimpse-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(10px);
+    z-index: 10000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.glimpse-lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.glimpse-lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 2.5rem;
+    color: var(--white);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10001;
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.glimpse-lightbox-close:hover {
+    color: #ff5555;
+    transform: scale(1.15);
+}
+
+.glimpse-lightbox-content {
+    max-width: 1200px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: zoomInLightBox 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes zoomInLightBox {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.glimpse-lightbox-img {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.glimpse-lightbox-caption {
+    margin-top: 1rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.glimpse-lightbox-caption h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.glimpse-lightbox-caption p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsiveness for Glimpse Section */
+@media (max-width: 768px) {
+    .glimpse-card-body {
+        padding: 1.75rem 1.25rem;
+    }
+    
+    .glimpse-banner-badge {
+        bottom: 12px;
+        right: 12px;
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .glimpse-panel-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}

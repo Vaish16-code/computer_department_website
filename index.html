@@ -240,6 +240,70 @@
             </div>
         </section>
 
+        <!-- Department Highlights & Glimpses Section -->
+        <section class="glimpse-section" id="glimpses">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Department Highlights & Glimpses</h2>
+                    <p class="section-subtitle">Moments of academic rigor, industry collaboration, and student innovation.</p>
+                </div>
+
+                <div class="glimpse-showcase-card">
+                    <div class="glimpse-banner-preview" onclick="openGlimpseModal()" title="Click to view full image">
+                        <img src="images/banner/BE Major project review 1 AY26-27 glimpses.jpeg" 
+                             alt="BE Major Project Review 1 AY26-27 Glimpses" 
+                             class="glimpse-banner-image">
+                        <div class="glimpse-banner-badge">
+                            <i class="fas fa-search-plus"></i> Click to Enlarge
+                        </div>
+                    </div>
+
+                    <div class="glimpse-card-body">
+                        <div class="glimpse-meta-row">
+                            <span class="glimpse-tag glimpse-tag-dark"><i class="fas fa-calendar-alt"></i> August 24, 2026</span>
+                            <span class="glimpse-tag"><i class="fas fa-graduation-cap"></i> BE Major Project</span>
+                            <span class="glimpse-tag"><i class="fas fa-users"></i> Alumni-Faculty Collaboration</span>
+                        </div>
+                        
+                        <h3 class="glimpse-card-title">BE Major Project – Review 1 (AY 2026–27)</h3>
+                        
+                        <p class="glimpse-card-text">
+                            Final-year Computer Engineering students presented their capstone projects during the Major Project Review-1. Esteemed alumni industry experts from <strong>AWS, Uber, Cequity,</strong> and <strong>Morgan & Morgan</strong> joined our faculty review panel to provide practical industry insights, assess technical architectures, and guide student innovations.
+                        </p>
+
+                        <div class="glimpse-panel-grid">
+                            <div class="glimpse-panel-col">
+                                <div class="panel-icon"><i class="fas fa-user-tie"></i></div>
+                                <div class="panel-details">
+                                    <h4>Distinguished Alumni Reviewers</h4>
+                                    <p><strong>Mr. Christopher Oswald Carvalho</strong> (Batch 2014, AWS Data Center Manager)</p>
+                                    <p><strong>Mr. Joel Joseph</strong> (Batch 2017, Cequity Design Engineer)</p>
+                                    <p><strong>Mr. Sourab Banka</strong> (Batch 2020, Uber Software Engineer)</p>
+                                    <p><strong>Mr. Raj</strong> (Batch 2024, Morgan & Morgan Salesforce Developer)</p>
+                                </div>
+                            </div>
+                            <div class="glimpse-panel-col">
+                                <div class="panel-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                                <div class="panel-details">
+                                    <h4>Department Leadership & Coordination</h4>
+                                    <p><strong>Dr. Seema Nehete</strong> — Major Project Coordinator</p>
+                                    <p><strong>Dr. Dipti Jadhav</strong> — Head of Department (HOD)</p>
+                                    <div class="glimpse-actions" style="margin-top: 1.25rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                                        <button type="button" class="hero-btn hero-btn-primary" onclick="openGlimpseModal()" style="cursor: pointer; border: none; font-size: 0.95rem; padding: 10px 22px;">
+                                            <i class="fas fa-expand-alt" style="margin-right: 8px;"></i> View Full Banner
+                                        </button>
+                                        <a href="events.html" class="hero-btn hero-btn-secondary" style="font-size: 0.95rem; padding: 10px 22px;">
+                                            More Events <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <!-- department events and news section -->
         <section class="events-news-section">
@@ -353,7 +417,47 @@
     <!-- Footer -->
     <div id="footer-placeholder"></div>
 
+    <!-- Fullscreen Glimpse Modal / Lightbox -->
+    <div id="glimpseModal" class="glimpse-lightbox" onclick="closeGlimpseModal(event)">
+        <button class="glimpse-lightbox-close" onclick="forceCloseGlimpseModal()" aria-label="Close">&times;</button>
+        <div class="glimpse-lightbox-content">
+            <img src="images/banner/BE Major project review 1 AY26-27 glimpses.jpeg" 
+                 alt="BE Major Project Review 1 AY26-27 Glimpses High Resolution" 
+                 class="glimpse-lightbox-img">
+            <div class="glimpse-lightbox-caption">
+                <h3>BE Major Project - Review 1 (AY 2026-27)</h3>
+                <p>Department of Computer Engineering | Don Bosco Institute of Technology</p>
+            </div>
+        </div>
+    </div>
+
     <script src="js/script.js"></script>
     <script src="js/components.js"></script>
+    <script>
+        function openGlimpseModal() {
+            const modal = document.getElementById('glimpseModal');
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        function forceCloseGlimpseModal() {
+            const modal = document.getElementById('glimpseModal');
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+        function closeGlimpseModal(e) {
+            if (e.target.id === 'glimpseModal' || e.target.classList.contains('glimpse-lightbox-close')) {
+                forceCloseGlimpseModal();
+            }
+        }
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                forceCloseGlimpseModal();
+            }
+        });
+    </script>
 </body>
 </html>
