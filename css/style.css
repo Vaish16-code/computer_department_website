@@ -2782,35 +2782,12 @@ body {
 
 
 
+
+
 /* Timetable links */
-
-
 .timetable-links {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
-    margin-top: 1rem;
-}
-
-
-
-
-.timetable-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    gap: 0.75rem;
-    margin-top: 1rem;
-}
-
-
-/* Timetable links */
-.timetable-links {
-    display: flex;
     justify-content: center;
     align-items: stretch;
     gap: 0.75rem;
